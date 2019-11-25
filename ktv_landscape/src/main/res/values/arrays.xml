@@ -1,0 +1,297 @@
+<resources>
+
+    <string-array name="page_star_top_tabs_right">
+        <item>男</item>
+        <item>女</item>
+        <item>组合</item>
+    </string-array>
+
+
+    <string-array name="search_types">
+        <item>歌曲</item>
+        <item>歌星</item>
+        <item>电影</item>
+    </string-array>
+
+    <string-array name="search_types_movie_pwd">
+        <item>歌曲</item>
+        <item>歌星</item>
+    </string-array>
+
+    <string-array name="choose_tabs">
+        <item>已点</item>
+        <item>已唱</item>
+        <item>下载</item>
+    </string-array>
+
+    <string-array name="lives_tabs">
+        <item>全部</item>
+        <item>直播中</item>
+        <item>即将开始</item>
+    </string-array>
+
+    <string-array name="star_tabs">
+        <item>歌曲</item>
+        <!--<item>专辑</item>-->
+    </string-array>
+
+    <string-array name="music_pop">
+        <item>音乐音量-</item>
+        <item>音乐音量+</item>
+    </string-array>
+
+    <string-array name="mic_pop">
+        <item>话筒音量-</item>
+        <item>话筒音量+</item>
+    </string-array>
+
+    <string-array name="tone_text">
+        <item>降调</item>
+        <item>原调</item>
+        <item>升调</item>
+    </string-array>
+
+    <string-array name="light_mode_texts">
+        <item>@string/standard</item>
+        <item>@string/bright</item>
+        <item>@string/soft</item>
+        <item>@string/lyric</item>
+        <item>@string/montion</item>
+        <item>@string/romantic</item>
+        <item>@string/dim</item>
+        <item>@string/concert</item>
+        <item>@string/passion</item>
+        <item>@string/clean</item>
+    </string-array>
+
+    <string-array name="jazzy_effects">
+        <item>Standard</item>
+        <item>Tablet</item>
+        <item>CubeIn</item>
+        <item>CubeOut</item>
+        <item>FlipVertical</item>
+        <item>FlipHorizontal</item>
+        <item>Stack</item>
+        <item>ZoomIn</item>
+        <item>ZoomOut</item>
+        <item>RotateUp</item>
+        <item>RotateDown</item>
+        <item>Accordion</item>
+    </string-array>
+
+
+    <string-array name="keyboard_word_count">
+        <item>全部</item>
+        <item>一字</item>
+        <item>二字</item>
+        <item>三字</item>
+        <item>四字</item>
+        <item>五字</item>
+        <item>六字</item>
+        <item>多字</item>
+    </string-array>
+
+
+    <string-array name="keyboard_input_types">
+        <item>拼音</item>
+        <item>手写</item>
+        <item>数字</item>
+    </string-array>
+
+    <string-array name="keyboard_number">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>0</item>
+    </string-array>
+
+
+    <string-array name="keyboard_keys_line1">
+        <item>Q</item>
+        <item>W</item>
+        <item>E</item>
+        <item>R</item>
+        <item>T</item>
+        <item>Y</item>
+        <item>U</item>
+        <item>I</item>
+        <item>O</item>
+        <item>P</item>
+    </string-array>
+
+    <string-array name="keyboard_keys_line2">
+        <item>A</item>
+        <item>S</item>
+        <item>D</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+    </string-array>
+    <string-array name="keyboard_keys_line3x">
+        <item>Z</item>
+        <item>X</item>
+        <item>C</item>
+        <item>V</item>
+        <item>B</item>
+        <item>N</item>
+        <item>M</item>
+        <item>@string/delete</item>
+    </string-array>
+    <string-array name="keyboard_keys_line3">
+        <item>Z</item>
+        <item>X</item>
+        <item>C</item>
+        <item>V</item>
+        <item>B</item>
+        <item>N</item>
+        <item>M</item>
+    </string-array>
+
+    <string-array name="keyboard_numbers">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>0</item>
+        <item>@string/delete</item>
+    </string-array>
+
+    <string-array name="keyboard_number_line1">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="keyboard_number_line2">
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>0</item>
+        <item>@string/delete</item>
+    </string-array>
+
+
+    <string-array name="mng_pwd_texts">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>@string/delete</item>
+        <item>0</item>
+        <item>确认</item>
+    </string-array>
+
+    <string-array name="rankings">
+        <item>本店排行</item>
+        <item>北星排行</item>
+        <item>酷我排行</item>
+        <item>虾米排行</item>
+    </string-array>
+
+    <string-array name="ranking_time">
+        <item>本月</item>
+        <item>上月</item>
+        <item>本季</item>
+    </string-array>
+
+    <string-array name="ranking_language">
+        <item>全部</item>
+        <item>国语</item>
+        <item>粤语</item>
+        <item>英语</item>
+    </string-array>
+    <string-array name="ranking_language_id">
+        <item></item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="service_types">
+        <item>呼叫服务员</item>
+        <item>DJ呼叫</item>
+        <item>清洁呼叫</item>
+        <item>保安呼叫</item>
+        <item>买单呼叫</item>
+        <item>催单呼叫</item>
+        <item>唛套呼叫</item>
+        <item>加冰呼叫</item>
+    </string-array>
+
+    <string-array name="score_modes">
+        <!--<item>关闭</item>-->
+        <item>娱乐模式</item>
+        <item>专业模式</item>
+    </string-array>
+
+    <string-array name="pk_tabs">
+        <item>挑战广场</item>
+        <item>排行榜</item>
+    </string-array>
+    <string-array name="marquee_text_size">
+        <item>小号</item>
+        <item>中号</item>
+        <item>大号</item>
+    </string-array>
+
+    <integer-array name="tv_marquee_text_size_sp">
+        <item>26</item>
+        <item>30</item>
+        <item>34</item>
+    </integer-array>
+
+    <!--<string-array name="song_sort_types">-->
+    <!--<item>热度</item>-->
+    <!--<item>字序</item>-->
+    <!--</string-array>-->
+
+    <string-array name="baudrate_list">
+        <item>300</item>
+        <item>600</item>
+        <item>1200</item>
+        <item>2400</item>
+        <item>4800</item>
+        <item>9600</item>
+        <item>19200</item>
+        <item>38400</item>
+        <item>43000</item>
+        <item>56000</item>
+        <item>57600</item>
+        <item>115200</item>
+    </string-array>
+
+    <string-array name="disco_dj_sort_types">
+        <item>热度</item>
+        <item>拼音</item>
+    </string-array>
+
+
+    <string-array name="screen_rotation">
+        <item>0</item>
+        <item>90</item>
+        <item>180</item>
+        <item>270</item>
+    </string-array>
+</resources>

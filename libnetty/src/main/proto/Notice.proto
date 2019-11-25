@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+option java_package = "com.bestarmedia.proto.monitor";
+option java_outer_classname = "NoticeProto";
+option java_multiple_files = true;
+
+// 发送通知请求
+message NoticeRequest {
+    string ktv_net_code = 1; // KTV编号
+    string room_code = 2; // 房间号 没有则为空
+    int32  type = 5; // 消息类型
+    int64  notice_id = 3; // 通知ID
+    string  log_id = 4; // 通知log id
+    int32  user_id = 6; // 用户id 可能来自手机或者本地功能或者远程监管
+}
+
+// 通知回复
+message NoticeResponse {
+    string ktv_net_code = 1;
+    string room_code = 2;
+    int64  notice_id = 4; // 通知id
+    string log_id = 6; // 通知log id
+    int32  type = 5; // 消息类型 1文本 2图文 3视频
+    int32  code = 3; // 0失败 1成功
+    int32  user_id = 7; //用户id 可能来自手机或者本地功能或者远程监管
+}
+
+// 待推送的消息
+message NoticePushedBroadcast {
+    string data = 1; // 消息数据
+}

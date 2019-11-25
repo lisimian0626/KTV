@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/ll_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/dlg_bg">
+
+        <TextView
+            android:id="@android:id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/pls_input_buy_count"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
+
+        <com.bestarmedia.libwidget.edit.EditTextEx
+            android:id="@android:id/input"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@android:id/title"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_edittext_drak_n"
+            android:drawableRight="@drawable/selector_edit_text_clear"
+            android:drawablePadding="10dp"
+            android:editable="false"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="3"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@android:color/white"
+            android:textCursorDrawable="@null"
+            android:textSize="30sp" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_items"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@android:id/input"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/ll_dialog"
+        android:src="@drawable/dlg_close_new" />
+</RelativeLayout>

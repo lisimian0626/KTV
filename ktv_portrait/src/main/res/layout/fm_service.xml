@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="40dp">
+
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/iv_inverted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/service_reflection_v"
+            android:tag="skin:service_reflection_v:src" />
+
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_bill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/iv_inverted"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/service_bill"
+            android:tag="skin:service_bill:src" />
+
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_sale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/iv_inverted"
+            android:layout_toRightOf="@+id/wm_bill"
+            android:src="@drawable/service_sale"
+            android:tag="skin:service_sale:src" />
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_fire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/iv_inverted"
+            android:layout_toRightOf="@+id/wm_sale"
+            android:src="@drawable/service_fire"
+            android:tag="skin:service_fire:src" />
+
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_wine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/wm_bill"
+            android:src="@drawable/service_wine"
+            android:tag="skin:service_wine:src" />
+
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_give"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/wm_bill"
+            android:layout_toRightOf="@+id/wm_wine"
+            android:src="@drawable/service_handsel"
+            android:tag="skin:service_handsel:src" />
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_pr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/iv_inverted"
+            android:layout_toRightOf="@+id/wm_fire"
+            android:src="@drawable/service_pr"
+            android:tag="skin:service_pr:src" />
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/wm_pr"
+            android:layout_toRightOf="@+id/wm_fire"
+            android:src="@drawable/service_setting"
+            android:tag="skin:service_setting:src" />
+    </RelativeLayout>
+
+</HorizontalScrollView>
+
+
+

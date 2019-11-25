@@ -1,0 +1,123 @@
+syntax = "proto3";
+
+import "Page.proto";
+
+option java_package = "com.bestarmedia.proto.node";
+option java_outer_classname = "LocalProto";
+option java_multiple_files = true;
+
+message LocalNoticeRoom {
+    string room_code = 1;
+    string ktv_room_code =2;
+}
+
+// 本地走马灯
+message LocalNotice {
+    string content = 1;
+    int32  order = 2;
+    int32  circle_type = 3;
+    int32  is_everyday_play = 4;
+    string start_date = 5;
+    string font_color = 6;
+    int32  status = 7;
+    int32  play_type = 8;
+    int32  times = 9;
+    string start_time = 10;
+    string end_time = 11;
+    string created_at = 12;
+    string updated_at = 13;
+    repeated LocalNoticeRoom room_list = 14; // 房间列表
+}
+
+// 本地走马灯播放记录
+message LocalNoticeRecord {
+    string created_at = 1;
+    string content = 2;
+    string title = 3;
+}
+
+// 走马灯列表请求
+message LocalNoticeRequest {
+    string address = 1;
+    int32  user_id = 2;
+    string ktv_net_code = 3;
+
+    int32 circle_type = 4; // 循环方式 1定时 2即时
+    int32 current_page = 5;
+    int32 per_page = 6;
+}
+
+// 走马灯列表回复
+message LocalNoticeResponse {
+    string address = 4;
+    int32  user_id = 5;
+    string ktv_net_code = 3;
+    int32  circle_type = 6; // 循环方式 1定时 2即时
+
+    repeated LocalNotice local_notice = 1; // 走马灯列表
+    Pagination pagination = 2; // 分页
+}
+
+// 走马灯播放记录请求
+message LocalNoticeRecordRequest {
+    string address = 1;
+    int32  user_id = 2;
+    string ktv_net_code = 3;
+
+    int32 current_page = 5;
+    int32 per_page = 6;
+    string start_date = 7;
+    string end_date = 8;
+}
+
+// 走马灯播放记录回复
+message LocalNoticeRecordResponse {
+    string address = 4;
+    int32  user_id = 5;
+    string ktv_net_code = 3;
+
+    repeated LocalNoticeRecord local_notice_record = 1;
+    Pagination pagination = 2; // 分页
+}
+
+// 火警素材请求
+message FireAlarmMaterialRequest {
+    string ktv_net_code = 1;
+    string address = 2;
+    int32  user_id = 3;
+}
+
+// 火警素材回复
+message FireAlarmMaterialResponse {
+    string alarm_img_a = 1; // 横版图 base64
+    string alarm_img_b = 2; // 竖版图 base 64
+    int32  early_alarm_time = 6; // 预警时间（分），默认为0
+    string address = 3;
+    int32  user_id = 4;
+    string ktv_net_code = 5;
+}
+
+// 消防逃生图请求
+message EvacuationLanRequest {
+    string address = 1;
+    string ktv_net_code = 2;
+    int32  user_id = 3;
+}
+
+// 消防逃生图回复
+message EvacuationLanResponse {
+    string address = 1;
+    string ktv_net_code = 2;
+    int32  user_id = 3;
+    string room_code = 4; // 房间号
+    string ktv_room_code = 5; // 房间名
+    string image = 6; // base64 图片数据
+}
+
+// 开/关房通知
+message RoomStatusBroadcast {
+    string room_code = 1;
+    string ktv_room_code = 2;
+    int32  op = 3; // 1开房 2关房
+}
+

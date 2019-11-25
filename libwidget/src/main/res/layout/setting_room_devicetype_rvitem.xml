@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/setting_room_regist_item_devicetype"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:clickable="true"
+            android:text="主屏"
+            android:drawableLeft="@drawable/ic_selection"
+            android:paddingLeft="10dp"
+            android:background="@drawable/selector_dlg_device_type"
+            android:textColor="#ffb413"
+            android:gravity="center"
+            android:textSize="@dimen/button_text_size" />
+    </RelativeLayout>

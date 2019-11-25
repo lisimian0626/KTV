@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_setting"
+    android:paddingLeft="50dp">
+
+    <TextView
+        android:id="@+id/tv_sn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="right"
+        android:textColor="@android:color/white" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="35dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="130dp"
+            android:gravity="right"
+            android:text="@string/version_info"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tv_version_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/service_setting_version"
+            android:drawablePadding="14dp"
+            android:gravity="center"
+            android:text="@string/version_info"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/tv_song_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:drawableTop="@drawable/service_setting_song"
+            android:drawablePadding="14dp"
+            android:gravity="center"
+            android:text="@string/song_info"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="35dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_tv_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="130dp"
+            android:gravity="right"
+            android:text="@string/tv_show_setting"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tv_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/service_setting_video"
+            android:drawablePadding="14dp"
+            android:gravity="center"
+            android:text="@string/video_size_setting"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="35dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_android_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="130dp"
+            android:gravity="right"
+            android:text="@string/android_setting"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tv_system_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/service_setting_android"
+            android:drawablePadding="14dp"
+            android:gravity="center"
+            android:text="@string/system_setting"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/tv_calibration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:drawableTop="@drawable/service_setting_calibration"
+            android:drawablePadding="14dp"
+            android:gravity="center"
+            android:text="@string/calibration"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/tv_rotation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:drawableTop="@drawable/service_setting_ip"
+            android:drawablePadding="14dp"
+            android:gravity="center"
+            android:text="@string/rotation_setting"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_serial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:drawableTop="@drawable/service_setting_port"
+            android:drawablePadding="14dp"
+            android:gravity="center"
+            android:text="@string/serial_tool"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="35dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_back_ktv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="130dp"
+            android:gravity="right"
+            android:text="@string/ktv_name"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/service_setting_backtoktv"
+            android:drawablePadding="14dp"
+            android:gravity="center"
+            android:text="@string/back_to_ktv"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:drawableTop="@drawable/setting_room_name"
+            android:drawablePadding="14dp"
+            android:gravity="center"
+            android:text="@string/room_name_setting"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_large_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:drawableTop="@drawable/setting_room_name"
+            android:drawablePadding="14dp"
+            android:gravity="center"
+            android:text="@string/room_large_screen"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_set_baudrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:drawableTop="@drawable/service_setting_port"
+            android:drawablePadding="14dp"
+            android:gravity="center"
+            android:text="@string/set_serial_screen_baudrate"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+    </TableRow>
+</TableLayout>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/play_pk_mic_plus_p" android:state_pressed="true" />
+    <item android:drawable="@drawable/play_pk_mic_plus_p" android:state_selected="true" />
+    <item android:drawable="@drawable/play_pk_mic_up_n" />
+    <!-- default -->
+</selector>

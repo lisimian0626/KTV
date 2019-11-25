@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical"
+    android:layout_width="650dp"
+    android:layout_height="680dp"
+    android:background="@drawable/dlg_bg">
+
+        <TextView
+            android:id="@+id/dlg_room_safety_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pls_input_mng_pwd"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/button_title_text_size"
+            />
+        <TextView
+            android:id="@+id/dlg_room_safety_conntent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/dlg_safety_input_content"
+            android:layout_below="@+id/dlg_room_safety_title"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/button_text_size"
+            />
+
+    <com.beidousat.karaoke.widget.WidgetKeyboardLandspace
+        android:id="@+id/keyboard"
+        android:layout_width="@dimen/keyboard_width_land"
+        android:layout_height="@dimen/keyboard_height_land"
+        android:layout_above="@+id/setting_room_tv_ok"
+        android:layout_below="@+id/dlg_room_safety_conntent"
+        android:layout_marginTop="10dp"
+        app:show_input_type="false"
+        app:keyboard_input_hint="@string/dlg_safety_input_tips" />
+
+       <android.support.v7.widget.RecyclerView
+           android:layout_above="@+id/setting_room_tv_ok"
+           android:layout_below="@+id/dlg_room_safety_conntent"
+           android:layout_alignParentLeft="true"
+           android:layout_marginTop="30dp"
+           android:layout_marginBottom="30dp"
+           android:id="@+id/dlg_room_safety_rv"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/dlg_roomm_safety_ok"
+                android:layout_width="180dp"
+                android:height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="-10dp"
+                android:layout_height="wrap_content"
+                android:text="确定"
+                android:gravity="center"
+                android:textColor="@color/dlg_button_gradient_text_color"
+                android:textSize="@dimen/button_text_size"
+                android:background="@drawable/selector_dlg_button_gradient"
+                />
+</RelativeLayout>

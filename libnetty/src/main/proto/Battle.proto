@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+option java_package = "com.bestarmedia.proto.vod";
+option java_outer_classname = "BattleProto";
+option java_multiple_files = true;
+
+// 斗歌用户
+message BattleUser {
+    string ktv_net_code = 1;
+    string ktv_name = 2;
+    string room_code = 3;
+    string room_name = 4;
+    string room_session = 5;
+    int32 user_id = 6;
+    string name = 7; // 用户昵称
+    string avatar = 8; // 头像
+    int32  sex = 9; // 性别 0男 1女
+    float  score = 10; // 得分 大于0为已上传最终得分， -1为未上传
+}
+
+// 斗歌挑战书记录（启动，斗歌过程，结果等消息的数据结构）
+message BattleContract {
+    int32 id = 1; // 宣战书id
+    string slogan = 2; // 宣言
+    int32 song_id = 3; // 歌曲id
+    string song_name = 4; // 挑战歌曲名称
+    string singer_name = 5; // 歌手名称
+
+    BattleUser declarer = 6; // 发起者
+    BattleUser challenger = 7; // 应战者
+
+    string created_at = 8; // 宣战书创建时间
+    string accept_at = 9; // 应战时间
+    string updated_at = 10; // 更新时间
+    int32 status = 11; // 状态
+    string expire_at = 12; // 过期失效时间
+    int32 remaining_time = 13; // 剩余时间
+}
+
+// 发送给对方的得分
+message ScoreToOpponent {
+    BattleUser current_user = 1; // 我的得分
+    string opponent_ktv_net_code = 2; // 对方KTV编号
+    string opponent_room_code = 3; // 对方房间号
+    string text = 4; // 弹幕文本
+    int32  id = 5; // 斗歌记录ID
+}
+

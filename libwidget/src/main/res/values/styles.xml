@@ -1,0 +1,13 @@
+<resources>
+
+
+    //For GifView Declaration
+    <style name="Widget.GifView" parent="@android:style/Widget"></style>
+
+
+    <style name="popMenuMoreAnim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pop_list_more_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/pop_list_more_exit_anim</item>
+    </style>
+
+</resources>

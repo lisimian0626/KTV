@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_prompt_dialog">
+
+    <TextView
+        android:id="@+id/tv_song_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:textColor="#666"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_user1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_song_name"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/iv_user1"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:id="@+id/tv_user1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="#666"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_user2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_song_name"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/iv_user2"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:id="@+id/tv_user2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="#666"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_vs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_song_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="VS"
+        android:textColor="#666"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/tv_give_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_bottom"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/selector_red_btn"
+        android:gravity="center"
+        android:minHeight="40dp"
+        android:minWidth="160dp"
+        android:text="@string/give_up_pk"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_give_up_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_give_up"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:gravity="center"
+        android:text="@string/give_up_pk_tip"
+        android:textColor="#999"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="106dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_bill_bottom"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/iv_music_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/selector_pk_music_down" />
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/iv_music_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:src="@drawable/selector_pk_music_up" />
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/iv_mic_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:src="@drawable/selector_pk_mic_down" />
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/iv_mic_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:src="@drawable/selector_pk_mic_up" />
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/iv_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:src="@drawable/selector_pk_service" />
+    </LinearLayout>
+</RelativeLayout>

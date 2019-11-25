@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">libcommon</string>
+    <!--network-->
+    <string name="result_null">空数据</string>
+    <string name="request_fail">请求失败：%1$s</string>
+    <string name="network_timeout">网络超时</string>
+    <string name="network_failure">网络错误</string>
+    <string name="data_fromat_err">数据解析错误</string>
+    <string name="prompt">温馨提示</string>
+    <string name="network_error">未连接网络，请联系服务员...</string>
+    <string name="device_auth_fail">此设备未授权，请联系管理员...</string>
+    <string name="try_again">重试</string>
+
+    <string name="check_mode_enable">C模式已启动</string>
+    <string name="check_mode_disable">C模式已关闭</string>
+    <string name="dlg_pay_title">综合技术服务费</string>
+    <string name="dlg_pay_desc">(含曲库服务费)</string>
+    <string name="dlg_pay_use_time">支付费用后，可欢唱至房间关闭</string>
+    <string name="rmb">¥</string>
+    <string name="pay_type">支持以下支付方式</string>
+    <string name="refund_process">扫码后可查看费用说明</string>
+    <string name="ready_tips">功能升级中，请敬请期待！</string>
+
+</resources>

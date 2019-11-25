@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingLeft="20dp">
+
+    <!--<com.beidousat.widgetlibs.image.RecyclerImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="60dp"-->
+    <!--android:src="@drawable/ic_feedback_logo" />-->
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="12dp"
+            android:listSelector="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_empty"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/selector_btn_violet"
+            android:gravity="center"
+            android:minWidth="150dp"
+            android:text="@string/submit"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <com.beidousat.karaoke.widget.WidgetKeyboard
+        android:id="@+id/keyboard"
+        android:layout_width="@dimen/keyboard_width"
+        android:layout_height="@dimen/keyboard_height"
+        app:keyboard_focus_input_type="1"
+        app:keyboard_input_hint="@string/input_song_name"
+        app:show_word_count="false" />
+
+</LinearLayout>
+
+
+

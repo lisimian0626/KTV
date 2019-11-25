@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+
+    <com.beidousat.karaoke.widget.viewpager.WidgetTopTabs
+        android:id="@+id/topTab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_tabs_bar_height"
+        android:layout_marginTop="80dp" />
+
+
+    <com.beidousat.karaoke.widget.viewpager.WidgetSongLyricPager
+        android:id="@+id/songPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/w_page"
+        android:layout_below="@+id/topTab"
+        android:layout_marginTop="20dp"
+        app:horizontalMargin="6dp"
+        app:verticalMargin="6dp" />
+
+    <include
+        layout="@layout/widget_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topTab"
+        android:layout_marginTop="20dp" />
+
+    <com.beidousat.karaoke.widget.viewpager.WidgetPage
+        android:id="@id/w_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/keyboard"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp" />
+
+
+    <com.beidousat.karaoke.widget.WidgetKeyboard
+        android:id="@+id/keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/keyboard_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        app:keyboard_focus_input_type="1"
+        app:keyboard_input_hint="@string/search_song"
+        app:show_input_type="true" />
+
+</RelativeLayout>
+
+
+

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingLeft="28dp"
+    android:paddingRight="28dp"
+    android:paddingTop="12dp">
+
+    <LinearLayout
+        android:id="@+id/ll_signer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40dp"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_singer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="28sp" />
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/iv_singer"
+            android:layout_width="380dp"
+            android:layout_height="380dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitXY" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_weight="1">
+
+        <com.beidousat.karaoke.widget.viewpager.WidgetTopTabs
+            android:id="@+id/topTab"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_tabs_bar_height"
+            android:layout_toLeftOf="@+id/tv_search_song" />
+
+        <TextView
+            android:id="@+id/tv_search_song"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/top_tabs_bar_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/selector_gray_button"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/tab_padding_l_r"
+            android:paddingRight="@dimen/tab_padding_l_r"
+            android:text="@string/search_song"
+            android:textColor="@drawable/selector_tab_text"
+            android:textSize="@dimen/tab_text_size" />
+
+        <TextView
+            android:id="@+id/tv_singer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/top_tabs_bar_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/selector_gray_button"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/tab_padding_l_r"
+            android:paddingRight="@dimen/tab_padding_l_r"
+            android:textColor="@drawable/selector_tab_text"
+            android:textSize="@dimen/tab_text_size"
+            android:visibility="gone" />
+
+        <com.beidousat.karaoke.widget.viewpager.WidgetSongPagerV4
+            android:id="@+id/songPager"
+            android:layout_width="match_parent"
+            android:layout_height="396dp"
+            android:layout_below="@+id/topTab"
+            android:layout_marginTop="18dp"
+            app:showSingerButton="false" />
+
+        <com.beidousat.karaoke.widget.viewpager.WidgetPage
+            android:id="@+id/w_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/songPager"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+
+    <com.beidousat.karaoke.widget.WidgetKeyboard
+        android:layout_marginTop="100dp"
+        android:id="@+id/keyboard"
+        android:layout_width="@dimen/keyboard_width"
+        android:layout_height="@dimen/keyboard_height"
+        android:layout_marginLeft="20dp"
+        android:visibility="gone"
+        app:keyboard_input_hint="@string/search_song" />
+
+</LinearLayout>

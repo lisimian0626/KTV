@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical"
+    android:layout_width="420dp"
+    android:layout_height="680dp"
+
+    android:background="@drawable/dlg_bg">
+
+        <TextView
+            android:id="@+id/dlg_room_safety_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dlg_safety_store_title"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/button_title_text_size"
+            />
+        <TextView
+            android:id="@+id/dlg_room_safety_tips1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/dlg_safety_store_tips"
+            android:layout_below="@+id/dlg_room_safety_title"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/button_text_size"
+            />
+       <ImageView
+           android:id="@+id/iv_store_safety_qrcode"
+           android:layout_below="@+id/dlg_room_safety_tips1"
+           android:layout_above="@+id/dlg_room_safety_tips2"
+           android:layout_marginTop="50dp"
+           android:layout_marginBottom="30dp"
+           android:layout_centerHorizontal="true"
+           android:layout_width="150dp"
+           android:layout_height="150dp"/>
+
+    <TextView
+        android:id="@+id/dlg_room_safety_tips3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:text="@string/dlg_safety_store_tips3"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/button_text_size"
+        />
+
+    <TextView
+        android:id="@+id/dlg_room_safety_tips2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dlg_room_safety_tips3"
+        android:gravity="center"
+        android:layout_marginBottom="50dp"
+        android:text="@string/dlg_safety_store_tips2"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/button_text_size"
+        />
+</RelativeLayout>

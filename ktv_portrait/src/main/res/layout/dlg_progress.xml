@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dialog_dark"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="40dp"
+    android:paddingBottom="30dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/update_tip"
+        android:textColor="@android:color/white"
+        android:textSize="30sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="50dp">
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:maxLines="5"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ProgressBar
+            android:id="@+id/pgb_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:max="100" />
+
+        <TextView
+            android:id="@+id/tv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pgb_progress"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="4dp"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@android:id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/selector_dlg_cancel"
+        android:minWidth="150dp"
+        android:text="@string/close"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:visibility="gone" />
+
+</LinearLayout>

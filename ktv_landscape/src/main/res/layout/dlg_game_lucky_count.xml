@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/play_adventure_dlg_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/riv_num0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/selector_game_lucky_num0" />
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/riv_num1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/selector_game_lucky_num1" />
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/riv_num2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/selector_game_lucky_num2" />
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/riv_num3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/selector_game_lucky_num3" />
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/riv_num4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/selector_game_lucky_num4" />
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/riv_num5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/selector_game_lucky_num5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/riv_num6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/selector_game_lucky_num6" />
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/riv_num7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/selector_game_lucky_num7" />
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/riv_num8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/selector_game_lucky_num8" />
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/riv_num9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/selector_game_lucky_num9" />
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/riv_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/selector_game_lucky_num_del" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/riv_dlg_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/selector_game_lucky_dlg_no" />
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/riv_dlg_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/selector_game_lucky_dlg_yes" />
+    </LinearLayout>
+</LinearLayout>

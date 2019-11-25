@@ -1,0 +1,463 @@
+<resources>
+    <string name="app_name">竖版</string>
+
+    <string name="switch_song">切歌</string>
+    <string name="pause">暂停</string>
+    <string name="play">播放</string>
+    <string name="replay">重唱</string>
+    <string name="replay2">重播</string>
+    <string name="original">原唱</string>
+    <string name="accompany">伴唱</string>
+    <!--<string name="keep_original">保持原唱</string>-->
+    <string name="vol_mic">话筒音量</string>
+    <string name="vol_music">音乐音量</string>
+    <string name="vol">音量</string>
+    <string name="tone">音调</string>
+    <string name="mute">静音</string>
+    <string name="mute2">取消静音</string>
+    <string name="light">灯光</string>
+    <string name="atmo">气氛</string>
+    <string name="env">环境</string>
+    <string name="service">服务</string>
+    <string name="record">录音</string>
+    <string name="choosen">已点歌曲</string>
+    <string name="minor">幻影</string>
+    <string name="service_on">呼叫服务</string>
+    <string name="service_cancel">取消服务</string>
+    <string name="tune">调音</string>
+    <string name="wifi">WiFi</string>
+    <string name="back">返回</string>
+    <string name="home">主页</string>
+    <!--network-->
+    <string name="result_null">空数据</string>
+    <string name="request_fail">请求失败：%1$s</string>
+    <string name="menu_bill">账单</string>
+    <string name="handwriting">手写</string>
+    <string name="number">数字</string>
+
+    <string name="search_all">快速搜索</string>
+    <string name="choose_x">已点<Data><![CDATA[ <b><font color="#f32dd3">%d</font></b> ]]></Data>首</string>
+
+    <!--page category-->
+    <string name="ost">影视原声</string>
+    <string name="positive_energy">正能量</string>
+    <string name="net_song">网络歌曲</string>
+    <string name="period">年代</string>
+    <string name="dance">舞曲</string>
+    <string name="folk_song">民歌</string>
+
+    <string name="all">全部</string>
+
+    <string name="playing">正在播放</string>
+    <string name="next_song">下一首</string>
+    <string name="priorities_x">第%s首</string>
+
+    <string name="playing_x">正在播放：%1$s</string>
+    <string name="next_x">下一首：%1$s</string>
+    <string name="current_x">当前：%1$s</string>
+
+    <string name="search_song">搜索歌曲</string>
+    <string name="search_singer">搜索歌星</string>
+    <string name="original_now">原唱</string>
+    <string name="acc_now">伴唱</string>
+    <string name="search_lives">搜索直播</string>
+    <string name="search_topics">搜索专题</string>
+    <string name="input_song_name">输入歌曲名称</string>
+    <string name="input_singer">输入歌手姓名</string>
+
+    <string name="release_time_x">上映时间：%1$s</string>
+    <string name="director_x">导演：%1$s</string>
+    <string name="duration_x">时长：%1$s</string>
+    <string name="tarring_x">主演：%1$s</string>
+    <string name="area_x">地区：%1$s</string>
+    <string name="type_x">类型：%1$s</string>
+
+    <string name="live_begin_x">直播开始时间：%1$s</string>
+    <string name="live_end_x">直播结束时间：%1$s</string>
+
+    <string name="search_movie">搜索电影</string>
+    <string name="play_begin">开始播放</string>
+    <string name="not_start">尚未开始</string>
+
+    <string name="living">正在直播</string>
+
+    <string name="shuffle">打乱</string>
+    <string name="priority">优先</string>
+    <string name="delete">删除</string>
+    <string name="preview">预览</string>
+    <string name="collect">收藏</string>
+    <string name="download">下载</string>
+    <string name="on">开</string>
+    <string name="off">关</string>
+    <string name="all_off">全关</string>
+    <string name="all_on">全开</string>
+    <string name="light_up">加亮</string>
+    <string name="light_down">调暗</string>
+    <string name="auto_light_on">歌曲灯光－开</string>
+    <string name="auto_light_off">歌曲灯光－关</string>
+
+    <string name="auto_light">歌曲灯光</string>
+    <string name="other">其他</string>
+
+    <string name="prompt">温馨提示</string>
+    <string name="network_erro">未连接网络，请联系服务员&#8230;</string>
+    <string name="device_auth_fail">此设备未授权，请联系管理员&#8230;</string>
+    <string name="try_again">重试</string>
+
+
+    <string name="pre_page">上一页</string>
+    <string name="next_page">下一页</string>
+
+    <string name="preview_play">预览播放</string>
+
+    <string name="ad_past_time">广告<Data><![CDATA[ <b><font color="#c93462">%d</font></b> ]]></Data>秒</string>
+
+    <string name="room_time_less">即将到钟，欢迎下次光临&#8230;</string>
+    <string name="room_time_over">您的房间到钟了，欢迎下次光临&#8230;</string>
+    <string name="is_purchase_not_enabled">抱歉，未开房或非ERP控房</string>
+    <string name="slot_card_not_enabled">抱歉，打卡功能未开通&#8230;</string>
+    <string name="can_not_select_song">抱歉，未开房不能点歌，请联系服务员&#8230;</string>
+
+    <string name="ad">广告</string>
+
+    <string name="tone_default">原调</string>
+    <string name="tone_up">升调</string>
+    <string name="tone_down">降调</string>
+
+    <string name="auto">自动</string>S
+
+    <string name="standard">标准</string>
+    <string name="bright">明亮</string>
+    <string name="soft">柔和</string>
+    <string name="lyric">抒情</string>
+    <string name="montion">动感</string>
+    <string name="romantic">浪漫</string>
+    <string name="dim">朦胧</string>
+    <string name="concert">演唱</string>
+    <string name="passion">激情</string>
+    <string name="clean">清洁</string>
+    <string name="light_setting">灯光设置</string>
+    <string name="light_switcher">开/关</string>
+    <string name="light_on">开灯</string>
+    <string name="light_off">关灯</string>
+    <string name="light_auto">歌曲灯光</string>
+    <string name="light_auto_desc">(随着歌曲自动变换灯光)</string>
+
+    <string name="choose_empty_tip">点播列表已为空，请点歌</string>
+
+    <string name="choose_max">已点歌曲已达上限</string>
+
+    <string name="version_x">版本号：%1$s</string>
+    <string name="sys_version_x">系统版本号：%1$s</string>
+
+    <string name="rmb_x">¥%1$s</string>
+    <string name="total_x">小计：¥%1$s</string>
+
+    <string name="shopping_car">购物车</string>
+
+    <string name="tab_song">点歌</string>
+    <string name="tab_mood">心情</string>
+    <string name="tab_film">影院</string>
+    <string name="tab_live">直播</string>
+    <string name="tab_bill">账单</string>
+
+    <string name="close">关闭</string>
+    <string name="total">总计</string>
+    <string name="pls_input_mng_pwd">请输入管理密码</string>
+    <string name="wrong_pwd">密码错误</string>
+    <string name="mic">话筒</string>
+    <string name="tone_mic">话筒调音</string>
+    <string name="tone_mix">音乐</string>
+    <string name="tone_mix_music">音乐调音</string>
+    <string name="vol_down">音量－</string>
+    <string name="vol_up">音量＋</string>
+    <string name="music">音乐</string>
+    <string name="effect">音效</string>
+    <string name="effect_sing">唱将</string>
+    <string name="effect_blame">搞怪</string>
+    <string name="effect_trick">整蛊</string>
+    <string name="effect_harmony">和声</string>
+    <string name="effect_down">混响－</string>
+    <string name="effect_up">混响＋</string>
+    <string name="effect2">混响</string>
+
+    <string name="copyright">北星传媒  版权所有</string>
+    <string name="copyright2">Copyright © 2015－2019 BestarMedia. All Rights Reserved.</string>
+
+    <string name="gift_choose">赠品选择</string>
+    <string name="package_detail">套餐详情</string>
+    <string name="read_video_fail">读取视频失败^,^</string>
+    <string name="order_count">下单数量</string>
+    <string name="cancel">取消</string>
+    <string name="ok">确定</string>
+    <string name="retry">重试</string>
+    <string name="exit">退出</string>
+    <string name="remarks">备注</string>
+    <string name="gift_choose_x">赠品选择(<Data><![CDATA[ <b><font color="#c93462">%1$s</font></b> ]]></Data>)</string>
+    <string name="gift_count_max_tip">已达最大赠送数量：%1$s</string>
+
+    <string name="phone_song">手机</string>
+    <string name="share">分享</string>
+    <string name="call_service">服务</string>
+    <string name="score">评分</string>
+
+    <string name="ranking_x">%1$s由</string>
+    <string name="supporter">赞助播出</string>
+    <string name="pay_now">下单</string>
+    <string name="submit_order">提交订单</string>
+    <string name="good">商品</string>
+    <string name="count">数量</string>
+    <string name="price">单价</string>
+    <string name="total_s">小计</string>
+    <string name="gift">赠品</string>
+    <string name="pls_input_buy_count">请输入购买数量</string>
+
+    <string name="open_room_time_x">开房时间：%1$s</string>
+    <string name="min_consume_x">最低消费：%1$s</string>
+    <string name="cur_consume_x">目前消费：%1$s</string>
+    <string name="discount_x">我的折扣率：%1$s</string>
+    <string name="min_balance_x">低消差额：%1$s</string>
+    <string name="include_no_min_consume">（部分消费不纳入低消）</string>
+
+    <string name="my_give">我的赠送</string>
+    <string name="go_consume">继续消费</string>
+
+    <string name="start_game">开始游戏</string>
+    <string name="exit_game_tip">您确定退出游戏吗？</string>
+    <string name="give_up_pk_tips">放弃斗歌将扣1分，您确定放弃斗歌吗？</string>
+
+    <string name="pk_record_x">胜：%1$s  平：%2$s  负：%3$s  放弃：%4$s</string>
+    <string name="total_score">积分：%1$s</string>
+    <string name="mode_normal">娱乐</string>
+    <string name="professional">专业</string>
+
+    <string name="pk_start_msg">您正在与%1$s的K房进行斗歌，现在可以互发弹幕</string>
+    <string name="pk_danmaku_close">斗歌结束，互发弹幕已关闭&#8230;</string>
+    <string name="pk_start_song">斗歌开始：《%1$s》</string>
+    <string name="pk_give_msg">放弃斗歌：《%1$s》</string>
+    <string name="winner_x">获胜者：%1$s</string>
+    <string name="pk_result_tie">打平啦^.^</string>
+    <string name="pk_result_x">《%1$s》 斗歌结果：%2$s</string>
+    <string name="pk_opponents_msg">对方放弃斗歌，我方取得胜利！</string>
+    <string name="open_tv_tip">请打开电视机</string>
+    <string name="no_song_tip">对不起，您要找的歌还没有，您可以进行缺歌登记，我们将以最快速度补上。</string>
+    <string name="lack_song">缺歌登记</string>
+    <string name="lack_song2">缺歌</string>
+    <string name="pinyin">拼音</string>
+    <string name="submit">提交</string>
+    <string name="pls_input_song_name">请输入歌曲名称</string>
+    <string name="pls_input_singer_name">请输入歌手名字</string>
+    <string name="pls_input_room_name">请输入房间名字</string>
+    <string name="upload_record_fail">上传录音失败&#8230;</string>
+    <string name="record_file_not_exist">录音文件不存在!</string>
+    <string name="get_song_info_ex">获取挑战歌曲出现异常</string>
+    <string name="select_save_user">请选择保存的人</string>
+    <string name="save_record_success">保存录音成功，请在手机查看</string>
+    <string name="save_record_fail">保存录音失败了</string>
+    <string name="save">保存</string>
+    <string name="select_pk">选择应战人</string>
+    <string name="fire_fail">请求应战失败，原因：%1$s</string>
+    <string name="pls_select_game_song">请选择挑战歌曲</string>
+    <string name="collecting">正在添加到收藏夹&#8230;</string>
+    <string name="collect_success">收藏成功！</string>
+    <string name="collect_fail">收藏失败：%1$s</string>
+    <string name="give_up_pk">放弃斗歌</string>
+    <string name="give_up_pk_tip">放弃斗歌则本次挑战作负</string>
+    <string name="pk_start_timer">斗歌倒计时</string>
+    <string name="you_win">您获得本次胜利</string>
+    <string name="pk_end_timer">斗歌结束倒计时</string>
+    <string name="opp_give_up_pk">对方放弃了本次斗歌</string>
+    <string name="winner">获胜者</string>
+    <string name="draw">打平啦！^.^</string>
+
+    <string name="marquee_simple">这里是走马灯位置示例</string>
+
+    <string name="marquee_position_x">走马灯当前位置：%d</string>
+    <string name="ad_corner_position_x">角标当前位置：%d</string>
+    <string name="ad_corner_setting">角标设置</string>
+    <string name="move_left">左移</string>
+    <string name="move_right">右移动</string>
+    <string name="back_default">还原默认位置</string>
+    <string name="marquee_setting">走马灯设置</string>
+    <string name="move_up">上移</string>
+    <string name="move_down">下移</string>
+    <string name="system_setting">系统设置</string>
+    <string name="tv_show_setting">电视屏显示设置</string>
+    <string name="back_to_ktv">返回点歌</string>
+    <string name="ktv_name">瑶光KTV</string>
+    <string name="android_setting">安卓系统界面</string>
+    <string name="order_submit_success">下单成功</string>
+    <string name="order_submit_fail">下单失败</string>
+
+    <string name="upload_mv_x">上传了自制MV《%1$s》</string>
+    <string name="invitation_x">邀请%1$s合唱 《%2$s》</string>
+    <string name="self_made_mv">自制MV</string>
+
+    <string name="game_no_tv_tip">您的电视机没有开，不能进行游戏</string>
+    <string name="score_closed">评分关闭</string>
+    <string name="score_mode_normal">娱乐评分模式</string>
+    <string name="score_mode_professional">专业评分模式</string>
+    <string name="tip_shopping_car_empty">未选择商品，请选择商品后再提交！</string>
+    <!--<string name="erp_disable_tip">暂未开通此功能</string>-->
+    <string name="erp_no_gift_tip">无赠送功能</string>
+    <string name="version_info">版本信息</string>
+    <string name="current_version">当前版本号</string>
+    <string name="total_song">歌曲总数</string>
+    <string name="hd_song_count">高清歌曲</string>
+    <string name="score_song_count">评分歌曲</string>
+    <string name="singer_count">歌星</string>
+
+    <!--<string name="new_add_song">新歌</string>-->
+    <!--<string name="china_new_voice">中国新歌声</string>-->
+    <!--<string name="zui_mei_he_sheng">最美和声</string>-->
+    <string name="update_log">更新日志</string>
+    <string name="song_x">%s首</string>
+    <string name="company_name">北星传媒</string>
+    <string name="saving">保存中&#8230;</string>
+    <string name="saved">已保存</string>
+    <string name="play_to_scenes">播放至场景</string>
+    <string name="score_no_open_tip">店家未开启评分功能</string>
+    <string name="is_scenes_playing">场景播放中</string>
+    <string name="song_info">歌库信息</string>
+    <string name="cur_version_x">当前版本：%s</string>
+    <string name="calibration">屏幕校准</string>
+    <string name="update_tip">系统升级</string>
+    <string name="hdmi_screen">电视屏</string>
+    <string name="clock_on">上班打卡</string>
+    <string name="clock_off">下班打卡</string>
+    <string name="clock_tip">请将您的工卡放置在读卡器上</string>
+    <string name="job_num">工号：%s</string>
+    <string name="stage_name">艺名：%s</string>
+    <!--<string name="clock_success">打卡成功</string>-->
+    <string name="clock_fail">打卡失败</string>
+    <string name="clock_cancel">取消打卡</string>
+    <string name="clock_card_or_input_account_pwd">刷卡或输入帐号密码</string>
+    <string name="clock_card">打卡</string>
+    <string name="clock_card_or_input_card_number">刷卡或输入卡号</string>
+    <string name="card_number">请输入卡号</string>
+    <string name="clock_on_success_desc">上班打卡成功</string>
+    <string name="clock_off_success_desc">下班打卡成功</string>
+    <string name="clock_cancel_success_desc">取消打卡成功</string>
+
+    <string name="clock_on_fail_desc">上班打卡失败</string>
+    <string name="clock_off_fail_desc">下班打卡失败</string>
+    <string name="clock_cancel_fail_desc">取消打卡失败</string>
+
+    <string name="video_size_setting">视频大小设置</string>
+    <string name="room_name_setting">房间设置</string>
+    <string name="room_name_setting_error">房间名不能为空</string>
+    <string name="room_name">房间名:</string>
+    <string name="original_size">原始大小</string>
+    <string name="enlarge_size">放大</string>
+    <string name="set_video_enlarge_tip">设置成功，重启应用后生效！</string>
+    <string name="reset_hdmi">重启</string>
+    <string name="checking_network">正在检测网络&#8230;</string>
+    <string name="connecting_server">正在连接服务器，请稍候&#8230;</string>
+    <string name="setting_network">设置网络</string>
+    <string name="choose_empty_tip2">您还没点歌，马上点歌high起来！</string>
+    <string name="sung_empty_tip">演唱歌曲，分享录音！（需开启录音）</string>
+    <string name="download_empty_tip">当前房间没有云下载歌曲</string>
+
+    <string name="search">搜索</string>
+    <string name="shrink">缩小</string>
+
+    <string name="red_packet_tip_x">%1$s提示您：</string>
+    <string name="cloud_song_download_tip">云歌曲需要下载</string>
+    <string name="downloading">正在下载</string>
+    <string name="download_fail">下载失败</string>
+    <string name="pls_input_pwd">请输入密码</string>
+    <string name="in_list">正在排队</string>
+
+
+    <string name="addr_x">地址：%1$s</string>
+    <string name="tel_x">电话：%1$s</string>
+    <string name="time_x">营业时间：%1$s</string>
+    <string name="view_all">查看全部</string>
+
+    <string name="remove_song_tip">移除已点歌曲《%1$s》吗？</string>
+    <string name="remove">移除</string>
+    <string name="wechat_scan_get_coupon">微信扫一扫领取优惠券</string>
+    <string name="coupon_is_over">优惠券被领完了 ^.^</string>
+    <string name="show_on_tv">投屏</string>
+
+    <string name="close_on_tv">关闭投屏</string>
+    <string name="enter_store_fail">入库失败：%1$s</string>
+    <string name="enter_store_success">入库成功！</string>
+
+    <string name="pk_guide">斗歌玩法</string>
+    <string name="server_ip">服务器IP设置</string>
+    <string name="go_to_setting">去设置</string>
+    <string name="server_ip_empty_tip">服务器IP不能为空，否则将无法使用！</string>
+    <string name="setting_success_pls_restart">设置成功，请重启！</string>
+
+    <string name="first_page">首页</string>
+    <string name="sing_again">再唱一次</string>
+    <string name="this_song_is_playing">这首歌正在播放</string>
+    <string name="song_already_in_selected_list">您已经点过这首歌了</string>
+    <string name="pls_select_bug_type">请选择歌曲问题</string>
+    <string name="song_bug_text1">KTV版缺失</string>
+    <string name="song_bug_text2">演唱会版缺失</string>
+    <string name="song_bug_text3">KTV版不清晰</string>
+    <string name="song_bug_text4">演唱会版不清晰</string>
+    <string name="set_serial_screen_baudrate">设置串口屏波特率</string>
+    <string name="disconnect_phone">断开所有手机>>></string>
+    <string name="feedback_loading">正在提交&#8230;</string>
+    <string name="feedback_success_tip">缺歌反馈提交成功，我们会尽快处理！谢谢支持！</string>
+    <string name="feedback_fail_tip">抱歉，网络出现一点小问题！您可以扫码在公众号内提交反馈，谢谢理解！</string>
+    <string name="del_shop_cart_confirm">要删除 %1$s 吗？</string>
+    <string name="male">男士</string>
+    <string name="female">女士</string>
+    <string name="people_count">人数</string>
+    <string name="left_people_x">左边起第%s个人</string>
+    <string name="del_shop_cart_confirm2">确定要删除所选商品吗？</string>
+    <string name="del_selected">删除所选</string>
+
+    <string name="mood">气氛</string>
+    <string name="serial_tool">中控测试工具</string>
+
+    <string name="no">序号</string>
+    <string name="stage_name2">艺名</string>
+    <string name="job_num2">工号</string>
+    <string name="clock_card_time">打卡时间</string>
+    <string name="video_loading">视频加载中&#8230;</string>
+    <string name="account">账号</string>
+    <string name="password">密码</string>
+    <string name="account_verify_fail">帐号或者密码不正确！</string>
+    <string name="have_gift_no_select_tip">本组套装没有选完，是否放弃选择进入下一组？</string>
+    <string name="order_have_gift_no_select_tip">《%s》有套装例送没有选完，是否继续提交订单？</string>
+    <string name="have_gift_no_select_close_tip">本组套装例送没有选完，是否离开？</string>
+    <string name="skin_default">默认皮肤</string>
+
+    <string name="disconnect_phone_tip">点击确定则断开当前房间所有手机连接，手机用户请重新扫码连接！</string>
+    <string name="disconnect">断开</string>
+
+    <string name="copyright_title">保护版权，人人有责</string>
+    <string name="copyright_desc">因权利人要求，此歌曲需要支付版权费才能继续点唱</string>
+    <string name="sing_other">我要点唱其他歌曲</string>
+    <string name="to_sing">我要点唱</string>
+    <string name="price_x">单价：¥%s</string>
+    <string name="pay_success">支付成功</string>
+    <string name="pay_fail">支付失败</string>
+    <string name="check_mode_enable">C模式已启动</string>
+    <string name="check_mode_disable">C模式已关闭</string>
+    <string name="song_file_not_exit">歌曲文件不存在</string>
+    <string name="update_week_of_year">第%1$s周（ %2$s 至 %3$s ）</string>
+    <string name="song_update_log">新歌：%1$s，更新：%2$s，下架：%3$s</string>
+
+    <string name="play_on_main_only_tip">游戏需要连接电视，只能在主屏上玩哦&#8230;</string>
+
+    <string name="pk_accepting">正在发起应战&#8230;</string>
+    <string name="pk_accept_success">应战成功！</string>
+
+    <string name="play_info">正在播放：%1$s             下一首：%2$s</string>
+    <string name="cool_screen">炫屏</string>
+    <string name="wechat_scan_qr_code">微信扫码点歌</string>
+    <string name="phone_login">扫码进入房间</string>
+    <string name="switching_cool_screen_tip">正在切换炫屏，请稍后&#8230;</string>
+    <string name="max_select">最大可选：(<Data><![CDATA[ <b><font color="#c93462">%1$s</font></b> ]]></Data>)</string>
+    <string name="gift_max_select">选择“%1$s”时，总量不能超过：%2$s</string>
+    <string name="network_disable_tip">网络不畅，请联系服务员处理&#8230;</string>
+    <string name="muting">静音中</string>
+    <string name="rotation_setting">屏幕旋转设置</string>
+
+</resources>

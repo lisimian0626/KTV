@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true">
+
+    <LinearLayout
+        android:id="@+id/lin_score"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/dlg_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical">
+
+            <com.bestarmedia.libwidget.text.GradientTextView
+                android:id="@+id/score_tv_entertainment"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_dlg_button_bg"
+                android:clickable="true"
+                android:drawableTop="@drawable/selector_dlg_score_entertainment"
+                android:gravity="center"
+                android:shadowColor="@color/dlg_shadow_color2"
+                android:shadowDx="0"
+                android:shadowDy="2"
+                android:shadowRadius="10"
+                android:textColor="@color/dlg_tone_text_color_start"
+                android:textColorHighlight="@color/dlg_tone_text_color_end" />
+
+            <com.bestarmedia.libwidget.text.GradientTextView
+                android:id="@+id/score_tv_entertainment_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:shadowColor="@color/dlg_shadow_color"
+                android:shadowDx="0"
+                android:shadowDy="10"
+                android:shadowRadius="20"
+                android:text="@string/mode_normal"
+                android:textColor="@color/dlg_tone_text_color_start"
+                android:textColorHighlight="@color/dlg_tone_text_color_end" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:orientation="vertical">
+
+            <com.bestarmedia.libwidget.text.GradientTextView
+                android:id="@+id/score_tv_professional"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_dlg_button_bg"
+                android:clickable="true"
+                android:drawableTop="@drawable/selector_dlg_score_professional"
+                android:gravity="center"
+                android:shadowColor="@color/dlg_shadow_color2"
+                android:shadowDx="0"
+                android:shadowDy="2"
+                android:shadowRadius="10"
+                android:textColor="@color/dlg_tone_text_color_start"
+                android:textColorHighlight="@color/dlg_tone_text_color_end" />
+
+            <com.bestarmedia.libwidget.text.GradientTextView
+                android:id="@+id/score_tv_professional_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:shadowColor="@color/dlg_shadow_color"
+                android:shadowDx="0"
+                android:shadowDy="10"
+                android:shadowRadius="20"
+                android:text="@string/professional"
+                android:textColor="@color/dlg_tone_text_color_start"
+                android:textColorHighlight="@color/dlg_tone_text_color_end" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/score_iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/lin_score"
+        android:src="@drawable/dlg_close_new" />
+</RelativeLayout>
+

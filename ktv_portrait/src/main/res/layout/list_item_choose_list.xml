@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contentView"
+    android:layout_width="match_parent"
+    android:layout_height="90dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_song"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/selector_song_item"
+        android:paddingBottom="4dp"
+        android:tag="skin:selector_song_item:background">
+
+        <TextView
+            android:id="@+id/tv_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/song_list_item_padding"
+            android:layout_marginTop="@dimen/song_list_item_padding"
+            android:minWidth="30dp"
+            android:singleLine="true"
+            android:tag="skin:selector_list_item_text:textColor"
+            android:textColor="@drawable/selector_list_item_text"
+            android:textSize="@dimen/text_song_item_name" />
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/song_list_item_padding"
+            android:layout_marginTop="@dimen/song_list_item_padding"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@+id/tv_no"
+            android:drawablePadding="6dp"
+            android:ellipsize="end"
+            android:gravity="start|top"
+            android:maxWidth="480dp"
+            android:maxLines="2"
+            android:tag="skin:selector_list_item_text:textColor"
+            android:textColor="@drawable/selector_list_item_text"
+            android:textSize="@dimen/text_song_item_name" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tv_name"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_singer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxWidth="120dp"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:tag="skin:selector_list_item_sub_text:textColor"
+                android:textColor="@drawable/selector_list_item_sub_text"
+                android:textSize="@dimen/text_song_item_singer" />
+
+            <TextView
+                android:id="@+id/tv_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:maxWidth="60dp"
+                android:maxLines="1"
+                android:tag="skin:selector_list_item_sub_text:textColor"
+                android:textColor="@drawable/selector_list_item_sub_text"
+                android:textSize="@dimen/text_song_item_version" />
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/riv_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:visibility="invisible" />
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/riv_cloud"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:src="@drawable/ic_song_cloud_tag"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_sort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:singleLine="true"
+                android:tag="skin:selector_list_item_sub_text:textColor"
+                android:textColor="@drawable/selector_list_item_sub_text"
+                android:textSize="@dimen/text_song_item_sort"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/riv_avatar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:singleLine="true"
+                android:tag="skin:selector_list_item_sub_text:textColor"
+                android:text="@string/phone_song"
+                android:textColor="@drawable/selector_list_item_sub_text"
+                android:textSize="@dimen/text_song_item_sort"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/riv_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/riv_more"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            android:src="@drawable/selector_to_top"
+            android:tag="skin:selector_to_top:src" />
+
+        <ImageView
+            android:id="@+id/riv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="2dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            android:src="@drawable/selector_song_list_more"
+            android:tag="skin:selector_song_list_more:src" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_singers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/selector_song_item"
+        android:padding="5dp"
+        android:tag="skin:selector_song_item:background"
+        android:visibility="gone">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_singer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" />
+
+        <TextView
+            android:id="@+id/tv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="24dp"
+            android:paddingTop="12dp"
+            android:paddingRight="24dp"
+            android:paddingBottom="12dp"
+            android:tag="skin:selector_list_item_sub_text:textColor"
+            android:text="@string/close"
+            android:textColor="@drawable/selector_list_item_sub_text" />
+    </RelativeLayout>
+</RelativeLayout>

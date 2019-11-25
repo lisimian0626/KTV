@@ -1,0 +1,99 @@
+<resources>
+
+    <!--<string-array name="api_song_language_text">-->
+        <!--<item>全部</item>-->
+        <!--<item>国语</item>-->
+        <!--<item>粤语</item>-->
+        <!--<item>英语</item>-->
+        <!--<item>日语</item>-->
+        <!--<item>韩语</item>-->
+        <!--<item>闽南语</item>-->
+        <!--<item>其他</item>-->
+    <!--</string-array>-->
+    <!--<string-array name="api_song_language_id">-->
+        <!--<item>ALL</item>-->
+        <!--<item>1</item>-->
+        <!--<item>2</item>-->
+        <!--<item>3</item>-->
+        <!--<item>4</item>-->
+        <!--<item>5</item>-->
+        <!--<item>6</item>-->
+        <!--<item>QITA</item>-->
+    <!--</string-array>-->
+
+    <!--<string-array name="ranking_texts">-->
+        <!--<item>本店</item>-->
+        <!--<item>北斗排行</item>-->
+        <!--<item>酷我</item>-->
+        <!--<item>虾米</item>-->
+        <!--<item>情歌榜</item>-->
+        <!--<item>劲歌榜</item>-->
+        <!--<item>KTV金曲</item>-->
+        <!--<item>中国好声音</item>-->
+        <!--<item>我是歌手</item>-->
+        <!--<item>最美和声</item>-->
+        <!--<item>影视经典</item>-->
+        <!--<item>60后</item>-->
+        <!--<item>70后</item>-->
+        <!--<item>80后</item>-->
+        <!--<item>90后</item>-->
+        <!--<item>00后</item>-->
+        <!--<item>新歌榜</item>-->
+        <!--<item>热歌榜</item>-->
+        <!--<item>中国新歌声</item>-->
+        <!--<item>盖世英雄</item>-->
+    <!--</string-array>-->
+
+    <!--<integer-array name="ranking_types">-->
+        <!--<item>1</item>-->
+        <!--<item>2</item>-->
+        <!--<item>3</item>-->
+        <!--<item>4</item>-->
+        <!--<item>5</item>-->
+        <!--<item>6</item>-->
+        <!--<item>7</item>-->
+        <!--<item>8</item>-->
+        <!--<item>9</item>-->
+        <!--<item>10</item>-->
+        <!--<item>11</item>-->
+        <!--<item>12</item>-->
+        <!--<item>13</item>-->
+        <!--<item>14</item>-->
+        <!--<item>15</item>-->
+        <!--<item>16</item>-->
+        <!--<item>17</item>-->
+        <!--<item>18</item>-->
+        <!--<item>22</item>-->
+        <!--<item>23</item>-->
+    <!--</integer-array>-->
+
+    <!--<string-array name="api_chorus_language_text">-->
+        <!--<item>全部</item>-->
+        <!--<item>国语</item>-->
+        <!--<item>粤语</item>-->
+        <!--<item>英语</item>-->
+    <!--</string-array>-->
+    <!--<string-array name="api_chorus_language_id">-->
+        <!--<item>ALL</item>-->
+        <!--<item>1</item>-->
+        <!--<item>2</item>-->
+        <!--<item>3</item>-->
+    <!--</string-array>-->
+
+    <!--<string-array name="api_singer_song_tab_text">-->
+        <!--<item>全部</item>-->
+        <!--<item>国语</item>-->
+        <!--<item>粤语</item>-->
+        <!--<item>英语</item>-->
+        <!--<item>A-Z排序</item>-->
+        <!--<item>字数排序</item>-->
+    <!--</string-array>-->
+    <!--<string-array name="api_singer_song_tab_id">-->
+        <!--<item>ALL</item>-->
+        <!--<item>1</item>-->
+        <!--<item>2</item>-->
+        <!--<item>3</item>-->
+        <!--<item></item>-->
+        <!--<item></item>-->
+    <!--</string-array>-->
+</resources>

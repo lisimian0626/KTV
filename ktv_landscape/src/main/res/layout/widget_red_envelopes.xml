@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/ll_ad"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_red_envelopes_ad"
+        android:paddingLeft="80dp"
+        android:paddingTop="10dp"
+        android:paddingRight="80dp"
+        android:paddingBottom="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_ad_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="宝马汽车提示您："
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:layout_width="210dp"
+            android:layout_height="19dp"
+            android:layout_below="@+id/tv_ad_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_red_envelopes_text" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/ll_red_envelopes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/riv_red_envelopes"
+            android:layout_width="153dp"
+            android:layout_height="143dp"
+            android:src="@drawable/bg_red_envelopes" />
+
+        <com.bestarmedia.libwidget.image.CircleImageView
+            android:id="@+id/riv_ad"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="80dp"
+            app:civ_border_color="@android:color/white"
+            app:civ_border_width="2dp"
+            app:civ_fill_color="#f05043" />
+
+    </RelativeLayout>
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/riv_gold"
+        android:layout_width="138dp"
+        android:layout_height="83dp"
+        android:layout_marginLeft="-120dp"
+        android:layout_toRightOf="@+id/ll_ad"
+        android:src="@drawable/ic_red_envelope_gold"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bestarmedia.libwidget.layout.EnterAnimLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/iv_screen_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/main_top_bar_logo"
+            android:tag="skin:main_top_bar_logo:src" />
+
+        <com.bestarmedia.libwidget.text.GradientTextView
+            android:id="@+id/tv_room_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:tag="skin:main_text_start:textColor|skin:main_text_end:textColorHighlight"
+            android:textColor="@color/main_text_start"
+            android:textColorHighlight="@color/main_text_end"
+            android:textSize="24sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</com.bestarmedia.libwidget.layout.EnterAnimLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+    <item
+        android:drawable="@drawable/tv_tutor3_1"
+        android:duration="330" />
+    <item
+        android:drawable="@drawable/tv_tutor3_2"
+        android:duration="330" />
+
+    <item
+        android:drawable="@drawable/tv_tutor3_3"
+        android:duration="330" />
+</animation-list>

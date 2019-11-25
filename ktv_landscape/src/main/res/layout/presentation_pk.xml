@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+
+    <com.bestarmedia.texture.VideoTextureView
+        android:id="@+id/video_texture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.bestarmedia.libwidget.danmaku.BarrageView
+            android:id="@+id/barrage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="53dp" />
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/iv_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="16dp"
+            android:src="@drawable/tv_calling_service"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/tv_player_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_tv_operation_tip"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textColor="@android:color/white"
+            android:textSize="38sp"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_avatar1"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:id="@+id/tv_user1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_avatar1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_rect_white_corner"
+                android:gravity="center"
+                android:maxWidth="80dp"
+                android:minWidth="64dp"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="10sp" />
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_start1"
+                android:layout_width="45dp"
+                android:layout_height="51dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/iv_avatar1"
+                android:src="@drawable/tv_pk_star_l" />
+
+            <ProgressBar
+                android:id="@+id/pgb_1"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tv_score1"
+                android:layout_toRightOf="@+id/iv_start1"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/bg_pk_score_pgb_left" />
+
+            <TextView
+                android:id="@+id/tv_score1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="28dp"
+                android:layout_toLeftOf="@+id/tv_vs"
+                android:text="00"
+                android:textColor="@android:color/white"
+                android:textSize="60sp" />
+
+            <TextView
+                android:id="@+id/tv_vs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="28dp"
+                android:layout_marginRight="28dp"
+                android:text="VS"
+                android:textColor="#666"
+                android:textSize="28sp" />
+
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_avatar2"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp" />
+
+            <TextView
+                android:id="@+id/tv_user2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_avatar2"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_rect_white_corner"
+                android:gravity="center"
+                android:maxWidth="80dp"
+                android:minWidth="64dp"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="10sp" />
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_start2"
+                android:layout_width="45dp"
+                android:layout_height="51dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/iv_avatar2"
+                android:src="@drawable/tv_pk_star_l" />
+
+            <TextView
+                android:id="@+id/tv_score2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="28dp"
+                android:layout_toRightOf="@+id/tv_vs"
+                android:text="00"
+                android:textColor="@android:color/white"
+                android:textSize="60sp" />
+
+
+            <ProgressBar
+                android:id="@+id/pgb_2"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/iv_start2"
+                android:layout_toRightOf="@+id/tv_score2"
+                android:background="@drawable/bg_tv_score_pgb"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/bg_pk_score_pgb_right" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_timer"
+            android:layout_width="336dp"
+            android:layout_height="207dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_prompt_dialog">
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="18dp"
+                android:text="@string/pk_start_timer"
+                android:textColor="#666"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="18dp"
+                android:layout_toRightOf="@+id/tv_time"
+                android:text="5"
+                android:textColor="#FF5555"
+                android:textSize="16sp" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_user1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_time"
+                android:layout_marginLeft="63dp"
+                android:layout_marginTop="34dp"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:maxEms="10"
+                android:orientation="vertical"
+                android:singleLine="true">
+
+                <com.bestarmedia.libwidget.image.RecyclerImageView
+                    android:id="@+id/iv_dlg_user1"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp" />
+
+                <TextView
+                    android:id="@+id/tv_dlg_user1"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="#666"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_user2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_time"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="34dp"
+                android:layout_marginRight="63dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.bestarmedia.libwidget.image.RecyclerImageView
+                    android:id="@+id/iv_dlg_user2"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp" />
+
+                <TextView
+                    android:id="@+id/tv_dlg_user2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="#666"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_dlg_vs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_time"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="55dp"
+                android:gravity="center"
+                android:text="VS"
+                android:textColor="#666"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_dlg_song_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:textColor="#666"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_give_up"
+            android:layout_width="230dp"
+            android:layout_height="159dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="230dp"
+                android:layout_height="138dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/bg_prompt_dialog">
+
+                <TextView
+                    android:id="@+id/tv_win_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="28dp"
+                    android:text="@string/you_win"
+                    android:textColor="#F59d08"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_give_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_win_text"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="11dp"
+                    android:text="@string/pk_end_timer"
+                    android:textColor="#666"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_give_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_win_text"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_toRightOf="@+id/tv_give_t"
+                    android:text="5"
+                    android:textColor="#FF5555"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginBottom="14dp"
+                    android:text="@string/opp_give_up_pk"
+                    android:textColor="#666"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:layout_width="43dp"
+                android:layout_height="46dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/tv_pk_winner_cup" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_game_result"
+            android:layout_width="368dp"
+            android:layout_height="198dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="28dp"
+            android:background="@drawable/tv_score_info_bg"
+            android:visibility="gone">
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_cup"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="46dp"
+                android:layout_marginTop="17dp"
+                android:src="@drawable/tv_pk_winner_cup" />
+
+            <TextView
+                android:id="@+id/iv_win_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="32dp"
+                android:layout_toRightOf="@+id/iv_cup"
+                android:text="@string/winner"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_winner"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="189dp"
+                android:layout_marginTop="16sp" />
+
+            <TextView
+                android:id="@+id/tv_tie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="32dp"
+                android:text="@string/draw"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_winner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="28dp"
+                android:layout_toRightOf="@+id/iv_winner"
+                android:background="@drawable/bg_rect_white_corner"
+                android:ellipsize="marquee"
+                android:maxWidth="92dp"
+                android:minHeight="18dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:singleLine="true"
+                android:textColor="#666"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="1dp"
+                android:layout_height="55dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginBottom="41dp"
+                android:background="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tv_result_score1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="50dp"
+                android:layout_toLeftOf="@+id/line"
+                android:textColor="#FF3690"
+                android:textSize="36sp" />
+
+
+            <TextView
+                android:id="@+id/tv_result_score2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="50dp"
+                android:layout_toRightOf="@+id/line"
+                android:textColor="#FF3690"
+                android:textSize="36sp" />
+
+
+            <TextView
+                android:id="@+id/tv_result_user1"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="37dp"
+                android:background="@drawable/bg_rect_white_corner"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:padding="4dp"
+                android:singleLine="true"
+                android:textColor="#666"
+                android:textSize="10sp" />
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_result_user1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_above="@+id/tv_result_user1"
+                android:layout_marginLeft="50dp" />
+
+
+            <TextView
+                android:id="@+id/tv_result_user2"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="46dp"
+                android:layout_marginBottom="37dp"
+                android:background="@drawable/bg_rect_white_corner"
+                android:gravity="center"
+                android:padding="2dp"
+                android:singleLine="true"
+                android:textColor="#666"
+                android:textSize="10sp" />
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_result_user2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_above="@+id/tv_result_user2"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="50dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

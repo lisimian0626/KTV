@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#353a41">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/version_info"
+            android:textColor="#999"
+            android:textSize="30sp" />
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/iv_back"
+            android:layout_width="114dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/service_setting_back" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_back"
+            android:background="#666666" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_version_info"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_version_info_corner"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_version_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:drawableTop="@drawable/service_setting_song"
+            android:drawablePadding="14dp"
+            android:gravity="center"
+            android:text="@string/song_info"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lv_songinfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="30dp">
+
+        <TextView
+            android:id="@+id/tv_update_log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/update_log"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <com.beidousat.karaoke.widget.viewpager.WidgetUpdateLogPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/w_page"
+            android:layout_below="@+id/tv_update_log"
+            android:layout_marginTop="20dp" />
+
+        <com.beidousat.karaoke.widget.viewpager.WidgetPage
+            android:id="@id/w_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

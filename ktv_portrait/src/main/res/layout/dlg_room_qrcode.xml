@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="708dp"
+        android:layout_height="370dp"
+        android:background="@drawable/floating_phone">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_qr_code"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="100dp"
+            android:layout_marginRight="90dp">
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_qrcode"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="0dp" />
+
+            <ProgressBar
+                android:id="@+id/pgb_qrcode"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:id="@+id/tv_qr_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+        <com.bestarmedia.libwidget.text.GradientTextView
+            android:id="@+id/btn_disconnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:padding="12dp"
+            android:text="@string/disconnect_phone"
+            android:tag="skin:main_text_start:textColor|skin:main_text_end:textColorHighlight"
+            android:textColor="@color/main_text_start"
+            android:textColorHighlight="@color/main_text_end"
+            android:textSize="16sp"
+            />
+    </RelativeLayout>
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/riv_down_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/rl_content"
+        android:layout_below="@+id/rl_content"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:src="@drawable/ic_download_app" />
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/riv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_dlg_qrcode_close"
+        android:stateListAnimator="@animator/selector_animate_scale"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bestarmedia.libwidget.material.RelativeLayoutMaterial xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contentView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_barrage"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="@color/barrage_selector_text"
+        android:textSize="18px"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        />
+</com.bestarmedia.libwidget.material.RelativeLayoutMaterial>

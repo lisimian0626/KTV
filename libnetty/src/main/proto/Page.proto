@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option java_package = "com.bestarmedia.proto";
+option java_outer_classname = "PageProto";
+option java_multiple_files = true;
+
+// 分页
+message Pagination {
+    int32 current_page = 1; // 当前页
+    int32 per_page = 2; // 每页数量
+    int32 total = 3; // 总数
+}

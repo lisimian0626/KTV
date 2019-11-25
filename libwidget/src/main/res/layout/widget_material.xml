@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.andexert.library.RippleView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@android:id/content"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:rv_rippleDuration="@integer/ripple_duration"
+    app:rv_type="simpleRipple">
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@android:id/background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</com.andexert.library.RippleView>

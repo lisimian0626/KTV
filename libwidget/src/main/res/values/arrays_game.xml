@@ -1,0 +1,74 @@
+<resources>
+    <string-array name="game_lv1">
+        <item>背一位异性绕场一周</item>
+        <item>唱青藏高原最后一句</item>
+        <item>做一个大家都满意的鬼脸</item>
+        <item>背起一位异性直到下一轮大冒险结束</item>
+        <item>用方言向一位异性小伙伴表白</item>
+        <item>与一位异性十指相扣，对视10秒</item>
+        <item>邀请一位异性为你唱情歌，或邀请一位异性与你情歌对唱</item>
+        <item>任选一人让他摆一个指定的POSE</item>
+        <item>跳草裙舞</item>
+        <item>在包房外向服务员鞠躬说辛苦了</item>
+        <item>深情的吻墙10秒</item>
+        <item>原地转10圈</item>
+        <item>跳钢管舞</item>
+        <item>在走廊大喊我要代表月亮消灭你们</item>
+        <item>走猫步</item>
+        <item>选个人胳肢你30秒</item>
+        <item>在厕所里唱歌，让大家都能听到唱的是什么</item>
+        <item>用手纸当围巾，围脖子上持续一轮游戏</item>
+        <item>站到凳子上表演大猩猩捶胸呐喊动作</item>
+        <item>背起最重的一位同伴做3个深蹲</item>
+        <item>选一人让他讲笑话直到所有人都笑为止</item>
+        <item>任选一个男生一起摆芙蓉姐姐的S形</item>
+        <item>选两个人，让他们互相壁咚</item>
+
+    </string-array>
+    <string-array name="game_lv2">
+        <item>竭尽所能邀请服务员进来唱一首歌</item>
+        <item>背一位异性绕场一周</item>
+        <item>任选一位同伴两人相拥10秒</item>
+        <item>选一位同伴近距对视30秒不许笑，直到成功</item>
+        <item>与一位同伴互相为食</item>
+        <item>在包房外大喊燃烧吧我的小宇宙</item>
+        <item>与左边同伴掰手腕 输的跳舞</item>
+        <item>任选一人在走廊大喊燃烧我的卡路里</item>
+        <item>左右手边的两位同伴喝交杯酒</item>
+        <item>与右手边第1个对喂花生米</item>
+        <item>任选一个人和你一起跳海草舞</item>
+        <item>任选两人，一人踩在另一人脚上跳舞</item>
+        <item>相邻最近的异性，女生坐男生小腿上，男生做10个仰卧起坐</item>
+        <item>对一名异性深情凝望，并朗诵骆宾王的《鹅》</item>
+        <item>露出肚皮，扭腰扭屁股，各扭3圈</item>
+        <item>慢慢地性感地把上衣撩起到不能再撩起的位置</item>
+        <item>给手机里一名异性打电话，深情的说其实…我是…猪</item>
+        <item>请一位异性共舞一段，舞蹈任意</item>
+        <item>敲隔壁包房的门说你找周润发</item>
+        <item>敲隔壁包房的门说我是周润发 刚刚有人找我吗</item>
+        <item>指定一名女生让她现场卸妆</item>
+
+    </string-array>
+
+    <string-array name="game_lv3">
+        <item>点一首征服，在地上劈叉唱</item>
+        <item>选一位异性互相喂酒、喂吃的</item>
+        <item>下腰做拱桥 肚子上放个水杯不许打翻</item>
+        <item>在包房桌子上游泳</item>
+        <item>任选两人，一人用嘴吸住一纸牌，另一人用嘴从另一面将纸牌吸住移走</item>
+        <item>相邻最近的异性，女生壁咚男生10秒</item>
+        <item>给关系最好的同性朋友打电话，说自己出柜了并对对方表白</item>
+        <item>相邻最近的异性，男生仰躺地上，女生撑在上面，坚持5秒钟</item>
+        <item>选一名异性同伴一起在包房外大喊三遍重金求子</item>
+        <item>模仿古代特殊职业女子拉客</item>
+        <item>与一名异性十指交扣握住保持一轮</item>
+        <item>挑逗最近的一位异性</item>
+        <item>任选两人让他们面对面作搓澡状，扭屁股的同时唱喜刷刷</item>
+        <item>被所有人弹额头</item>
+        <item>背一位异性绕场一周</item>
+        <item>和右边第一个异性关在厕所里等一轮游戏</item>
+        <item>把右边第一个异性横抱起来</item>
+        <item>妩媚地摸自己胸说“唉太小了”</item>
+        <item>点一首飞得更高，任选一人一边深蹲跳一边唱</item>
+    </string-array>
+</resources>

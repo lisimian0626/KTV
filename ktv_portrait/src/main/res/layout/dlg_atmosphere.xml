@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/dlg_atmosphere"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/dlg_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/dlg_atmosphere_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal">
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/rv_emoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_dlg_atmosphere_emoji" />
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/rv_barrage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_dlg_atmosphere_barrage" />
+
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/rv_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_dlg_atmosphere_room" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_emoji"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/dlg_atmosphere_emoji_detail"
+                android:layout_width="660dp"
+                android:layout_height="350dp"
+                android:background="@drawable/bg_atmosphere_connent"
+                android:scrollbars="vertical" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dlg_atmosphere_emoji_detail"
+                android:background="@drawable/bg_atmosphere_bottom"
+                android:orientation="horizontal">
+
+                <com.bestarmedia.libwidget.image.RecyclerImageView
+                    android:id="@+id/emoji_default"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/emojilist_selector"
+                    android:src="@drawable/emoji_list_default" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/dlg_atmosphere_emoji_list"
+                    android:layout_width="580dp"
+                    android:layout_height="80dp"
+                    android:scrollbars="horizontal" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_barrage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_atmosphere_connent"
+            android:padding="15dp"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/et_text"
+                android:layout_width="420dp"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_edit_text_atmosphere"
+                android:editable="false"
+                android:enabled="false"
+                android:focusable="false"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="80dp"
+                android:textColor="#333"
+                android:textSize="26sp" />
+
+            <com.bestarmedia.libwidget.material.ImageMaterial
+                android:id="@+id/riv_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/et_text"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/mood_barrage_edit_clear" />
+
+            <com.bestarmedia.libwidget.material.ImageMaterial
+                android:id="@+id/tv_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_toRightOf="@+id/et_text"
+                android:src="@drawable/mood_barrage_send" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_barrages"
+                android:layout_width="280dp"
+                android:layout_height="300dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@+id/rv_words"
+                android:orientation="vertical"
+                android:scrollbars="vertical" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_words"
+                android:layout_width="60dp"
+                android:layout_height="300dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@+id/tablet" />
+
+            <FrameLayout
+                android:id="@+id/tablet"
+                android:layout_width="240dp"
+                android:layout_height="300dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/bg_mood_barrage_writing" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_room"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/rl_air"
+                android:layout_width="400dp"
+                android:layout_height="430dp"
+                android:background="@drawable/bg_atmosphere_connent">
+
+                <LinearLayout
+                    android:id="@+id/ll_air_switcher"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/dlg_button_bg_n"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ToggleButton
+                        android:id="@+id/tg_air_switcher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:button="@drawable/selector_dlg_toggle"
+                        android:checked="true"
+                        android:clickable="false"
+                        android:textOff=""
+                        android:textOn="" />
+
+                    <com.bestarmedia.libwidget.text.GradientBaseTextView
+                        android:id="@+id/tv_air_switcher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:shadowColor="@color/dlg_shadow_color2"
+                        android:shadowDy="2"
+                        android:shadowRadius="10"
+                        android:text="@string/air_con"
+                        android:textColor="@color/selector_text_color_blue_item"
+                        android:textColorHighlight="@color/selector_text_colorhight_blue_item" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_air"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_air_switcher"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_air_mode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical">
+
+                        <com.bestarmedia.libwidget.text.GradientBaseTextView
+                            android:id="@+id/air_mode"
+                            android:layout_width="110dp"
+                            android:layout_height="30dp"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center"
+                            android:text="@string/air_mode"
+                            android:textColor="@color/dlg_tone_text_color_nomal"
+                            android:textSize="16sp" />
+
+                        <com.bestarmedia.libwidget.text.GradientTextView
+                            android:id="@+id/air_mode_auto"
+                            android:layout_width="110dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/selector_light_effect_bg_blue"
+                            android:drawableStart="@drawable/selector_dlg_atmosphere_air_mode_auto"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="12dp"
+                            android:text="@string/air_con_mode_auto"
+                            android:textColor="@color/selector_text_color_blue_item"
+                            android:textColorHighlight="@color/selector_text_colorhight_blue_item"
+                            android:textSize="16sp" />
+
+                        <com.bestarmedia.libwidget.text.GradientTextView
+                            android:id="@+id/air_mode_cool"
+                            android:layout_width="110dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/selector_light_effect_bg_blue"
+                            android:drawableStart="@drawable/selector_dlg_atmosphere_air_mode_cool"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="12dp"
+                            android:text="@string/air_con_mode_cool"
+                            android:textColor="@color/selector_text_color_blue_item"
+                            android:textColorHighlight="@color/selector_text_colorhight_blue_item"
+                            android:textSize="16sp" />
+
+                        <com.bestarmedia.libwidget.text.GradientTextView
+                            android:id="@+id/air_mode_hot"
+                            android:layout_width="110dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/selector_light_effect_bg_blue"
+                            android:drawableStart="@drawable/selector_dlg_atmosphere_air_mode_hot"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="12dp"
+                            android:text="@string/air_con_mode_hot"
+                            android:textColor="@color/selector_text_color_blue_item"
+                            android:textColorHighlight="@color/selector_text_colorhight_blue_item"
+                            android:textSize="16sp" />
+
+                        <com.bestarmedia.libwidget.text.GradientTextView
+                            android:id="@+id/air_mode_wind"
+                            android:layout_width="110dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/selector_light_effect_bg_blue"
+                            android:drawableStart="@drawable/selector_dlg_atmosphere_air_mode_wind"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="12dp"
+                            android:text="@string/air_con_mode_wind"
+                            android:textColor="@color/selector_text_color_blue_item"
+                            android:textColorHighlight="@color/selector_text_colorhight_blue_item"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_temp_mode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical">
+
+                        <com.bestarmedia.libwidget.text.GradientBaseTextView
+                            android:id="@+id/temp_mode"
+                            android:layout_width="110dp"
+                            android:layout_height="30dp"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center"
+                            android:text="@string/temp_mode"
+                            android:textColor="@color/dlg_tone_text_color_nomal"
+                            android:textSize="16sp" />
+
+                        <com.bestarmedia.libwidget.text.GradientTextView
+                            android:id="@+id/air_temp_up"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:background="@drawable/selector_dlg_button_bg"
+                            android:clickable="true"
+                            android:drawableTop="@drawable/selector_dlg_tone_up"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:shadowColor="@color/dlg_shadow_color2"
+                            android:shadowDy="2"
+                            android:shadowRadius="10"
+                            android:text="@string/temp"
+                            android:textColor="@color/selector_text_color_blue_item"
+                            android:textColorHighlight="@color/selector_text_colorhight_blue_item" />
+
+                        <com.bestarmedia.libwidget.text.GradientTextView
+                            android:id="@+id/air_temp_down"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/selector_dlg_button_bg"
+                            android:clickable="true"
+                            android:drawableTop="@drawable/selector_dlg_tone_down"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:shadowColor="@color/dlg_shadow_color2"
+                            android:shadowDy="2"
+                            android:shadowRadius="10"
+                            android:text="@string/temp"
+                            android:textColor="@color/selector_text_color_blue_item"
+                            android:textColorHighlight="@color/selector_text_colorhight_blue_item" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_wind_mode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical">
+
+                        <com.bestarmedia.libwidget.text.GradientBaseTextView
+                            android:id="@+id/wind_mode"
+                            android:layout_width="110dp"
+                            android:layout_height="30dp"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center"
+                            android:text="@string/wind_mode"
+                            android:textColor="@color/dlg_tone_text_color_nomal"
+                            android:textSize="16sp" />
+
+
+                        <com.bestarmedia.libwidget.text.GradientTextView
+                            android:id="@+id/wind_mode_auto"
+                            android:layout_width="110dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/selector_light_effect_bg_blue"
+                            android:drawableStart="@drawable/selector_dlg_atmosphere_air_mode_auto"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="12dp"
+                            android:text="@string/air_con_mode_auto"
+                            android:textColor="@color/selector_text_color_blue_item"
+                            android:textColorHighlight="@color/selector_text_colorhight_blue_item"
+                            android:textSize="16sp" />
+
+                        <com.bestarmedia.libwidget.text.GradientTextView
+                            android:id="@+id/wind_mode_high"
+                            android:layout_width="110dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/selector_light_effect_bg_blue"
+                            android:drawableStart="@drawable/selector_dlg_atmosphere_air_wind_high"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="12dp"
+                            android:text="@string/air_wind_high"
+                            android:textColor="@color/selector_text_color_blue_item"
+                            android:textColorHighlight="@color/selector_text_colorhight_blue_item"
+                            android:textSize="16sp" />
+
+                        <com.bestarmedia.libwidget.text.GradientTextView
+                            android:id="@+id/wind_mode_mid"
+                            android:layout_width="110dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/selector_light_effect_bg_blue"
+                            android:drawableStart="@drawable/selector_dlg_atmosphere_air_wind_mid"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="12dp"
+                            android:text="@string/air_wind_mid"
+                            android:textColor="@color/selector_text_color_blue_item"
+                            android:textColorHighlight="@color/selector_text_colorhight_blue_item"
+                            android:textSize="16sp" />
+
+                        <com.bestarmedia.libwidget.text.GradientTextView
+                            android:id="@+id/wind_mode_low"
+                            android:layout_width="110dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/selector_light_effect_bg_blue"
+                            android:drawableStart="@drawable/selector_dlg_atmosphere_air_wind_low"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="12dp"
+                            android:text="@string/air_wind_low"
+                            android:textColor="@color/selector_text_color_blue_item"
+                            android:textColorHighlight="@color/selector_text_colorhight_blue_item"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_wind"
+                android:layout_width="240dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_toRightOf="@+id/rl_air"
+                android:background="@drawable/bg_atmosphere_connent">
+
+                <LinearLayout
+                    android:id="@+id/ll_wind_switcher"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/dlg_button_bg_n"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ToggleButton
+                        android:id="@+id/tg_wind_switcher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:button="@drawable/selector_dlg_toggle"
+                        android:checked="true"
+                        android:clickable="false"
+                        android:textOff=""
+                        android:textOn="" />
+
+                    <com.bestarmedia.libwidget.text.GradientBaseTextView
+                        android:id="@+id/tv_wind_switcher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:shadowColor="@color/dlg_shadow_color2"
+                        android:shadowDy="2"
+                        android:shadowRadius="10"
+                        android:text="@string/air"
+                        android:textColor="@color/selector_text_color_blue_item"
+                        android:textColorHighlight="@color/selector_text_colorhight_blue_item" />
+                    />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_effect"
+                android:layout_width="240dp"
+                android:layout_height="260dp"
+                android:layout_below="@+id/rl_wind"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/rl_air"
+                android:background="@drawable/bg_atmosphere_connent">
+
+                <com.bestarmedia.libwidget.text.GradientTextView
+                    android:id="@+id/room_effect_bubble"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/selector_dlg_button_bg"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/selector_air_effect_bubble"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:shadowColor="@color/dlg_shadow_color2"
+                    android:shadowDy="2"
+                    android:shadowRadius="10"
+                    android:text="@string/air_bubble"
+                    android:textColor="@color/selector_text_color_blue_item"
+                    android:textColorHighlight="@color/selector_text_colorhight_blue_item" />
+
+                <com.bestarmedia.libwidget.text.GradientTextView
+                    android:id="@+id/room_effect_smoke"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_below="@+id/room_effect_bubble"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/selector_dlg_button_bg"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/selector_air_effect_smoke"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:shadowColor="@color/dlg_shadow_color2"
+                    android:shadowDy="2"
+                    android:shadowRadius="10"
+                    android:text="@string/air_smoke"
+                    android:textColor="@color/selector_text_color_blue_item"
+                    android:textColorHighlight="@color/selector_text_colorhight_blue_item" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/riv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/dlg_atmosphere"
+        android:src="@drawable/dlg_close_new" />
+</RelativeLayout>

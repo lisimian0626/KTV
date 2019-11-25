@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    >
+    <LinearLayout
+        android:id="@+id/dlg_light_control"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/dlg_bg">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <com.bestarmedia.libwidget.text.GradientTextView
+                android:id="@+id/light_tv_up"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:background="@drawable/selector_dlg_button_bg"
+                android:clickable="true"
+                android:drawableTop="@drawable/selector_dlg_tone_up"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="12dp"
+                android:shadowColor="@color/dlg_shadow_color2"
+                android:shadowDy="2"
+                android:shadowRadius="10"
+                android:text="@string/light_up"
+                android:textColor="@color/selector_text_color_blue_item"
+                android:textColorHighlight="@color/selector_text_colorhight_blue_item" />
+
+            <com.bestarmedia.libwidget.text.GradientTextView
+                android:id="@+id/light_tv_down"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_dlg_button_bg"
+                android:clickable="true"
+                android:drawableTop="@drawable/selector_dlg_tone_down"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="12dp"
+                android:shadowColor="@color/dlg_shadow_color2"
+                android:shadowDy="2"
+                android:shadowRadius="10"
+                android:text="@string/light_down"
+                android:textColor="@color/selector_text_color_blue_item"
+                android:textColorHighlight="@color/selector_text_colorhight_blue_item" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/light_rv_effect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/light_lin_screen"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:background="@drawable/dlg_button_bg_n"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ToggleButton
+                    android:id="@+id/light_tg_screen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:button="@drawable/selector_dlg_toggle"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:textOff=""
+                    android:textOn="" />
+
+                <com.bestarmedia.libwidget.text.GradientBaseTextView
+                    android:id="@+id/light_tv_screen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:shadowColor="@color/dlg_shadow_color2"
+                    android:shadowDy="2"
+                    android:shadowRadius="10"
+                    android:text="@string/hdmi_screen"
+                    android:textColor="@color/selector_text_color_blue_item"
+                    android:textColorHighlight="@color/selector_text_colorhight_blue_item" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/light_lin_auto"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/dlg_button_bg_n"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ToggleButton
+                    android:id="@+id/light_tg_auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:button="@drawable/selector_dlg_toggle"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:textOff=""
+                    android:textOn="" />
+
+                <com.bestarmedia.libwidget.text.GradientBaseTextView
+                    android:id="@+id/light_tv_auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:shadowColor="@color/dlg_shadow_color2"
+                    android:shadowDy="2"
+                    android:shadowRadius="10"
+                    android:text="@string/auto_light"
+                    android:textColor="@color/selector_text_color_blue_item"
+                    android:textColorHighlight="@color/selector_text_colorhight_blue_item" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/riv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/dlg_light_control"
+        android:src="@drawable/dlg_close_new" />
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 按下状态-->
+    <item android:state_focused="true" android:state_pressed="true">
+        <shape android:shape="oval">
+            <stroke android:width="@dimen/seekbar_thumb_transparent_pop" android:color="@android:color/transparent" />
+            <solid android:color="@android:color/white" />
+            <size android:width="@dimen/seekbar_thumb_pressed_height_pop" android:height="@dimen/seekbar_thumb_pressed_height_pop" />
+
+        </shape>
+    </item>
+    <!-- 普通无焦点状态 -拖动按钮-->
+    <item android:state_focused="false" android:state_pressed="false">
+        <shape android:shape="oval">
+            <stroke android:width="@dimen/seekbar_thumb_transparent_pop" android:color="@android:color/transparent" />
+            <solid android:color="@android:color/white" />
+            <size android:width="@dimen/seekbar_thumb_pressed_height_pop" android:height="@dimen/seekbar_thumb_pressed_height_pop" />
+        </shape>
+    </item>
+
+    <!-- 有焦点状态-->
+    <item android:state_focused="true" android:state_pressed="false">
+        <shape android:shape="oval">
+            <stroke android:width="@dimen/seekbar_thumb_transparent_pop" android:color="@android:color/transparent" />
+            <solid android:color="@android:color/white" />
+            <size android:width="@dimen/seekbar_thumb_pressed_height_pop" android:height="@dimen/seekbar_thumb_pressed_height_pop" />
+        </shape>
+    </item>
+    <!-- 有焦点 -->
+    <item android:state_focused="true">
+        <shape android:shape="oval">
+            <stroke android:width="@dimen/seekbar_thumb_transparent_pop" android:color="@android:color/transparent" />
+            <solid android:color="@android:color/white" />
+            <size android:width="@dimen/seekbar_thumb_pressed_height_pop" android:height="@dimen/seekbar_thumb_pressed_height_pop" />
+        </shape>
+    </item>
+</selector>

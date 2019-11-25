@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_keyboard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/keyboard_background"
+    android:orientation="horizontal"
+    android:paddingLeft="6dp"
+    android:paddingTop="6dp"
+    android:paddingRight="3dp"
+    android:paddingBottom="6dp"
+    android:tag="skin:keyboard_background:background">
+
+    <LinearLayout
+        android:layout_width="205dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.bestarmedia.libwidget.edit.EditTextEx
+            android:id="@android:id/edit"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/keyboard_search_input_background"
+            android:drawableRight="@drawable/selector_edit_text_clear"
+            android:drawablePadding="10dp"
+            android:editable="false"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:tag="skin:keyboard_search_input_background:background|skin:keyboard_text_selected:textColor|skin:keyboard_text:textColorHint"
+            android:textColor="@color/keyboard_text_selected"
+            android:textColorHint="@color/keyboard_text"
+            android:textCursorDrawable="@null"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/rg_input_types"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/keyboard_key_background"
+                android:checkedButton="@+id/rb_pinyin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:tag="skin:keyboard_key_background:background">
+
+                <RadioButton
+                    android:id="@+id/rb_pinyin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:clickable="false"
+                    android:tag="skin:selector_keyboard_tab_text:textColor"
+                    android:text="@string/pinyin"
+                    android:textColor="@drawable/selector_keyboard_tab_text"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_split"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:tag="skin:selector_keyboard_tab_text:textColor"
+                    android:text="/"
+                    android:textColor="@drawable/selector_keyboard_tab_text"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_handwriting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:clickable="false"
+                    android:tag="skin:selector_keyboard_tab_text:textColor"
+                    android:text="@string/handwriting"
+                    android:textColor="@drawable/selector_keyboard_tab_text"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_feedback"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1"
+                android:background="@color/keyboard_search_lack_song_background"
+                android:gravity="center"
+                android:tag="skin:keyboard_search_lack_song_background:background|skin:selector_keyboard_tab_text:textColor"
+                android:text="@string/lack_song2"
+                android:textColor="@drawable/selector_keyboard_tab_text"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_words_count"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:overScrollMode="never" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/type_keyboard"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="6dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_number"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:overScrollMode="never" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_keyboard_line1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="3dp"
+            android:overScrollMode="never" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_keyboard_line2"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="3dp"
+            android:overScrollMode="never" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_keyboard_line3"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="3dp"
+            android:overScrollMode="never" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/type_handwriting"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:id="@+id/tablet"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_toLeftOf="@+id/iv_del"
+            android:background="@drawable/bg_keyboard_hand_writing"
+            android:tag="skin:bg_keyboard_hand_writing:background" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_words"
+            android:layout_width="162dp"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/iv_del"
+            android:layout_alignParentRight="true"
+            android:overScrollMode="never" />
+
+        <TextView
+            android:id="@+id/iv_del"
+            android:layout_width="160dp"
+            android:layout_height="57dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/selector_keyboard_handwriting_word_background"
+            android:gravity="center"
+            android:tag="skin:selector_keyboard_handwriting_word_background:background|skin:selector_keyboard_key_text:textColor"
+            android:text="@string/delete"
+            android:textColor="@drawable/selector_keyboard_key_text"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="18">
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/bg_cur_next"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_ad_corner_top" />
+
+        <TextView
+            android:id="@+id/tv_current_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_next_song"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxWidth="130dp"
+            android:singleLine="true"
+            android:text="@string/playing"
+            android:textColor="#FE5195"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_next_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="6dp"
+            android:ellipsize="end"
+            android:maxWidth="130dp"
+            android:maxLines="1"
+            android:text="@string/next_song"
+            android:textColor="#898989"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/rl_top"
+        android:layout_weight="55">
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/bg_ad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_ad_corner_bottom" />
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/iv_ads"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_ad_corner"
+            android:scaleType="fitXY"
+            android:src="@drawable/ad_corner_default" />
+    </RelativeLayout>
+
+
+</LinearLayout>

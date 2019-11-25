@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bestarmedia.libwidget.layout.EnterAnimLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/iv_qr_code"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:scaleType="fitXY"
+            android:src="@drawable/qrcode" />
+
+        <com.bestarmedia.libwidget.text.GradientTextView
+            android:id="@+id/tv_text"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2"
+            android:background="@android:color/black"
+            android:gravity="center"
+            android:tag="skin:main_text_start:textColor|skin:main_text_end:textColorHighlight"
+            android:text="@string/wechat_scan_qr_code"
+            android:textColor="@color/main_text_start"
+            android:textColorHighlight="@color/main_text_end"
+            android:textSize="@dimen/television_qr_code_text_size"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</com.bestarmedia.libwidget.layout.EnterAnimLayout>

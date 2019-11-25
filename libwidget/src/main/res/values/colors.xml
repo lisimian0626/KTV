@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FFF4D573</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <color name="bg_top_bar">#e0140a1e</color>
+    <color name="bg_bottom_bar">#313030</color>
+    <color name="txt_banner">#ebd5b5</color>
+    <color name="divider_main">#ab6116</color>
+    <color name="material_text_color">#ffffffff</color>
+    <color name="list_view_divider">#484759</color>
+
+    <color name="pager_bg">#66000000</color>
+
+    <color name="half_transparent">#E9000000</color>
+    <!--<color name="movie_live_play">#f49626</color>-->
+    <!--<color name="movie_live_playing">#33FFFFFF</color>-->
+    <color name="bg_shop_cart">#99000000</color>
+    <!--走马灯加亮-->
+    <color name="marquee">#FABF1F</color>
+
+    <color name="voic_source">#D2D2D2</color>
+    <color name="voic_mic">#fe418c</color>
+    <color name="song_list_item_text">#CCCCCC</color>
+    <color name="song_selected">#FFF4D573</color>
+
+    <color name="renderColor">@android:color/white</color>
+
+    <color name="C1">#FFB413</color>
+    <color name="C2">#FFF</color>
+    <color name="C3">#566C7A</color>
+
+    <color name="B1">#FFF</color>
+
+    <color name="CZ1">#333</color>
+    <color name="CZ2">#666</color>
+    <color name="CZ3">#999</color>
+    <color name="CZ4">#8b4523</color>
+
+    <color name="X1">#CCC</color>
+
+
+    <color name="dlg_tone_text_color_start">#4183D4</color>
+    <color name="dlg_tone_text_color_end">#75DEB5</color>
+    <color name="dlg_tone_text_color2_start">#b209ea</color>
+    <color name="dlg_tone_text_color2_end">#e3689e</color>
+    <color name="dlg_tone_text_color_nomal">#677298</color>
+
+    <color name="dlg_shadow_color">#801f91c6</color>
+    <color name="tone_text_color">#7382be</color>
+    <color name="dlg_shadow_color2">#181d35</color>
+    <color name="dlg_light_text_color_nomal">#677298</color>
+    <color name="dlg_light_text_color_blue">#4183d4</color>
+    <color name="dlg_light_text_color_red">#b209ea</color>
+
+    <color name="dlg_button_gradient_default_start">#ffa913</color>
+    <color name="dlg_button_gradient_default_end">#ff7113</color>
+
+    <color name="dlg_button_gradient_press_start">#da7600</color>
+    <color name="dlg_button_gradient_press_end">#ca4b0a</color>
+
+    <color name="dlg_button_default_nomal">#343d67</color>
+    <color name="dlg_button_default_press">#252d54</color>
+
+    <color name="dlg_button_text_color">#a8b2e7</color>
+    <color name="dlg_button_gradient_text_color">#562d0d</color>
+
+
+    <color name="dlg_device_type_bg_p">#ffb413</color>
+    <color name="dlg_device_type_bg_n">#b376b8</color>
+    <color name="dlg_safety_check_fail">#ec3535</color>
+
+    <!--以下颜色是皮肤可以配置-->
+    <!--音量底部操作栏进度条背景颜色-->
+    <color name="voice_progress_bg">#34115c</color>
+    <!--音量环渐变开始颜色背景颜色-->
+    <color name="main_volume_color_start">#4b47ea</color>
+    <!--音量环渐变结束颜色背景颜色-->
+    <color name="main_volume_color_end">#b010f1</color>
+
+    <!--播放器进度条底色-->
+    <color name="player_progress_background">#130836</color>
+    <!--播放器进度条渐变开始颜色-->
+    <color name="player_progress_color_start">#4b47ea</color>
+    <!--播放器进度条渐变结束颜色-->
+    <color name="player_progress_color_end">#b010f1</color>
+
+    <!--首页字体颜色-->
+    <color name="main_text_start">#a366ff</color>
+    <color name="main_text_end">#ff7ccb</color>
+
+    <!--列表item颜色-->
+    <color name="list_item_fill_start">#e6050c18</color><!--列表填充颜色（渐变开始）色值-->
+    <color name="list_item_fill_start_pressed">#e6050c18</color><!--列表填充颜色（渐变开始）点击色值-->
+    <color name="list_item_fill_end">#e62a3341</color><!--列表填充颜色（渐变结束）色值-->
+    <color name="list_item_fill_end_pressed">#e62a3341</color><!--列表填充颜色（渐变结束）点击色值-->
+    <color name="list_item_stroke">#e61e2d44</color><!--列表边框色值-->
+    <color name="list_item_stroke_pressed">#e61e2d44</color><!--列表边框色值，点击色值-->
+    <color name="list_item_text">#ffffff</color><!--列表文字默认颜色-->
+    <color name="list_item_text_selected">#ffb413</color><!--列表文字选中颜色（歌名）-->
+    <color name="list_item_sub_text">#cccccc</color><!--列表小文字颜色（歌手、版本）-->
+    <color name="list_item_sub_text_selected">#ffb413</color><!--列表文字选中颜色（歌名）-->
+
+    <!--键盘颜色-->
+    <color name="keyboard_text">#cccccc</color><!--键盘文字颜色（拼音、手写、字数）-->
+    <color name="keyboard_text_selected">#ffb413</color><!--键盘文字选中颜色（拼音、手写、字数）-->
+    <color name="keyboard_background">#e6272f3b</color><!--键盘背景颜色-->
+    <color name="keyboard_background_stroke">#e64f5259</color><!--键盘背景描边颜色-->
+    <color name="keyboard_search_input_background">#99272f3b</color><!--键盘搜索框背景颜色-->
+    <color name="keyboard_search_lack_song_background">#ff272f3b</color><!--键盘缺歌背景颜色-->
+    <color name="keyboard_key_background">#1a2029</color><!--键盘按键背景颜色-->
+    <color name="keyboard_key_background_pressed">#ffb413</color><!--键盘按键点击背景颜色-->
+    <color name="keyboard_key_text">#ffffff</color><!--键盘按键文字默认颜色-->
+    <color name="keyboard_key_text_pressed">#ffffff</color><!--键盘按键文字点击颜色-->
+    <color name="keyboard_key_text_disable">#303843</color><!--键盘按键文字禁用颜色-->
+    <color name="keyboard_handwriting_word_background">#991a2029</color><!--键盘手写备选字背景颜色-->
+    <color name="keyboard_handwriting_word_background_pressed">#ffb413</color><!--键盘手写备选字背景颜色-->
+
+    <!--语种等筛选TAB-->
+    <color name="tab_fill_start">#e6050c18</color><!--填充颜色（渐变开始）色值-->
+    <color name="tab_fill_end">#e62a3341</color><!--填充颜色（渐变开始）色值-->
+    <color name="tab_stroke">#e61e2d44</color><!--表边框色值-->
+    <color name="tab_text">#ffffff</color><!--文字默认颜色-->
+    <color name="tab_text_selected">#ffb413</color><!--文字选中颜色-->
+    <color name="tab_text_disable">#303843</color><!--文字默认颜色-->
+
+    <color name="room_regist_text2">#da3434</color>
+    <color name="room_regist_text1">#34da82</color>
+
+    <color name="barrage_select">#fee91e</color>
+
+</resources>

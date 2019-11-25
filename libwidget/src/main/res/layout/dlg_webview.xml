@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<com.github.lzyzsd.jsbridge.BridgeWebView-->
+        <!--android:id="@+id/webview"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--/>-->
+    <com.tamic.jswebview.view.ProgressBarWebView
+        android:id="@+id/webview"
+        style="@style/NumberProgressBar_Default"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/riv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/webview"
+        android:src="@drawable/dlg_close_new" />
+</RelativeLayout>

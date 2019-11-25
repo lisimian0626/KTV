@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bestarmedia.libwidget.layout.EnterAnimLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/riv_ad_screen1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+</com.bestarmedia.libwidget.layout.EnterAnimLayout>

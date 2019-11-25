@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dlg_order_submit"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@android:id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/clock_on"
+        android:textColor="@android:color/white"
+        android:textSize="28sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/clock_card_or_input_card_number"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <com.bestarmedia.libwidget.edit.NoImeEditText
+                android:id="@+id/et_num"
+                android:layout_width="1px"
+                android:layout_height="1px"
+                android:focusable="true"
+                android:visibility="visible" />
+
+
+            <com.bestarmedia.libwidget.edit.EditTextEx
+                android:id="@android:id/edit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_edit_text"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/selector_edit_text_clear"
+                android:editable="false"
+                android:hint="@string/card_number"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="#35CD8E"
+                android:textColorHint="@drawable/selector_account_input_text"
+                android:textCursorDrawable="@null"
+                android:textSize="20sp" />
+
+            <com.bestarmedia.libwidget.edit.EditTextEx
+                android:id="@android:id/input"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/selector_edit_text"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/selector_edit_text_clear"
+                android:editable="false"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="#35CD8E"
+                android:textColorHint="@drawable/selector_account_input_text"
+                android:textCursorDrawable="@null"
+                android:textSize="20sp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@android:id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/selector_dlg_order_submit_ok"
+                android:gravity="center"
+                android:text="@string/ok"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@android:id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_dlg_order_submit_cancel"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/type_keyboard"
+            android:layout_width="485dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_number"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:overScrollMode="never" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_keyboard_line1"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginTop="3dp"
+                android:overScrollMode="never" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_keyboard_line2"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginTop="3dp"
+                android:overScrollMode="never" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_keyboard_line3"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginTop="3dp"
+                android:overScrollMode="never" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

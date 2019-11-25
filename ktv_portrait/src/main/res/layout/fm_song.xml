@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingBottom="40dp">
+
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/iv_inverted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/song_reflection_v"
+            android:tag="skin:song_reflection_v:src" />
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_song_new"
+            android:layout_width="218dp"
+            android:layout_height="200dp"
+            android:layout_above="@+id/iv_inverted"
+            android:layout_alignParentLeft="true" />
+
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/iv_inverted"
+            android:layout_marginTop="@dimen/material_margin"
+            android:layout_toRightOf="@+id/wm_song_new"
+            android:src="@drawable/song_category"
+            android:tag="skin:song_category:src" />
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/iv_inverted"
+            android:layout_marginLeft="@dimen/material_margin"
+            android:layout_toRightOf="@+id/wm_category"
+            android:src="@drawable/song_star"
+            android:tag="skin:song_star:src" />
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/iv_inverted"
+            android:layout_toRightOf="@+id/wm_star"
+            android:src="@drawable/song_score"
+            android:tag="skin:song_score:src" />
+
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_pinyin"
+            android:layout_width="423dp"
+            android:layout_height="230dp"
+            android:layout_above="@+id/wm_song_new"
+            android:layout_alignParentLeft="true" />
+
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_lyric"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/wm_score"
+            android:layout_toRightOf="@+id/wm_star"
+            android:src="@drawable/song_lyric"
+            android:tag="skin:song_lyric:src" />
+
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_hd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/wm_score"
+            android:layout_toRightOf="@+id/wm_lyric"
+            android:src="@drawable/song_hd"
+            android:tag="skin:song_hd:src" />
+    </RelativeLayout>
+</HorizontalScrollView>
+
+
+

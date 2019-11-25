@@ -1,0 +1,199 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+import "Mime.proto";
+
+option java_package = "com.bestarmedia.proto.node";
+option java_outer_classname = "NodeProto";
+option java_multiple_files = true;
+
+// VOD 服务器心跳包
+message VodHeartbeat {
+    google.protobuf.Empty beat = 1;
+}
+
+// 机顶盒截图请求
+message VodScreenShotRequest {
+    string ktv_net_code = 1; // KTV编号
+    string room_code = 2; // 房间号
+    string address = 3; // 请求来源 address
+    int32 platform = 4; // 请求平台 1北星云平台 2政府监管平台
+    string endpoint = 5; // 上传接口，根据平台不同给机顶盒不同的上传地址,由服务器端定义，web前端传空
+    int32 user_id = 6; // web 用户 ID
+}
+
+// 机顶盒截图回复 (一般情况机顶盒直接通过HTTP上传截图到云端即可, 机顶盒无法出外网时，则通过以下回复，由VOD服务器上传截图到云端)
+message VodScreenShotResponse {
+    string ktv_net_code = 1; // KTV编号
+    string room_code = 2; // 房间号
+    string ktv_room_code = 15; // 房间名
+    int32 image_id = 11; // 截图id
+    string image_url = 3; // 截图 url (机顶盒通过HTTP上传云端后返回的url)
+    int32 playing_type = 4; // 当前播放类型 1公益广告 2歌曲 3电影 4直播 5贴片广告
+    string playing_id = 5; // 对应播放类型下的播放源id
+    string playing_name = 6; // 播放源名称
+    string playing_ad_id = 7; // 广告id
+    string address = 8; // 请求来源地址
+    int32 platform = 12; // 请求平台 1北星云平台 2政府监管平台
+    string song_version = 9; // 歌曲版本
+    string singer_name = 10; // 歌手名称
+    int32 user_id = 13; // 用户ID
+    string date = 14; // 日期
+}
+
+// 本地功能的房间控制 (火警启停，机顶盒重启/关机/全部关机，广播走马灯，定时插播视频，定时降音量，ERP弹幕)
+
+// 火警控制请求
+message FireAlarmRequest {
+    string room_code = 1; // 房间号
+    int32 op = 2; // 1启动 2或者其它值 停止
+}
+
+// 火警控制回复
+message FireAlarmResponse {
+    string room_code = 1;
+    int32 op = 3; // 1启动 2或者其它值 停止
+    int32 code = 2; // 0失败 1成功
+}
+
+// 升/降音量请求
+message VolumeRequest {
+    string room_code = 1; // 房间号
+    int32 op = 2; // 1降音量 2升音量
+    int32 volume = 3;
+}
+
+// 升/降音量回复
+message VolumeResponse {
+    string room_code = 1;
+    int32 code = 2; // 0失败 1成功
+}
+
+// 机顶盒关机/重启请求
+message BoxControlRequest {
+    string ip = 1; // 设备ip 为空时则表示收到指令就要关机/重启
+    int32 op = 2; // 0关机 1重启
+    string room_code = 3; // 房间号
+}
+
+// 机顶盒关机/重启回复
+message BoxControlResponse {
+    string room_code = 1;
+    int32 ip = 2; // 设备ip
+    int32 op = 4; // 0关机 1重启
+    int32 code = 3; // 0失败 1成功
+}
+
+// 弹幕请求
+message BarrageRequest {
+    int32 user_id = 1; // 用户ID
+    string address = 2; // 用户地址 没有则为空
+    string name = 3; // 用户名字
+    string avatar = 4; //头像
+    string room_session = 5; // 房间SESSION
+    string room_code = 6; // 房间号
+    string ktv_net_code = 7; // KTV ID
+    string text = 8; // 弹幕文本
+}
+
+// 弹幕回复
+message BarrageResponse {
+    string ktv_net_code = 5; // KTV编号
+    string room_code = 1; // 房间号
+    int32 code = 2; // 0失败 1成功
+    int32 user_id = 3; // 用户ID
+    string address = 4; // 用户SOCKET地址 没有则为空
+}
+
+// 文本消息请求
+message TextMessageRequest {
+    int32 user_id = 5; // 用户ID 本地功能，没有则为0
+    string name = 6; // 用户姓名
+    string avatar = 7; // 用户头像
+    string room_session = 4; // 房间session
+    string ktv_net_code = 3; // KTV编号
+    string room_code = 1; // 房间号
+    Text text = 2; // 文本消息体
+    int32 push_to_queue = 8; //是否加入队列 0否 1是
+    int32 push_to_queue_position = 9; //插入队列位置；默认0队尾，1队头
+}
+
+// 文本消息回复
+message TextMessageResponse {
+    string room_code = 1; // 房间号
+    int32 code = 2; // 0失败 1成功
+    int32 user_id = 3; // 用户id 从请求中原样返回，没有则为0
+}
+
+// 图片消息请求
+message ImageMessageRequest {
+    int32 user_id = 5; // 用户ID 本地功能，没有则为0
+    string name = 6; // 用户姓名
+    string avatar = 7; // 用户头像
+    string room_session = 4; // 房间session
+    string ktv_net_code = 3; // KTV编号
+    string room_code = 1; // 房间号
+    Image image = 2; // 图片消息体
+    int32 push_to_queue = 8; //是否加入队列 0否 1是
+    int32 push_to_queue_position = 9; //插入队列位置；默认0队尾，1队头
+}
+
+// 图片消息回复
+message ImageMessageResponse {
+    string room_code = 1; // 房间号
+    int32 code = 2; // 0失败 1成功
+    int32 user_id = 3; // 用户id 从请求中原样返回，没有则为0
+}
+
+// 视频消息请求
+message VideoMessageRequest {
+    int32 user_id = 5; // 用户ID 本地功能，没有则为0
+    string name = 6; // 用户姓名
+    string avatar = 7; // 用户头像
+    string room_session = 4; // 房间session
+    string ktv_net_code = 3; // KTV编号
+    string room_code = 1; // 房间号
+    Video video = 2; // 视频消息体
+    int32 push_to_queue = 8; //是否加入队列 0否 1是
+    int32 push_to_queue_position = 9; //插入队列位置；默认0队尾，1队头
+}
+
+// 视频消息回复
+message VideoMessageResponse {
+    string room_code = 1; // 房间号
+    int32 code = 2; // 0失败 1成功
+    int32 user_id = 3; // 用户id 从请求中原样返回，没有则为0
+}
+
+// 机顶盒无任何操作通知
+message BoxIdleBroadcast {
+    string room_code = 1; // 房间号
+    int32 minute = 2; // 空闲时间 - 分钟
+    string serial_node = 3; // 机顶盒序列号
+    string ip = 4; // 机顶盒 IP
+    int32 status = 5; // 当前状态 0空闲 1活动
+}
+
+// 支付消息请求
+message PayMessageRequest {
+    string ktv_net_code = 1;
+    string room_code = 2; // 房间号
+    string pay_url = 3; // 支付二维码
+}
+
+// 支付消息回复
+message PayMessageResponse {
+    string ktv_net_code = 1;
+    string room_code = 2; // 房间号
+    int32 pay_status = 3; // 0未支付 1已支付
+}
+
+// 广播房间统计数据
+message RoomStatisticBroadcast {
+    int32 opening_number = 1; // 开房数
+    int32 closing_number = 2; // 关房数
+    int32 online_number = 3; // 在线机顶盒数
+    int32 offline_number = 4; // 离线机顶盒数
+    int32 safety_checked_number = 5; // 安全检查房间数
+    string ktv_net_code = 6; // KTV编号
+}

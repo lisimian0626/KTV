@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/iv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/play_game_title" />
+
+    <LinearLayout
+        android:id="@+id/rv_level"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_title"
+        android:layout_marginTop="70dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="18dp">
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_level1_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_game_level_bg" />
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_level1_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/selector_game_level1_title" />
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_level1_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_level1_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/play_game_level_new" />
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_level1_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_level1_bg"
+                android:layout_alignEnd="@+id/iv_level1_bg"
+                android:src="@drawable/play_game_pass_tag"
+                android:visibility="invisible" />
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_level1_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_level1_bg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/selector_game_enter_level" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp">
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_level2_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_game_level_bg" />
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_level2_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/selector_game_level2_title" />
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_level2_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_level2_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/play_game_level_disable" />
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_level2_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_level2_bg"
+                android:layout_alignEnd="@+id/iv_level2_bg"
+                android:src="@drawable/play_game_pass_tag"
+                android:visibility="invisible" />
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_level2_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_level2_bg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/selector_game_enter_level" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rv_level2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rv_level"
+        android:layout_marginTop="60dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="18dp">
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_level3_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_game_level_bg" />
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_level3_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/selector_game_level3_title" />
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_level3_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_level3_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/play_game_level_disable" />
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_level3_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_level3_bg"
+                android:layout_alignEnd="@+id/iv_level3_bg"
+                android:src="@drawable/play_game_pass_tag"
+                android:visibility="invisible" />
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_level3_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_level3_bg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/selector_game_enter_level" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp">
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_level4_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_game_level_bg" />
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_level4_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/selector_game_level4_title" />
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_level4_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_level4_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/play_game_level_disable" />
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_level4_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_level4_bg"
+                android:layout_alignEnd="@+id/iv_level4_bg"
+                android:src="@drawable/play_game_pass_tag"
+                android:visibility="invisible" />
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_level4_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_level4_bg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/selector_game_enter_level" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

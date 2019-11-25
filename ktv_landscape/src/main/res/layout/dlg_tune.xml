@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/lin_tone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/dlg_bg">
+
+        <View
+            android:id="@+id/tone_left_padding"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="40dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/tone_lin_mic_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.bestarmedia.libwidget.text.GradientTextView
+                    android:id="@+id/tone_iv_mic_up"
+                    android:layout_width="60dp"
+                    android:layout_height="102.5dp"
+                    android:background="@drawable/selector_dlg_button_bg"
+                    android:drawableStart="@drawable/selector_dlg_tone_up"
+                    android:shadowColor="@color/dlg_shadow_color2"
+                    android:shadowDx="0"
+                    android:shadowDy="2"
+                    android:shadowRadius="10" />
+
+
+                <com.bestarmedia.libwidget.text.GradientTextView
+                    android:id="@+id/tone_iv_mic_down"
+                    android:layout_width="60dp"
+                    android:layout_height="102.5dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/selector_dlg_button_bg"
+                    android:clickable="true"
+                    android:drawableStart="@drawable/selector_dlg_tone_down"
+                    android:shadowColor="@color/dlg_shadow_color2"
+                    android:shadowDx="0"
+                    android:shadowDy="2"
+                    android:shadowRadius="10" />
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="23dp"
+                    android:gravity="center"
+                    android:text="@string/mic"
+                    android:textColor="@color/tone_text_color"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tone_lin_mic_tone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <com.bestarmedia.libwidget.text.GradientTextView
+                    android:id="@+id/tone_tv_mic_up"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/selector_dlg_button_bg"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:shadowColor="@color/dlg_shadow_color2"
+                    android:shadowDx="0"
+                    android:shadowDy="2"
+                    android:shadowRadius="10"
+                    android:text="@string/tone_up"
+                    android:textColor="@color/dlg_tone_text_color_start"
+                    android:textColorHighlight="@color/dlg_tone_text_color_end"
+                    android:textSize="16sp"
+                    app:gradient_animating="false" />
+
+                <com.bestarmedia.libwidget.text.GradientTextView
+                    android:id="@+id/tone_tv_mic_default"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/selector_dlg_button_bg"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:shadowColor="@color/dlg_shadow_color2"
+                    android:shadowDx="0"
+                    android:shadowDy="2"
+                    android:shadowRadius="10"
+                    android:text="@string/tone_default"
+                    android:textColor="@color/dlg_tone_text_color2_end"
+                    android:textColorHighlight="@color/dlg_tone_text_color2_start"
+                    android:textSize="16sp"
+                    app:gradient_animating="false" />
+
+                <com.bestarmedia.libwidget.text.GradientTextView
+                    android:id="@+id/tone_tv_mic_down"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/selector_dlg_button_bg"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:shadowColor="@color/dlg_shadow_color2"
+                    android:shadowDx="0"
+                    android:shadowDy="2"
+                    android:shadowRadius="10"
+                    android:text="@string/tone_down"
+                    android:textColor="@color/dlg_tone_text_color_end"
+                    android:textColorHighlight="@color/dlg_tone_text_color_start"
+                    android:textSize="16sp"
+                    app:gradient_animating="false" />
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="23dp"
+                    android:gravity="center"
+                    android:text="@string/tone_mic"
+                    android:textColor="@color/tone_text_color"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tone_lin_effect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.bestarmedia.libwidget.text.GradientTextView
+                    android:id="@+id/tone_tv_effect_trick"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:background="@drawable/selector_dlg_button_bg"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/selector_dlg_tone_effect_trick"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:shadowColor="@color/dlg_shadow_color2"
+                    android:shadowDx="0"
+                    android:shadowDy="2"
+                    android:shadowRadius="20"
+                    android:text="@string/effect_trick"
+                    android:textColor="@color/dlg_tone_text_color_end"
+                    android:textColorHighlight="@color/dlg_tone_text_color_start" />
+
+                <com.bestarmedia.libwidget.text.GradientTextView
+                    android:id="@+id/tone_tv_effect_sing"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/selector_dlg_button_bg"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/selector_dlg_tone_effect_sing"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:shadowColor="@color/dlg_shadow_color2"
+                    android:shadowDx="0"
+                    android:shadowDy="2"
+                    android:shadowRadius="20"
+                    android:text="@string/effect_sing"
+                    android:textColor="@color/dlg_tone_text_color_end"
+                    android:textColorHighlight="@color/dlg_tone_text_color_start" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <com.bestarmedia.libwidget.text.GradientTextView
+                    android:id="@+id/tone_tv_effect_blame"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:background="@drawable/selector_dlg_button_bg"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/selector_dlg_tone_effect_blame"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:shadowColor="@color/dlg_shadow_color2"
+                    android:shadowDx="0"
+                    android:shadowDy="2"
+                    android:shadowRadius="20"
+                    android:text="@string/effect_blame"
+                    android:textColor="@color/dlg_tone_text_color_end"
+                    android:textColorHighlight="@color/dlg_tone_text_color_start" />
+
+                <com.bestarmedia.libwidget.text.GradientTextView
+                    android:id="@+id/tone_tv_effect_harmony"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/selector_dlg_button_bg"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/selector_dlg_tone_effect_harmony"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:shadowColor="@color/dlg_shadow_color2"
+                    android:shadowDx="0"
+                    android:shadowDy="2"
+                    android:shadowRadius="20"
+                    android:text="@string/effect_harmony"
+                    android:textColor="@color/dlg_tone_text_color_end"
+                    android:textColorHighlight="@color/dlg_tone_text_color_start" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tone_text_effect"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:gravity="center"
+                android:text="@string/effect"
+                android:textColor="@color/tone_text_color"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.bestarmedia.libwidget.text.GradientTextView
+                    android:id="@+id/tone_iv_music_up"
+                    android:layout_width="60dp"
+                    android:layout_height="102.5dp"
+                    android:background="@drawable/selector_dlg_button_bg"
+                    android:clickable="true"
+                    android:drawableStart="@drawable/selector_dlg_tone_up"
+                    android:shadowColor="@color/dlg_shadow_color2"
+                    android:shadowDx="0"
+                    android:shadowDy="2"
+                    android:shadowRadius="10" />
+
+                <com.bestarmedia.libwidget.text.GradientTextView
+                    android:id="@+id/tone_iv_music_down"
+                    android:layout_width="60dp"
+                    android:layout_height="102.5dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/selector_dlg_button_bg"
+                    android:clickable="true"
+                    android:drawableStart="@drawable/selector_dlg_tone_down"
+                    android:shadowColor="@color/dlg_shadow_color2"
+                    android:shadowDx="0"
+                    android:shadowDy="2"
+                    android:shadowRadius="10" />
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="23dp"
+                    android:gravity="center"
+                    android:text="@string/tone_mix"
+                    android:textColor="@color/tone_text_color"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:orientation="vertical">
+
+                <com.bestarmedia.libwidget.text.GradientTextView
+                    android:id="@+id/tone_tv_music_tone_up"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/selector_dlg_button_bg"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:shadowColor="@color/dlg_shadow_color2"
+                    android:shadowDx="0"
+                    android:shadowDy="2"
+                    android:shadowRadius="10"
+                    android:text="@string/tone_up"
+                    android:textColor="@color/dlg_tone_text_color_end"
+                    android:textColorHighlight="@color/dlg_tone_text_color_start"
+                    android:textSize="16sp"
+                    app:gradient_animating="false" />
+
+                <com.bestarmedia.libwidget.text.GradientTextView
+                    android:id="@+id/tone_tv_music_tone_default"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/selector_dlg_button_bg"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:shadowColor="@color/dlg_shadow_color2"
+                    android:shadowDx="0"
+                    android:shadowDy="2"
+                    android:shadowRadius="10"
+                    android:text="@string/tone_default"
+                    android:textColor="@color/dlg_tone_text_color2_end"
+                    android:textColorHighlight="@color/dlg_tone_text_color2_start"
+                    android:textSize="16sp"
+                    app:gradient_animating="false" />
+
+
+                <com.bestarmedia.libwidget.text.GradientTextView
+                    android:id="@+id/tone_tv_music_tone_down"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/selector_dlg_button_bg"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:shadowColor="@color/dlg_shadow_color2"
+                    android:shadowDx="0"
+                    android:shadowDy="2"
+                    android:shadowRadius="10"
+                    android:text="@string/tone_down"
+                    android:textColor="@color/dlg_tone_text_color_end"
+                    android:textColorHighlight="@color/dlg_tone_text_color_start"
+                    android:textSize="16sp"
+                    app:gradient_animating="false" />
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="23dp"
+                    android:gravity="center"
+                    android:text="@string/tone_mix_music"
+                    android:textColor="@color/tone_text_color"
+                    android:textSize="14dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tone_lin_mix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical">
+
+
+            <com.bestarmedia.libwidget.text.GradientTextView
+                android:id="@+id/tone_iv_effect_up"
+                android:layout_width="60dp"
+                android:layout_height="102.5dp"
+                android:background="@drawable/selector_dlg_button_bg"
+                android:clickable="true"
+                android:drawableStart="@drawable/selector_dlg_tone_up"
+                android:shadowColor="@color/dlg_shadow_color2"
+                android:shadowDx="0"
+                android:shadowDy="2"
+                android:shadowRadius="10" />
+
+
+            <com.bestarmedia.libwidget.text.GradientTextView
+                android:id="@+id/tone_iv_effect_down"
+                android:layout_width="60dp"
+                android:layout_height="102.5dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/selector_dlg_button_bg"
+                android:drawableStart="@drawable/selector_dlg_tone_down"
+                android:shadowColor="@color/dlg_shadow_color2"
+                android:shadowDx="0"
+                android:shadowDy="2"
+                android:shadowRadius="10" />
+
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:gravity="center"
+                android:text="@string/effect2"
+                android:textColor="@color/tone_text_color"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/tone_right_padding"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginRight="60dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/tone_iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/lin_tone"
+        android:src="@drawable/dlg_close_new" />
+</RelativeLayout>

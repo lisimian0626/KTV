@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contentView"
+    android:layout_width="match_parent"
+    android:layout_height="90dp">
+
+    <com.bestarmedia.libwidget.material.RelativeLayoutMaterial
+        android:id="@+id/rl_song"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/selector_song_item"
+        android:paddingBottom="4dp"
+        android:tag="skin:selector_song_item:background">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/song_list_item_padding"
+            android:layout_marginTop="@dimen/song_list_item_padding"
+            android:layout_marginEnd="5dp"
+            android:drawablePadding="6dp"
+            android:ellipsize="end"
+            android:gravity="start|top"
+            android:maxWidth="300dp"
+            android:maxLines="2"
+            android:tag="skin:selector_song_item:textColor"
+            android:textColor="@drawable/selector_list_item_text"
+            android:textSize="@dimen/text_song_item_name" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="2dp">
+
+            <TextView
+                android:id="@+id/tv_singer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxWidth="150dp"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:tag="skin:selector_list_item_sub_text:textColor"
+                android:textColor="@drawable/selector_list_item_sub_text"
+                android:textSize="@dimen/text_song_item_singer" />
+
+            <TextView
+                android:id="@+id/tv_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:gravity="center"
+                android:maxWidth="60dp"
+                android:maxLines="1"
+                android:tag="skin:selector_list_item_sub_text:textColor"
+                android:textColor="@drawable/selector_list_item_sub_text"
+                android:textSize="@dimen/text_song_item_version" />
+
+            <ImageView
+                android:id="@+id/riv_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/riv_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/ic_song_list_pay_tag"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/riv_cloud"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/ic_song_cloud_tag"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_sort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:tag="skin:selector_list_item_sub_text:textColor"
+                android:textColor="@drawable/selector_list_item_sub_text"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/riv_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/riv_more"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            android:src="@drawable/selector_to_top" />
+
+        <ImageView
+            android:id="@+id/riv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="2dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            android:src="@drawable/selector_song_list_more" />
+    </com.bestarmedia.libwidget.material.RelativeLayoutMaterial>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_singers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/selector_song_item"
+        android:padding="5dp"
+        android:tag="skin:selector_song_item:background"
+        android:visibility="gone">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_singer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" />
+
+        <TextView
+            android:id="@+id/tv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:paddingStart="24dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="12dp"
+            android:tag="skin:selector_list_item_sub_text:textColor"
+            android:text="@string/close"
+            android:textColor="@drawable/selector_list_item_sub_text" />
+    </RelativeLayout>
+</RelativeLayout>

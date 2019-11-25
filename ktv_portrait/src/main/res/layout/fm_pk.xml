@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="70dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <com.beidousat.karaoke.widget.viewpager.WidgetTopTabs
+            android:id="@+id/topTab"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_tabs_bar_height"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/tv_guide" />
+
+        <TextView
+            android:id="@+id/tv_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/top_tabs_bar_height"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/selector_gray_button"
+            android:gravity="center"
+            android:paddingLeft="@dimen/tab_padding_l_r"
+            android:paddingRight="@dimen/tab_padding_l_r"
+            android:singleLine="true"
+            android:text="@string/pk_guide"
+            android:textColor="@drawable/selector_tab_text"
+            android:textSize="@dimen/tab_text_size" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_empty"
+        android:layout_width="600dp"
+        android:layout_height="800dp"
+        android:layout_below="@+id/rl_top_bar"
+        android:layout_marginLeft="50dp"
+        android:visibility="gone">
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/riv_empty"
+            android:layout_marginBottom="45dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/game_pk_guide" />
+
+        <RelativeLayout
+            android:id="@+id/rl_qr_code"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginLeft="102dp"
+            android:layout_marginTop="108dp">
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/riv_qrcode"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_centerInParent="true" />
+
+            <ProgressBar
+                android:id="@+id/pgb_qrcode"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_qr_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="#333"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.beidousat.karaoke.widget.viewpager.WidgetPkPager
+        android:id="@+id/pkPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_top_bar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="6dp"
+        app:horizontalMargin="12dp" />
+
+    <com.beidousat.karaoke.widget.viewpager.WidgetPkRankingPager
+        android:id="@+id/ranking"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/w_page"
+        android:layout_below="@+id/rl_top_bar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone" />
+
+
+    <com.beidousat.karaoke.widget.viewpager.WidgetPage
+        android:id="@+id/w_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp" />
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/ll_page"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginBottom="12dp"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<Button-->
+    <!--android:id="@+id/btn_pre"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@drawable/selector_page_down" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_pages"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="16dp"-->
+    <!--android:layout_marginRight="16dp"-->
+    <!--android:textColor="@android:color/white"-->
+    <!--android:textSize="20sp" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/btn_next"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@drawable/selector_page_up" />-->
+    <!--</LinearLayout>-->
+
+</RelativeLayout>
+
+
+

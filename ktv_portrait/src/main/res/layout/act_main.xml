@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Main">
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/iv_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/main_bg_v"
+        android:tag="skin:main_bg_v:src" />
+
+    <!--<com.meis.widget.praise.BezierPraiseView-->
+    <!--android:id="@+id/bpv_bg_anim"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent" />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/ll_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.beidousat.karaoke.widget.WidgetRoomNameLogo
+                    android:id="@+id/iv_logo"
+                    android:layout_width="120dp"
+                    android:layout_height="70dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onClick"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.beidousat.karaoke.widget.MarqueePlayer
+                    android:id="@+id/tv_marquee"
+                    android:layout_width="260dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    app:direction="left"
+                    app:isRepeat="false"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/iv_logo"
+                    app:marqueeStrokeWidth="0.5"
+                    app:speed="2"
+                    app:startPoint="end"
+                    app:textSize="20sp"
+                    app:textcolor="@android:color/white" />
+
+                <com.bestarmedia.libwidget.text.GradientBaseTextView
+                    android:id="@+id/tv_play_info"
+                    style="@style/TopBarText"
+                    android:layout_width="300dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/top_bar_play_info_bg"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:tag="skin:main_text_start:textColor|skin:main_text_end:textColorHighlight"
+                    android:textColor="@color/main_text_start"
+                    android:textColorHighlight="@color/main_text_end"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/iv_logo" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_top_bar"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/ll_top">
+
+                <com.bestarmedia.libwidget.image.ScaleRecyclerImage
+                    android:id="@+id/iv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="10dp"
+                    android:onClick="onClick"
+                    android:src="@drawable/main_top_bar_phone"
+                    android:tag="skin:main_top_bar_phone:src" />
+
+                <com.bestarmedia.libwidget.text.GradientTextView
+                    android:id="@+id/tv_wifi"
+                    style="@style/TopBarText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_toStartOf="@+id/tv_record"
+                    android:layout_toEndOf="@+id/iv_phone"
+                    android:drawableStart="@drawable/main_top_bar_wifi"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:tag="skin:main_text_start:textColor|skin:main_text_end:textColorHighlight|selector_main_wifi:background"
+                    android:text="@string/wifi"
+                    android:textColor="@color/main_text_start"
+                    android:textColorHighlight="@color/main_text_end" />
+
+                <com.bestarmedia.libwidget.text.GradientBaseTextView
+                    android:id="@+id/tv_record"
+                    style="@style/TopBarText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="25dp"
+                    android:layout_toStartOf="@+id/tv_score"
+                    android:drawableStart="@drawable/selector_main_top_toggle"
+                    android:drawablePadding="10dp"
+                    android:onClick="onClick"
+                    android:tag="skin:main_text_start:textColor|skin:selector_main_top_toggle:drawableRight|skin:main_text_end:textColorHighlight"
+                    android:text="@string/record"
+                    android:textColor="@color/main_text_start"
+                    android:textColorHighlight="@color/main_text_end" />
+
+                <com.bestarmedia.libwidget.text.GradientBaseTextView
+                    android:id="@+id/tv_score"
+                    style="@style/TopBarText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="25dp"
+                    android:layout_toStartOf="@+id/iv_search"
+                    android:drawableEnd="@drawable/selector_main_top_toggle"
+                    android:drawablePadding="10dp"
+                    android:onClick="onClick"
+                    android:tag="skin:main_text_start:textColor|skin:selector_main_top_toggle:drawableRight|skin:main_text_start:textColorHighlight"
+                    android:text="@string/score"
+                    android:textColor="@color/main_text_start"
+                    android:textColorHighlight="@color/main_text_end" />
+
+                <com.bestarmedia.libwidget.image.ScaleRecyclerImage
+                    android:id="@+id/iv_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/tv_choose"
+                    android:onClick="onClick"
+                    android:src="@drawable/selector_main_search"
+                    android:tag="skin:selector_main_search:src" />
+
+                <com.bestarmedia.libwidget.text.GradientTextView
+                    android:id="@+id/tv_choose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/selector_main_choose"
+                    android:gravity="start|center_vertical"
+                    android:onClick="onClick"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="15dp"
+                    android:shadowDy="2"
+                    android:shadowRadius="4"
+                    android:tag="skin:main_text_start:textColor|skin:selector_main_choose:background|skin:main_text_end:textColorHighlight"
+                    android:text="00"
+                    android:textColor="@color/main_text_start"
+                    android:textColorHighlight="@color/main_text_end"
+                    android:textSize="@dimen/top_bar_choose_text_size"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <com.beidousat.karaoke.widget.WidgetAdBannerPlayer
+            android:id="@+id/wm_ad_banner"
+            android:layout_width="680dp"
+            android:layout_height="280dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/banner_default_v" />
+
+        <LinearLayout
+            android:id="@+id/left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.bestarmedia.libwidget.seekbar.PhasedSeekBar
+                android:id="@+id/psb_tab"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="15dp"
+                app:phased_anchor_height="40dp"
+                app:phased_anchor_width="82dp"
+                app:phased_draw_on_off="true"
+                app:phased_fix_point="true"
+                app:phased_item_height="80dp"
+                app:phased_item_width="139dp"
+                app:phased_mode="horizontal" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/contentPanel"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/bottom_tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp">
+
+            <RelativeLayout
+                android:id="@+id/ll_buttom_tools"
+                android:layout_width="360dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/buttom_tools_gradient_bg"
+                android:gravity="center_vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.bestarmedia.libwidget.text.GradientTextView
+                    android:id="@+id/tv_acc"
+                    style="@style/BottomBarIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/bottom_icon_margin"
+                    android:drawableStart="@drawable/selector_main_original_on"
+                    android:onClick="onClick"
+                    android:tag="skin:main_text_start:textColor|skin:selector_main_original_on:drawableLeft|skin:main_text_end:textColorHighlight"
+                    android:text="@string/original"
+                    android:textColor="@color/main_text_start"
+                    android:textColorHighlight="@color/main_text_end" />
+
+                <com.bestarmedia.libwidget.text.GradientTextView
+                    android:id="@+id/tv_next"
+                    style="@style/BottomBarIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/bottom_icon_margin"
+                    android:layout_toStartOf="@+id/tv_acc"
+                    android:drawableStart="@drawable/selector_main_next"
+                    android:onClick="onClick"
+                    android:tag="skin:main_text_start:textColor|skin:selector_main_next:drawableLeft|skin:main_text_end:textColorHighlight"
+                    android:text="@string/switch_song"
+                    android:textColor="@color/main_text_start"
+                    android:textColorHighlight="@color/main_text_end"
+                    tools:layout_editor_absoluteX="74dp" />
+            </RelativeLayout>
+
+            <com.bestarmedia.libwidget.image.ScaleRecyclerImage
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:src="@drawable/selector_main_back"
+                android:tag="skin:selector_main_back:src"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.bestarmedia.libwidget.image.ScaleRecyclerImage
+                android:id="@+id/iv_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/bottom_icon_margin"
+                android:layout_toStartOf="@+id/iv_back"
+                android:onClick="onClick"
+                android:src="@drawable/selector_main_home"
+                android:tag="skin:selector_main_home:src"
+                android:visibility="gone"
+                app:layout_constraintRight_toLeftOf="@+id/iv_back"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ProgressBar
+                android:id="@+id/player_progress"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.1"
+                android:max="1000"
+                android:progress="0"
+                android:progressDrawable="@drawable/player_progress"
+                android:tag="skin:player_progress:progressDrawable" />
+
+            <com.bestarmedia.libwidget.text.GradientTextView
+                android:id="@+id/tv_replay"
+                style="@style/BottomBarIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/bottom_icon_margin"
+                android:drawableTop="@drawable/selector_main_replay"
+                android:onClick="onClick"
+                android:tag="skin:main_text_start:textColor|skin:selector_main_replay:drawableTop|skin:main_text_end:textColorHighlight"
+                android:text="@string/replay"
+                android:textColor="@color/main_text_start"
+                android:textColorHighlight="@color/main_text_end"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/tv_tune"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.bestarmedia.libwidget.text.GradientTextView
+                android:id="@+id/tv_tune"
+                style="@style/BottomBarIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/bottom_icon_margin"
+                android:drawableTop="@drawable/selector_main_tone"
+                android:onClick="onClick"
+                android:tag="skin:main_text_start:textColor|skin:selector_main_tone:drawableTop|skin:main_text_end:textColorHighlight"
+                android:text="@string/tune"
+                android:textColor="@color/main_text_start"
+                android:textColorHighlight="@color/main_text_end"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/tv_pause"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.bestarmedia.libwidget.text.GradientTextView
+                android:id="@+id/tv_pause"
+                style="@style/BottomBarIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/bottom_icon_margin"
+                android:drawableTop="@drawable/selector_main_pause"
+                android:onClick="onClick"
+                android:tag="skin:main_text_start:textColor|skin:selector_main_pause:drawableTop|skin:main_text_end:textColorHighlight"
+                android:text="@string/pause"
+                android:textColor="@color/main_text_start"
+                android:textColorHighlight="@color/main_text_end"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/voice_sub"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.bestarmedia.libwidget.image.ScaleRecyclerImage
+                android:id="@+id/voice_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:onClick="onClick"
+                android:src="@drawable/selector_main_music_down"
+                android:tag="skin:selector_main_music_down:src"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/voice_progress"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.beidousat.karaoke.widget.ArcProgress
+                android:id="@+id/voice_progress"
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:background="#00000000"
+                app:arc_max="15"
+                app:arc_progress="4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.bestarmedia.libwidget.text.GradientTextView
+                android:id="@+id/iv_mute"
+                style="@style/BottomBarIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/selector_main_mute"
+                android:gravity="center_horizontal"
+                android:onClick="onClick"
+                android:src="@drawable/selector_main_mute"
+                android:tag="skin:main_text_start:textColor|skin:selector_main_mute:drawableTop|skin:main_text_end:textColorHighlight"
+                android:textColor="@color/main_text_start"
+                android:textColorHighlight="@color/main_text_end"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.bestarmedia.libwidget.image.ScaleRecyclerImage
+                android:id="@+id/voice_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:onClick="onClick"
+                android:src="@drawable/selector_main_music_up"
+                android:tag="skin:selector_main_music_up:src"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/voice_progress"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.bestarmedia.libwidget.text.GradientTextView
+                android:id="@+id/tv_light"
+                style="@style/BottomBarIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/bottom_icon_margin"
+                android:drawableTop="@drawable/selector_main_light"
+                android:onClick="onClick"
+                android:tag="skin:main_text_start:textColor|skin:selector_main_light:drawableTop|skin:main_text_end:textColorHighlight"
+                android:text="@string/light"
+                android:textColor="@color/main_text_start"
+                android:textColorHighlight="@color/main_text_end"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/voice_plus"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.bestarmedia.libwidget.text.GradientTextView
+                android:id="@+id/tv_atmo"
+                style="@style/BottomBarIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/bottom_icon_margin"
+                android:drawableTop="@drawable/selector_main_mood"
+                android:onClick="onClick"
+                android:tag="skin:main_text_start:textColor|skin:selector_main_mood:drawableTop|skin:main_text_end:textColorHighlight"
+                android:text="@string/mood"
+                android:textColor="@color/main_text_start"
+                android:textColorHighlight="@color/main_text_end"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/tv_light"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.bestarmedia.libwidget.text.GradientTextView
+                android:id="@+id/tv_service"
+                style="@style/BottomBarIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/bottom_icon_margin"
+                android:drawableTop="@drawable/selector_main_service"
+                android:onClick="onClick"
+                android:tag="skin:main_text_start:textColor|skin:selector_main_service:drawableTop|skin:main_text_end:textColorHighlight"
+                android:text="@string/service"
+                android:textColor="@color/main_text_start"
+                android:textColorHighlight="@color/main_text_end"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/tv_atmo"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

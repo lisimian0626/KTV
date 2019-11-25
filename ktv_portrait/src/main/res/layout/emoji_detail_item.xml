@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bestarmedia.libwidget.material.RelativeLayoutMaterial xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/emoji_detail_iv_cover"
+        android:scaleType="centerInside"
+        android:layout_width="165dp"
+        android:layout_height="175dp" />
+
+    <com.opensource.svgaplayer.SVGAImageView
+        android:id="@+id/emoji_detail_svga"
+        android:layout_height="165dp"
+        android:layout_width="175dp"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        app:antiAlias="true"/>
+</com.bestarmedia.libwidget.material.RelativeLayoutMaterial>
+

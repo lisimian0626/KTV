@@ -1,0 +1,141 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+option java_package = "com.bestarmedia.proto.device";
+option java_outer_classname = "DeviceProto";
+
+//设备心跳
+message DeviceHeartbeat {
+    google.protobuf.Empty beat = 1;
+}
+
+// 设备认证请求
+message DeviceAuthRequest {
+    string ktv_net_code = 1; // KTV编号
+    string room_code = 2; // 房间号
+    string serial_no = 3; // 机顶盒序列号
+    string device_ip = 4; //ip
+    int32 device_type = 5; //设备类型，1主屏，2副屏，3墙面板，4门口屏，5投影
+}
+
+// 设备认证回复
+message DeviceAuthResponse {
+    enum CodeType {
+        SUCCESS = 0; // 认证失败
+        FAILED = 1; // 认证成功
+    }
+    int32 code = 1; // 代码
+}
+//按钮状态
+message ButtonStatus {
+    int32 is_hdmi_black = 1; // 电视是否黑屏
+    int32 is_light_auto = 2; // 智能灯光是否开启
+    int32 is_mute = 3; // 是否静音
+    int32 is_pause = 4; // 是否暂停
+    int32 is_record = 5; // 是否开启录音
+    int32 is_serving = 6; // 是否服务铃响应
+    int32 light_mode = 7; // 灯光模式
+    int32 origin_on = 8; // 是否开启原唱
+    int32 score_mode = 9; // 评分模式 0关闭 1娱乐 2专业
+    int32 service_mode = 10; // 服务铃模式 -1无呼叫 0服务员 1DJ 2清洁 3保安 4买单 5催单 6唛套 7加冰
+    int32 current_volume = 11; //当前音量值
+    string current_light_code = 12; // 当前灯光码
+}
+//空调状态
+message AirConStatus {
+    bool air_con_open = 1; //开启开关状态
+    int32 mode = 2; // 空调模式；0自动，1制冷，2制热，3送风
+    int32 wind_speed = 3; // 空调风速；0自动，1高风，2中风，3低风
+    bool wind_open = 4; //排风开关状态
+}
+
+//播放器相关操作
+message Operation {
+    int32 operate_type = 1;
+    //1切歌，2原伴唱，3暂停/播放，4静音/取消静音，5音乐音量，
+    //6重唱，7评分，8录音，9麦克风音量，10麦克风音调，
+    //11音乐音调，12弹幕，13表情，14服务铃，15点自制MV，
+    //16优先点自制MV，17点歌，18优先点歌，19优先已点，20删除已点,
+    //21炫屏，22自动灯光，23音效,24混响，25灯光码，
+    //26灯光模式，27亮度，28电视屏黑屏，29重置二维码，30空调模式
+    //31空调风速，32排风开关，33泡泡机，34烟雾机，35空调开关
+    //36温度，37炫屏状态
+    int32 operate_value = 2;
+    string operate_text = 3;
+}
+//已点已唱列表
+message RoomSongListChanged {
+    int32 type = 1; //1已点，2已唱
+    int32 count = 2; // 当前数量
+}
+
+message Song {
+    string id = 1; //歌曲id
+    string song_name = 2; //歌曲名称
+    repeated int32 singer_mid = 3; //歌星id
+    repeated string singer = 4; //歌星名称
+    string video_type = 5; //视频版本
+    int32 is_hd = 6; //是否高清
+    int32 is_cloud = 7; //是否云歌曲
+    string main_lyric = 8; //主要歌词
+    int32 hot = 9; //热度
+    int32 is_pay = 10; //是否付费歌曲
+    int32 is_red_packet = 11; //是否红包歌曲
+    int32 download_status = 12; //0-排队;1-完成;2-下载中;3>=失败;
+    int32 download_percent = 13;
+    int32 download_sort = 14;
+    bool is_show_singer = 15;
+    bool is_to_top = 16;
+}
+
+//下载列表
+message DownloadSongList {
+    repeated Song song = 1; // 歌曲下载列表
+}
+
+message SyncAd {
+    int32 type = 1; //类型
+    Ad ad = 2; // 广告
+}
+
+message Ad {
+    int32 id = 1; //广告id
+    string name = 2; //广告名称
+    string ad_position = 3; //广告位
+    string ad_content = 4; //内容
+    string brand_name = 5; //广告商
+    int32 ad_type_id = 6; //广告类型id
+    repeated string ori_singer = 7; //关联歌星
+    string naming_song_list_id = 8; //关联歌单id
+    string naming_song_list_type = 9; //关联歌单类型
+}
+
+//开始游戏
+message GameStart {
+    int32 level = 1; //关卡
+    int32 page = 2; //歌曲页码
+    int32 position = 3; //歌曲位置
+}
+//游戏操作
+message GameOperation {
+    int32 op = 1; //操作指令 1暂停/播放，2退出关闭游戏
+    int32 value = 2; //操作值
+}
+
+//游戏状态
+message GameStatus {
+    int32 pass_level = 1; //已通关数
+    int32 play_status = 2; //0未开始，1视频加载中,2已开始，3已结束，4已关闭
+    int32 playing_level = 3; //当前正在玩的关卡
+    int32 is_pause = 4; //是否暂停中
+
+}
+
+//炫屏状态
+message CoolScreenStatus {
+    int32 is_open = 1; //开启开关状态
+    int32 is_random = 2; // 是否随机
+    int32 current_id = 3; // 当前炫屏id
+    string current_url = 4; //当前炫屏url
+}

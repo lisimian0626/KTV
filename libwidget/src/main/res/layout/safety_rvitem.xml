@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        >
+        <TextView
+            android:id="@+id/safety_rvitem_tv_name"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="房间名称"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/button_text_size" />
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:id="@+id/safety_rvitem_tv_ok"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:clickable="true"
+        android:text="@string/dlg_safety_rvitem_tv_ok"
+        android:paddingLeft="10dp"
+        android:background="@drawable/selector_dlg_device_type"
+        android:gravity="center"
+        android:textSize="@dimen/button_text_size" />
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:id="@+id/safety_rvitem_tv_fail"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:clickable="true"
+        android:text="@string/dlg_safety_rvitem_tv_fail"
+        android:paddingLeft="10dp"
+        android:background="@drawable/selector_dlg_safety_fail"
+        android:gravity="center"
+        android:textSize="@dimen/button_text_size" />
+    </LinearLayout>

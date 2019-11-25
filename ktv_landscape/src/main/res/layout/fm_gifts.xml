@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingTop="100dp"
+    android:paddingLeft="160dp"
+    android:paddingBottom="120dp"
+    android:paddingRight="40dp">
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.9"
+        android:background="@drawable/bg_prompt_dialog"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_bill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bg_bill" />
+
+        <TextView
+            android:id="@+id/tv_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:textColor="@android:color/white"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tv_room_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_bill"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_room_type"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_discount"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/tv_cur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_min"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_pre_type"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/top_tabs_bar_height" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_types"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/iv_next_type"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/top_tabs_bar_height" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="40dp"
+        android:gravity="right"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_shopping_car"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/top_tabs_bar_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/selector_gray_button"
+            android:drawableLeft="@drawable/service_handsel_tag"
+            android:gravity="center"
+            android:paddingLeft="@dimen/tab_padding_l_r"
+            android:paddingRight="@dimen/tab_padding_l_r"
+            android:singleLine="true"
+            android:text="@string/my_give"
+            android:textColor="@drawable/selector_tab_text"
+            android:textSize="@dimen/tab_text_size" />
+
+        <com.beidousat.karaoke.widget.viewpager.WidgetGiftPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/w_page"
+            android:layout_below="@+id/tv_shopping_car"
+            android:layout_marginTop="4dp" />
+
+
+        <com.beidousat.karaoke.widget.viewpager.WidgetPage
+            android:id="@+id/w_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>

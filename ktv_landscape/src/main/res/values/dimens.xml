@@ -1,0 +1,137 @@
+<resources>
+    <!-- Default screen 21.5 1920x1080 -->
+    <dimen name="bottom_bar_material_padding">20dp</dimen>
+
+    <integer name="ripple_duration">30</integer>
+
+    <dimen name="bottom_icon_margin">20dp</dimen>
+
+    <dimen name="marquee_text_size_1080">30sp</dimen>
+    <integer name="anim_duration">150</integer>
+
+    <!-- Default screen 21.5 1920x1080 -->
+
+    <dimen name="content_padding_top">5dp</dimen>
+    <dimen name="content_padding_bottom">5dp</dimen>
+    <dimen name="content_padding_left">25dp</dimen>
+    <dimen name="content_padding_right">88dp</dimen>
+    <dimen name="content_padding_top_big">40dp</dimen>
+    <dimen name="content_padding_bottom_big">80dp</dimen>
+
+    <dimen name="seek_page_margin_top">12.5dp</dimen>
+
+    <dimen name="left_bar_icon_margin">15dp</dimen>
+
+    <dimen name="bottom_bar_icon_margin">6dp</dimen>
+
+
+    <!--material块状-->
+    <dimen name="material_margin">0dp</dimen>
+    <!--块状间距-->
+    <dimen name="material_margin_half">3dp</dimen>
+
+    <dimen name="text_material">18sp</dimen>
+    <dimen name="material_padding">13dp</dimen>
+    <dimen name="top_tabs_bar_height">40dp</dimen>
+    <dimen name="text_desc">14sp</dimen>
+
+
+    <!--正在播放字体大小-->
+    <dimen name="playing_text_size">16sp</dimen>
+    <dimen name="top_bar_text_size">16sp</dimen>
+    <dimen name="tab_padding_l_r">12dp</dimen>
+    <dimen name="bottom_bar_icon_text_size">18sp</dimen>
+    <dimen name="tab_text_size">16sp</dimen>
+
+    <!--song item-->
+    <dimen name="text_song_item_name">24sp</dimen>
+    <dimen name="text_song_item_singer">14sp</dimen>
+    <dimen name="text_song_item_sort">14sp</dimen>
+    <dimen name="text_song_item_version">14sp</dimen>
+    <dimen name="song_list_item_padding">10dp</dimen>
+
+    <!--SeekBar -->
+    <!--页码 -->
+    <dimen name="seekbar_height_page_seek">4dp</dimen>
+    <dimen name="seekbar_thumb_transparent_page_seek">1dp</dimen>
+    <dimen name="seekbar_thumb_pressed_height_page_seek">30dp</dimen>
+    <dimen name="seekbar_thumb_pressed_height_half_page_seek">15dp</dimen>
+    <!--弹出框（音量、mic音量） -->
+    <dimen name="seekbar_height_pop">2dp</dimen>
+    <dimen name="seekbar_thumb_transparent_pop">7.5dp</dimen>
+    <dimen name="seekbar_thumb_pressed_height_pop">12.5dp</dimen>
+    <dimen name="seekbar_thumb_pressed_height_half_pop">6.5dp</dimen>
+    <!--幻影-->
+    <dimen name="seekbar_height_minor">4dp</dimen>
+    <dimen name="seekbar_thumb_transparent_minor">40dp</dimen>
+    <dimen name="seekbar_thumb_pressed_height_minor">60dp</dimen>
+    <dimen name="seekbar_thumb_pressed_height_half_minor">30dp</dimen>
+
+
+    <dimen name="ad_margin_top">44dp</dimen>
+    <dimen name="top_bar_height">80dp</dimen>
+    <dimen name="grid_spacing">12dp</dimen>
+
+    <dimen name="page_num_text_size">16sp</dimen>
+    <dimen name="pager_padding">18dp</dimen>
+    <dimen name="page_seek_margin_l_r">150dp</dimen>
+    <dimen name="singer_cover_w_h">140dp</dimen>
+
+    <dimen name="movie_cover_hor">339dp</dimen>
+    <dimen name="movie_cover_ver">170dp</dimen>
+
+    <dimen name="movie_cover_hor_h">186dp</dimen>
+    <dimen name="movie_cover_ver_h">230dp</dimen>
+
+    <dimen name="movie_tab_margin_l">150dp</dimen>
+
+    <dimen name="movie_title_text_size">18sp</dimen>
+    <dimen name="movie_desc_text_size">8sp</dimen>
+
+    <dimen name="movie_ver_title_text_size">14sp</dimen>
+    <dimen name="movie_ver_desc_text_size">6sp</dimen>
+
+    <dimen name="movie_type_tab_text_size">26sp</dimen>
+
+    <dimen name="movie_title_padding">6dp</dimen>
+
+    <dimen name="mood_item_w">160dp</dimen>
+    <dimen name="mood_item_h">195dp</dimen>
+    <dimen name="mood_item_margin">5dp</dimen>
+
+    <dimen name="live_cover_w_h">88dp</dimen>
+
+    <dimen name="pop_seek_bar_text_size">14sp</dimen>
+
+    <dimen name="pop_margin_view">50dp</dimen>
+    <dimen name="pop_icon_text_size">10sp</dimen>
+    <dimen name="pop_icon_padding">4dp</dimen>
+
+    <integer name="preview_w">800</integer>
+    <integer name="preview_h">450</integer>
+    <dimen name="preview_bolder_w">10dp</dimen>
+
+    <dimen name="keyboard_text_size">20sp</dimen>
+
+    <dimen name="marquee_text_size">22sp</dimen>
+
+    <dimen name="choose_item_padding">7dp</dimen>
+
+    <integer name="list_weight">78</integer>
+    <integer name="keyboard_weight">49</integer>
+    <dimen name="keyboard_height">440dp</dimen>
+    <dimen name="keyboard_width">490dp</dimen>
+    <dimen name="minor_width">128dp</dimen>
+    <dimen name="minor_height">72dp</dimen>
+    <dimen name="minor_margin_left">10dp</dimen>
+    <dimen name="minor_margin_bottom">16dp</dimen>
+
+    <dimen name="mv_player_image_height">322dp</dimen>
+    <dimen name="mv_player_height">346dp</dimen>
+
+    <dimen name="television_qr_code_width">100dp</dimen>
+    <dimen name="television_qr_code_height">120dp</dimen>
+    <dimen name="television_qr_code_text_size">16sp</dimen>
+    <dimen name="television_logo_width">70dp</dimen>
+    <dimen name="television_logo_height">70dp</dimen>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/riv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/game_pk_guide" />
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/riv_qrcode"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="382dp"
+        android:layout_marginTop="90dp" />
+</RelativeLayout>

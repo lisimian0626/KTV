@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.bestarmedia.libwidget.banner.JazzyViewPager
+        android:id="@+id/jViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/riv_pre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/selector_banner_pre" />
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/riv_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/selector_banner_next" />
+</RelativeLayout>

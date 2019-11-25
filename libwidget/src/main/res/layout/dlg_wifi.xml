@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    >
+
+    <RelativeLayout
+        android:id="@+id/dlg_wifi"
+        android:layout_width="680dp"
+        android:layout_height="@dimen/button_max_hight"
+        android:layout_centerInParent="true"
+        android:background="@drawable/dlg_bg">
+
+        <RelativeLayout
+            android:id="@+id/dlg_wifi_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dlg_wifi_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/dlg_wifi_name"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/button_text_size" />
+
+            <TextView
+                android:id="@+id/dlg_wifi_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:text="@string/dlg_wifi_pwd"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/button_text_size" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dlg_wifi_layout"
+            android:layout_centerInParent="true">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/dlg_wifi_rv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </ScrollView>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/dlg_wifi_iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/dlg_wifi"
+        android:src="@drawable/dlg_close_new" />
+</RelativeLayout>

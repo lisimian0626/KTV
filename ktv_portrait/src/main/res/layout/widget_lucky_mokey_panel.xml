@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="400dp"
+    android:background="@drawable/tv_turntable_bg"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+
+    <ImageView
+        android:id="@+id/bg_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/tv_adventure_light01" />
+
+    <ImageView
+        android:id="@+id/bg_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/tv_adventure_light02"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="42dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.beidousat.karaoke.widget.game.PanelItemView
+                android:id="@+id/item1"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/bg_lucky_monkey_item1" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <com.beidousat.karaoke.widget.game.PanelItemView
+                android:id="@+id/item2"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/bg_lucky_monkey_item2" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <com.beidousat.karaoke.widget.game.PanelItemView
+                android:id="@+id/item3"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/bg_lucky_monkey_item1" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.beidousat.karaoke.widget.game.PanelItemView
+                android:id="@+id/item4"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/bg_lucky_monkey_item2" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+
+            <Button
+                android:id="@+id/btn_action"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/game_lucky_monkey_go_n"
+                android:text="Go"
+                android:textColor="#4d1c01"
+                android:textSize="34sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <com.beidousat.karaoke.widget.game.PanelItemView
+                android:id="@+id/item6"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/bg_lucky_monkey_item2" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.beidousat.karaoke.widget.game.PanelItemView
+                android:id="@+id/item7"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/bg_lucky_monkey_item1" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <com.beidousat.karaoke.widget.game.PanelItemView
+                android:id="@+id/item8"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/bg_lucky_monkey_item2" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <com.beidousat.karaoke.widget.game.PanelItemView
+                android:id="@+id/item9"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/bg_lucky_monkey_item1" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

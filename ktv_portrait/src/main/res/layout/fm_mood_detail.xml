@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp">
+
+    <com.beidousat.karaoke.widget.viewpager.WidgetPage
+        android:id="@+id/w_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true" />
+
+    <com.beidousat.karaoke.widget.viewpager.WidgetSongPagerV4
+        android:id="@+id/songPager"
+        android:layout_width="match_parent"
+        android:layout_height="693dp"
+        android:layout_above="@+id/w_page"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="30dp"
+        app:horizontalMargin="7dp"
+        app:verticalMargin="7dp" />
+
+    <TextView
+        android:id="@+id/tv_ranking_name"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/top_tabs_bar_height"
+        android:layout_above="@+id/ll_top"
+        android:layout_marginBottom="20dp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/tab_text_size" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_tabs_bar_height"
+        android:layout_above="@+id/songPager"
+        >
+
+        <TextView
+            android:id="@+id/tv_supporter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/company_name"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/top_tabs_bar_height"
+            android:text="@string/supporter"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/tab_text_size" />
+
+        <com.beidousat.karaoke.widget.viewpager.WidgetTopTabs
+            android:id="@+id/topTab"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_tabs_bar_height"
+            app:leftTabWeight="3"
+            app:rightTabWeight="1.1" />
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+
+
+
+

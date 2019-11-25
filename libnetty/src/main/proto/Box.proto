@@ -1,0 +1,112 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+import "Mime.proto";
+
+option java_package = "com.bestarmedia.proto.vod";
+option java_outer_classname = "BoxProto";
+option java_multiple_files = true;
+
+//机顶盒心跳
+message BoxHeartbeat {
+    google.protobuf.Empty beat = 1;
+}
+
+// 机顶盒认证请求
+message BoxAuthRequest {
+    string ktv_net_code = 1; // KTV编号
+    string room_code = 2; // 房间号
+    int32  hdmi_enable = 3; // HDMI状态 0未开启 1已开启
+    string serial_no = 4; // 机顶盒序列号
+}
+
+// 机顶盒认证回复
+message BoxAuthResponse {
+    enum CodeType {
+        SUCCESS = 0; // 认证失败
+        FAILED = 1; // 认证成功
+    }
+    int32  code = 1; // 代码
+}
+
+// 机顶盒截图请求
+message BoxImageCutRequest {
+    string ktv_net_code = 1;
+    string room_code = 2;
+    string user_id = 3;
+    string address = 4;
+}
+
+message MobileUser {
+    int32  user_id = 1; // 用户ID
+    string name = 2; // 用户名(昵)称
+    string avatar = 3; // 用户头像(云端url)
+    int32  sex = 4; // 用户性别 0保密 1男 2女
+    string ktv_net_code = 5; // KTV编号
+    string ktv_name = 6; // KTV名称
+    string room_code = 7; // 房间号
+    string room_name = 11; // 房间名称
+    string room_session = 8; // 房间session
+    string address = 9; // 手机websocket地址
+    string phoneIMEI = 10; //手机串号
+}
+
+/* 手机消息（包含用户，遥控，弹幕，斗歌等信息）
+ * 具体值可能的说明:
+ * 0 点歌 -> value为歌曲ID
+ * 1 指令 -> value为指令 (一般是老版本指令消息号)
+ * 2 弹幕 -> 消息内容为弹幕文本
+ * 3 图片 -> 消息内容为 url
+ * 4 气氛表情 -> 为表情值 0掌声 1喝彩 2欢呼 3倒彩 4难听
+ * 5 斗歌 -> 消息内容为当前用户得分值
+ * */
+message MobileMessageBroadcast {
+    MobileUser user = 1;
+    int32  directive = 2; // 消息指令（原消息号，根据此消息号来判断是什么指令动作）
+    Text text = 3; // 文本 (弹幕) 可以为空
+    Image image = 4; // 图片 可以为空
+    string id = 5; // ID类值（歌曲ID，气氛表情ID）
+    string  score = 6; // 斗歌得分
+}
+
+// 按钮状态
+message ButtonStatusBroadcast {
+    Button button = 1; // 按钮状态
+    MobileUser user = 2; // 用户消息
+}
+
+message Button {
+    bool is_hdmi_black = 1; // 电视是否黑屏
+    bool is_light_auto = 2; // 智能灯光是否开启
+    bool is_mute = 3; // 是否静音
+    bool is_pause = 4; // 是否暂停
+    bool is_record = 5; // 是否开启录音
+    bool is_serving = 6; // 是否服务铃响应
+    int32 light_mode = 7; // 灯光模式
+    bool origin_on = 8; // 是否开启原唱
+    int32 score_mode = 9; // 评分模式 0关闭 1娱乐 2专业
+    int32 service_mode = 10; // 服务铃模式 -1无呼叫 0服务员 1DJ 2清洁 3保安 4买单 5催单 6唛套 7加冰
+}
+
+//已点已唱歌曲信息
+message SongSimple {
+    string uuid = 1; // 歌曲记录ID
+    string song_id = 2; // 歌曲ID
+    string song_name = 3; // 歌曲名称
+    string singer_name = 4; // 歌手
+    string video_type = 5; // 歌曲版本
+}
+
+//已点/已唱列表
+message RoomSongList {
+    int32 type = 1; // 1已点 2已唱
+    repeated SongSimple song = 2; // 歌曲列表
+    MobileUser user = 3; // 手机用户信息
+}
+
+// 房间session过期
+message ExpiredSession {
+    string ktv_net_code = 1; // KTV编号
+    string room_code = 2; // 房间号
+    string room_session = 3; // 房间session
+}

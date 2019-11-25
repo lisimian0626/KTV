@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bestarmedia.libwidget.material.RelativeLayoutMaterial xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/emoji_detail_iv_cover"
+        android:layout_width="165dp"
+        android:layout_height="175dp"
+        android:scaleType="centerInside" />
+</com.bestarmedia.libwidget.material.RelativeLayoutMaterial>
+

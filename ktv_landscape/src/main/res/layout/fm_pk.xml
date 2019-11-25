@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="100dp"
+    android:paddingLeft="160dp"
+    android:paddingBottom="120dp"
+    android:paddingRight="40dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.beidousat.karaoke.widget.viewpager.WidgetTopTabs
+            android:id="@+id/topTab"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_tabs_bar_height"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/tv_guide" />
+
+        <TextView
+            android:id="@+id/tv_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/top_tabs_bar_height"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/selector_gray_button"
+            android:gravity="center"
+            android:paddingLeft="@dimen/tab_padding_l_r"
+            android:paddingRight="@dimen/tab_padding_l_r"
+            android:singleLine="true"
+            android:text="@string/pk_guide"
+            android:textColor="@drawable/selector_tab_text"
+            android:textSize="@dimen/tab_text_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_empty"
+        android:layout_width="900dp"
+        android:layout_height="400dp"
+        android:layout_above="@+id/w_page"
+        android:layout_below="@+id/rl_top_bar"
+        android:layout_marginLeft="6dp"
+        android:visibility="gone">
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/riv_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/game_pk_guide" />
+
+
+
+        <RelativeLayout
+            android:id="@+id/rl_room_qr_code"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:clickable="true"
+            android:layout_marginLeft="382dp"
+            android:layout_marginTop="90dp">
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_qrcode"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_centerInParent="true"
+                android:gravity="center" />
+
+            <ProgressBar
+                android:id="@+id/pgb_qrcode"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_qr_msg"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.beidousat.karaoke.widget.viewpager.WidgetPage
+        android:id="@+id/w_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <com.beidousat.karaoke.widget.viewpager.WidgetPkPager
+        android:id="@+id/pkPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/w_page"
+        android:layout_below="@+id/rl_top_bar"
+        android:layout_marginTop="20dp" />
+
+    <com.beidousat.karaoke.widget.viewpager.WidgetPkRankingPager
+        android:id="@+id/ranking"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/w_page"
+        android:layout_below="@+id/rl_top_bar"
+        android:layout_marginTop="10dp"
+        android:visibility="gone" />
+
+</RelativeLayout>
+
+
+

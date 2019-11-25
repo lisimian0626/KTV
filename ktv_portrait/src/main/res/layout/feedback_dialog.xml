@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/feeback_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/feedback_fail"
+    >
+    <ImageView
+        android:id="@+id/feedback_iv_qrcode"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:src="@drawable/beixing_qrcode"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        />
+    <ImageView
+        android:id="@android:id/icon1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/feedback_close"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        />
+    <LinearLayout
+        android:paddingTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        >
+
+        <ProgressBar
+            android:id="@+id/pgb_progress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:indeterminateDrawable="@drawable/progress_bar"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:layout_gravity="center"
+            android:id="@android:id/text1"
+            android:layout_width="250dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:textColor="#333"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@android:id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/selector_dlg_ok"
+            android:minWidth="150dp"
+            android:text="@string/close"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/iv_singer"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/topTab"
+        android:layout_marginRight="34dp"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/tv_singer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/iv_singer"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/iv_singer"
+        android:textColor="@android:color/white"
+        android:textSize="28sp" />
+
+    <com.beidousat.karaoke.widget.viewpager.WidgetTopTabs
+        android:id="@+id/topTab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_tabs_bar_height"
+        android:layout_above="@+id/songPager"
+        android:layout_marginTop="7dp" />
+
+    <com.beidousat.karaoke.widget.viewpager.WidgetSongPagerV4
+        android:id="@+id/songPager"
+        android:layout_width="match_parent"
+        android:layout_height="390dp"
+        android:layout_above="@+id/w_page"
+        android:layout_marginTop="7dp"
+        app:showSingerButton="false" />
+
+    <com.beidousat.karaoke.widget.viewpager.WidgetPage
+        android:id="@id/w_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/keyboard"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp" />
+
+
+    <com.beidousat.karaoke.widget.WidgetKeyboard
+        android:id="@+id/keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/keyboard_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        app:keyboard_input_hint="@string/search_song" />
+
+</RelativeLayout>

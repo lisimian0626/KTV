@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/play_game_dlg_bg"
+    android:layout_height="match_parent">
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@android:id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/selector_game_close" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/iv_pre"
+        android:layout_below="@+id/iv_close"
+        android:orientation="horizontal">
+
+        <com.beidousat.karaoke.widget.viewpager.WidgetGameSongPager
+            android:id="@+id/pager"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_level_rules"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/play_game_rules_level1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:background="@drawable/play_game_gift_tag"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_gift"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/bg_rect_white_corner"
+                android:paddingBottom="4dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="4dp"
+                android:text="本奖品由麦当劳提供"
+                android:textColor="#9357EB"
+                android:textSize="20sp"
+                android:visibility="invisible" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp">
+
+                <com.bestarmedia.libwidget.image.RecyclerImageView
+                    android:id="@+id/btn_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:background="@drawable/selector_game_start" />
+
+                <com.bestarmedia.libwidget.anim.LeafLoading
+                    android:id="@+id/lf_loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/iv_pre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/iv_music_down"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="100dp"
+        android:src="@drawable/selector_game_pre_page" />
+
+    <TextView
+        android:id="@+id/tv_pages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/iv_music_down"
+        android:layout_marginBottom="28dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/iv_pre"
+        android:textColor="#9357EB"
+        android:textSize="20sp" />
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/iv_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/iv_music_down"
+        android:layout_marginBottom="18dp"
+        android:layout_toRightOf="@+id/tv_pages"
+        android:src="@drawable/selector_game_next_page" />
+
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/iv_music_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="92dp"
+        android:src="@drawable/selector_game_music_down" />
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/iv_music_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/iv_music_down"
+        android:src="@drawable/selector_game_music_up" />
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/iv_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/iv_music_up"
+        android:src="@drawable/selector_game_pause" />
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/iv_mic_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/iv_pause"
+        android:src="@drawable/selector_game_mic_down" />
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/iv_mic_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/iv_mic_down"
+        android:src="@drawable/selector_game_mic_up" />
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/iv_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/iv_mic_up"
+        android:src="@drawable/selector_game_service" />
+</RelativeLayout>

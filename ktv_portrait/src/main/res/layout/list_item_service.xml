@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/contentView"
+    android:layout_width="110dp"
+    android:layout_height="110dp"
+    android:background="@drawable/selector_dlg_button_bg"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/riv_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/call_service_1"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <com.bestarmedia.libwidget.text.GradientTextView
+        android:id="@+id/dlg_service_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:clickable="false"
+        android:focusable="false"
+        android:shadowColor="@color/dlg_shadow_color"
+        android:shadowDx="0"
+        android:shadowDy="2"
+        android:shadowRadius="8"
+        android:textColor="@color/dlg_tone_text_color_end"
+        android:textColorHighlight="@color/dlg_tone_text_color_start"
+        android:textSize="16sp"
+        app:gradient_animating="false" />
+
+</LinearLayout>

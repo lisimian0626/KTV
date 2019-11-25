@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="40dp">
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/iv_inverted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/play_reflection_v"
+            android:tag="skin:play_reflection:src" />
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_pk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/iv_inverted"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/play_pk"
+            android:tag="skin:play_pk:src" />
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_mv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/iv_inverted"
+            android:layout_toRightOf="@+id/wm_pk"
+            android:src="@drawable/play_mv"
+            android:tag="skin:play_mv:src" />
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_adventure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/wm_mv"
+            android:layout_toRightOf="@+id/wm_pk"
+            android:src="@drawable/play_adventure"
+            android:tag="skin:play_adventure:src" />
+
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_hyun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/iv_inverted"
+            android:layout_toRightOf="@+id/wm_mv"
+            android:src="@drawable/play_hyun"
+            android:tag="skin:play_hyun:src" />
+
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/iv_inverted"
+            android:layout_toRightOf="@+id/wm_hyun"
+            android:src="@drawable/play_game"
+            android:tag="skin:play_game:src" />
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_skin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/iv_inverted"
+            android:layout_toRightOf="@+id/wm_game"
+            android:src="@drawable/play_skin"
+            android:tag="skin:play_skin:src" />
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_live"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/wm_skin"
+            android:layout_toRightOf="@+id/wm_game"
+            android:src="@drawable/play_live"
+            android:tag="skin:play_live:src" />
+    </RelativeLayout>
+</HorizontalScrollView>
+
+
+

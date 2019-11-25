@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dlg_bg">
+
+    <TextView
+        android:id="@+id/dlg_pay_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/dlg_pay_title"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/button_title_text_size" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dlg_pay_tv_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:text="@string/dlg_pay_desc"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/button_text_size" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_desc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:text="@string/dlg_pay_use_time"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/button_text_size" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_time"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_white_stroke_corner"
+        android:padding="25dp">
+
+        <ImageView
+            android:id="@+id/dlg_pay_iv_qrcode"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tv_rmb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="25dp"
+            android:layout_toEndOf="@+id/dlg_pay_iv_qrcode"
+            android:text="@string/rmb"
+            android:textColor="#ffb413"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_rmb"
+            android:layout_toEndOf="@+id/tv_rmb"
+            android:textColor="#ffb413"
+            android:textSize="42sp" />
+
+        <TextView
+            android:id="@+id/tv_pay_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_fee"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/dlg_pay_iv_qrcode"
+            android:text="@string/pay_type"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/button_text_size" />
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_pay_type"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/dlg_pay_iv_qrcode"
+            android:src="@drawable/ic_pay" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_refund_process"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:autoLink="all"
+        android:text="@string/refund_process"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/button_text_size" />
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contentView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.bestarmedia.libwidget.text.GradientTextView
+        android:id="@+id/dlg_light_effect"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:background="@drawable/selector_light_effect_bg_blue"
+        android:drawableStart="@drawable/selector_light_effect_blue"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:textColor="@color/selector_text_color_blue_item"
+        android:textColorHighlight="@color/selector_text_colorhight_blue_item"
+        android:textSize="16sp" />
+
+</LinearLayout>

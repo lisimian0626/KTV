@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:background="@drawable/selector_dlg_atmosphere_handwriting"
+    android:gravity="center"
+    android:paddingBottom="6dp"
+    android:paddingTop="6dp"
+    android:textColor="@android:color/white"
+    android:textSize="@dimen/keyboard_text_size" />

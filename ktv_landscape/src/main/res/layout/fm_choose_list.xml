@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="40dp"
+    android:paddingTop="100dp"
+    android:paddingRight="40dp">
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/riv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/bg_choose_empty"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/riv_empty"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/choose_empty_tip2"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_shuffle"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/top_tabs_bar_height"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_gray_button"
+        android:gravity="center"
+        android:paddingLeft="@dimen/tab_padding_l_r"
+        android:paddingRight="@dimen/tab_padding_l_r"
+        android:singleLine="true"
+        android:text="@string/shuffle"
+        android:textColor="@drawable/selector_tab_text"
+        android:textSize="@dimen/tab_text_size"
+        android:visibility="invisible" />
+
+
+    <com.beidousat.karaoke.widget.viewpager.WidgetTopTabs
+        android:id="@+id/topTab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_tabs_bar_height"
+        android:layout_toLeftOf="@+id/tv_shuffle" />
+
+    <com.beidousat.karaoke.widget.viewpager.WidgetPage
+        android:id="@+id/w_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="130dp"
+        android:layout_alignParentBottom="true" />
+
+
+    <com.beidousat.karaoke.widget.viewpager.WidgetChoosePagerList
+        android:id="@+id/choosePager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/w_page"
+        android:layout_below="@+id/topTab"
+        android:layout_marginTop="20dp" />
+
+
+    <com.beidousat.karaoke.widget.viewpager.WidgetSungPagerList
+        android:id="@+id/sungPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/w_page"
+        android:layout_below="@+id/topTab"
+        android:layout_marginTop="20dp"
+        android:visibility="gone" />
+
+    <com.beidousat.karaoke.widget.viewpager.WidgetDownloadPager
+        android:id="@+id/downloadPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/w_page"
+        android:layout_below="@+id/topTab"
+        android:layout_marginTop="20dp" />
+</RelativeLayout>
+
+
+

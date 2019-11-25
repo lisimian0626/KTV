@@ -1,0 +1,185 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+option java_package = "com.bestarmedia.proto.monitor";
+option java_outer_classname = "MonitorProto";
+option java_multiple_files = true;
+
+// websocket心跳包 (15s)
+message WebsocketHeartbeat {
+    google.protobuf.Empty beat = 1;
+}
+
+// 服务器连接认证请求
+message NodeLoginRequest {
+    string ktv_net_code = 1;
+    string ktv_name = 2;
+}
+
+// 服务器连接认证回复
+message NodeLoginResponse {
+    int32 code = 1; // 认证结果 1成功 0失败
+    string message = 2; // 消息
+}
+
+// 流水消息
+message StreamMessage {
+    enum SubType {
+        ELSE = 0; // 其它
+        ROOM_OPEN = 1; // 开房
+        ROOM_CLOSE = 2; // 关房
+        BOX_ONLINE = 3; // 机顶盒上线
+        BOX_OFFLINE = 4; // 机顶盒下线
+        NODE_ONLINE = 5; // 服务器上线
+        NODE_OFFLINE = 6; // 服务器下线
+        EARLY_FIRE_ALARM = 7; // 火警预警
+        FIRE_ALARM = 8; // 火警 （此时需要将火警信号发给房间客人）
+        DRUG = 9; // 疑似吸毒
+        MINORS = 10; // 疑似未成年人
+        SONG = 11; // 点歌
+        FIRE_ALARM_CANCEL = 12; // 火警取消
+        SONG_END = 13; // 歌曲演唱完成
+        STARTING_BUSINESS = 14; // 店家开始营业
+    }
+    int32 type = 1; // 消息类型 0其它 1营业 2火警 3异常行为 4点歌
+    int32 sub_type = 2; // 子消息类型
+    string date = 3; // 消息发生时间
+    string ktv_net_code = 4; // KTV编号
+    string room_code = 5; // 房间号
+    string ktv_room_code = 9; // KTV房间名
+    string content = 6; // 消息内容
+    string extra = 7; // 扩展内容（备用）
+    string ktv_name = 8; // KTV名称
+}
+
+// 点歌记录
+message SongRecordBroadcast {
+    string ktv_net_code = 1;
+    string ktv_name = 2;
+    string room_code = 3;
+    string session = 4; // 房间　session
+    int32  duration = 5; // 歌曲时长
+    int32  play_time = 6; // 播放时长
+    double time_scale = 7; // 完成度
+    int32  status = 8; // 状态 0已点 1已唱
+    int32  song_code = 9; // 歌曲代码
+    string simp_name = 10; // 歌曲名称
+    int32  song_type = 11; // 歌曲类型
+    string song_version = 12; // 歌曲版本
+    int32  language_type = 13; // 语种类型
+    int32  singer_id = 14; // 歌手ID
+    string singer_name = 15; // 歌手名称
+    string created_at = 16; // 点播时间
+    string play_at = 17; // 演唱开始时间
+    string end_at = 18; // 演唱结束时间
+}
+
+// websocket 用户连接认证请求
+message UserAuthRequest {
+    int32 id = 1; // ID
+    string username = 2; // 用户名
+    string name = 3; // 昵称/名字
+}
+
+// websocket 用户连接认证回复
+message UserAuthResponse {
+    int32 code = 1; // 认证结果 0失败 1成功
+}
+
+// 房间
+message Room {
+    string ktv_room_code = 1; // 房间名称
+    string room_code = 2; // 房间号
+    int32  status = 3; // 房间状态 0未开房 1开房中
+    int32  is_online = 4; // 机顶盒是否在线 0否 1是
+    int32  hdmi_enable = 5; // 是否开电视 0否 1是
+    string check_at = 6; // 开房时间，只有开房中的房间才有
+    string session = 7; // 房间 session
+    string playing_song = 8; // 正在播放的歌曲信息，没有为空
+
+}
+
+// 房间状态变化通知广播（房间列表处更新时有用到）
+message DeviceStatusBroadcast {
+    string ktv_net_code = 1; // KTV编号
+    string ktv_name = 2; // KTV名称
+    Room room = 3; // 房间信息
+}
+
+// 房间列表请求
+message RoomListRequest {
+    string ktv_net_code = 1; // KTV编号
+    string address = 2; // 客户端 socket 地址
+    int32  user_id = 3; // 前端用户ID
+}
+
+// 房间列表回复
+message RoomListResponse {
+    string ktv_net_code = 1; // KTV编号
+    string address = 2; // 客户端地址
+    int32  user_id = 7; // 前端用户id
+    int32  amount = 3; // 房间总数量
+    int32  opening_amount = 4; // 开房中数量
+    int32  closing_amount = 5; // 关房中数量
+    repeated Room room = 6; // 房间列表
+}
+
+// 房间信息请求
+message RoomRequest {
+    string ktv_net_code = 1; // KTV编号
+    string room_code = 2; // 房间编号
+    string address = 3; // 客户端 socket 地址
+    int32  user_id = 4; // 前端用户ID
+}
+
+// 房间信息回复
+message RoomResponse {
+    string ktv_net_code = 1; // ktv编号
+    string address = 2; // 客户端 socket 地址
+    int32  user_id = 3; // 前端用户ID
+    Room   room = 4; // 房间信息
+}
+
+// 店家营业开始通知
+message BusinessBroadcast {
+    string ktv_net_code = 1; // KTV编号
+    string check_at = 2; // 打卡时间
+    string begin_at = 4; // 开始时间
+    string end_at = 5; // 结束时间
+}
+
+// 房间营业打卡通知
+message BusinessRoomBroadcast {
+    string ktv_net_code = 1; // KTV编号
+    string room_code = 2; // 房间编号
+    string check_at = 3; // 房间打卡时间
+    string begin_at = 4; // 开始时间
+    string end_at = 5; // 结束时间
+}
+
+// 停业通知请求
+message BusinessClosingRequest {
+    string ktv_net_code = 1; // KTV编号
+    string begin_at = 2; // 开始时间
+    string end_at = 3; // 结束时间
+    int32  type = 4; // 类型
+    string reason = 5; // 原因
+    string document_url = 6; // 文书凭证url，预留
+    int32  id = 7; // 停业通知id
+    string log_id = 8; // 停业日志id
+}
+
+// 停业通知回复
+message BusinessClosingResponse {
+    string ktv_net_code = 1; // KTV编号
+    int32  code = 2; // 0失败 1成功
+    int32  id = 3; // 停业通知id
+    string  log_id = 4; // 停业日志id
+}
+
+// 火警持续时间通知
+message FireAlarmLastTimeBroadcast {
+    string ktv_net_code = 1; // KTV编号
+    int32  time = 2; // 持续时间
+}

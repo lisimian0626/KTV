@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <gradient android:angle="90" android:endColor="@color/list_item_fill_end_pressed" android:startColor="@color/list_item_fill_start_pressed" android:type="linear" />
+            <stroke android:width="1dp" android:color="@color/list_item_stroke_pressed"></stroke>
+        </shape>
+    </item>
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <gradient android:angle="90" android:endColor="@color/list_item_fill_end_pressed" android:startColor="@color/list_item_fill_start_pressed" android:type="linear" />
+            <stroke android:width="1dp" android:color="@color/list_item_stroke_pressed"></stroke>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <gradient android:angle="90" android:endColor="@color/list_item_fill_end" android:startColor="@color/list_item_fill_start" android:type="linear" />
+            <stroke android:width="1dp" android:color="@color/list_item_stroke"></stroke>
+        </shape>
+    </item>
+</selector>

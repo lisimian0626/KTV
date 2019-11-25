@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingBottom="40dp">
+
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/iv_inverted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/song_category_reflection"
+            android:tag="skin:song_category_reflection:src" />
+
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_pop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/iv_inverted"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/song_category_pop"
+            android:tag="skin:song_category_pop:src" />
+
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_drama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/iv_inverted"
+            android:layout_toEndOf="@+id/wm_pop"
+            android:src="@drawable/song_category_drama"
+            android:tag="skin:song_category_drama:src" />
+
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_folk_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/iv_inverted"
+            android:layout_toEndOf="@+id/wm_drama"
+            android:src="@drawable/song_category_folksong"
+            android:tag="skin:song_category_folksong:src" />
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_disco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/wm_drama"
+            android:layout_toEndOf="@+id/wm_pop"
+            android:src="@drawable/song_category_disco"
+            android:tag="skin:song_category_disco:src" />
+
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_military"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/iv_inverted"
+            android:layout_toEndOf="@+id/wm_disco"
+            android:src="@drawable/song_category_military"
+            android:tag="skin:song_category_military:src" />
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_dance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/iv_inverted"
+            android:layout_toEndOf="@+id/wm_military"
+            android:src="@drawable/song_category_dance"
+            android:tag="skin:song_category_dance:src" />
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_children"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/wm_dance"
+            android:layout_toEndOf="@+id/wm_military"
+            android:src="@drawable/song_category_children"
+            android:tag="skin:song_category_children:src" />
+
+
+        <com.bestarmedia.libwidget.material.ImageMaterial
+            android:id="@+id/wm_classial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/wm_dance"
+            android:layout_toEndOf="@+id/wm_children"
+            android:src="@drawable/song_category_classical"
+            android:tag="skin:song_category_classical:src"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</HorizontalScrollView>
+
+
+

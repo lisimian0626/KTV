@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="20dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp">
+
+
+    <include
+        android:id="@+id/ll_qrode"
+        layout="@layout/dlg_room_qrcode"
+        android:layout_width="710dp"
+        android:layout_height="420dp"
+        android:layout_marginTop="280dp"
+        android:visibility="gone"></include>
+
+    <com.beidousat.karaoke.widget.viewpager.WidgetPage
+        android:id="@+id/w_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp" />
+
+    <com.beidousat.karaoke.widget.viewpager.WidgetMvPager
+        android:id="@+id/songPager"
+        android:layout_width="match_parent"
+        android:layout_height="685dp"
+        android:layout_above="@+id/w_page"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_above="@+id/songPager"
+        android:layout_marginBottom="20dp" />
+</RelativeLayout>

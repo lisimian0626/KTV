@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name">libwidget</string>
+
+    <string name="room_large_screen">巨幕设置</string>
+    <string name="large_screen_ip">巨幕IP设置</string>
+    <string name="large_screen_port">巨幕端口设置</string>
+    <string name="large_screen_ip_tips">请输入IP地址</string>
+    <string name="large_screen_port_tips">请输入端口</string>
+
+    //房间信息
+    <string name="setting_room_title">房间信息</string>
+    <string name="setting_room_scene">使用场景</string>
+    <string name="setting_room_user1">KTV编号</string>
+    <string name="setting_room_user2">用户名</string>
+    <string name="setting_room_pwd1">房间号</string>
+    <string name="setting_room_pwd2">密码</string>
+    <string name="setting_room_confirm1">检测</string>
+    <string name="setting_room_confirm2">登录</string>
+    <string name="setting_room_rb1">KTV</string>
+    <string name="setting_room_rb2">家庭</string>
+    <string name="setting_room_tpye">设备类型</string>
+    <string name="setting_room_tips">请输入房间号如:B1</string>
+    //regist
+    <string name="setting_room_device_regist">注册设备</string>
+    <string name="setting_room_device_regist_tips1">房间尚未注册任何设备，请注册点歌屏</string>
+    <string name="setting_room_device_regist_tips2">房间已存在注册设备，请选择要注册的设备类型</string>
+    <string name="setting_room_device_regist_now">马上注册</string>
+    <string name="setting_room_device_null">设备未注册</string>
+    <string name="setting_room_device_type_error">选择的设备类型不符合！</string>
+    <string name="setting_room_device_null_tips">检测到该设备尚未进行注册绑定房间,请先注册设备,注册后方可正常使用</string>
+    //devicetype
+    <string name="setting_room_devicetype_title">变更设备类型</string>
+    <string name="setting_room_devicetype_title2">请选择您要注册的设备类型</string>
+    //logout
+    <string name="setting_room_logout_title">注销设备</string>
+    <string name="setting_room_logout_content">注销后将会解除场所及房间的绑定,再次接入使用时需要重新注册,确定注销吗?</string>
+    <string name="setting_room_logout_succed_title">注销成功</string>
+    <string name="setting_room_logout_succed_content">设备注销成功,重新注册后方可正常使用</string>
+    //房间名修改
+    <string name="setting_room_updata_succed">修改成功</string>
+    <string name="setting_room_updata_name_succed">房间名称已修改成功</string>
+    <string name="setting_room_updata_fail">修改成功</string>
+    <string name="setting_room_updata_name_fail">房间名称修改失败</string>
+
+    <string name="mic_vol_down">话筒音量-</string>
+    <string name="mic_vol_up">话筒音量+</string>
+
+    //设备替换
+    <string name="setting_room_updata_device_main_title">重复设备（主屏）</string>
+    <string name="setting_room_updata_device_main_content">检测到该房间已注册了主屏机顶盒,新注册设备是否替换旧设备,替换后旧设备就会被注销,确定要替换吗?</string>
+
+    <string name="setting_room_updata_device_other_title">重复设备(%1$s)</string>
+    <string name="setting_room_updata_device_other_content">检测到该房间已注册了%1$s机顶盒,\n1) 新注册设备可以选择替换旧设备,替换后旧设备将会被注销。\n2) 如需新增%1$s请选择新增%1$s</string>
+    <string name="setting_room_dlg_add_title">新增%1$s</string>
+    <string name="setting_room_dlg_replace_title">替换%1$s</string>
+    <string name="setting_room_dlg_replace_content">请选择您要替换的%1$s</string>
+
+    //安全检查
+    <string name="dlg_safety_input_tips">输入管理密码</string>
+    <string name="dlg_safety_input_content">输入管理密码提交消防检查后方可正常开房使用</string>
+    <string name="dlg_safety_input_tips2">消防检查</string>
+    <string name="dlg_safety_input_content2">防火安全无小事,时时处处需小心,请认真检查房间内以下各项是否验视通过,发现异常请及时处理！\n公共区域以及房间消防状况都验视通过后则可正常营业！</string>
+    <string name="dlg_safety_rvitem_tv_ok">验视通过</string>
+    <string name="dlg_safety_rvitem_tv_fail">异常</string>
+    <string name="dlg_safety_check_pass_title">消防检查完成</string>
+    <string name="dlg_safety_check_pass_content">房间消防状况已验视通过,房间可营业</string>
+    <string name="dlg_safety_check_fail_title">消防检查不通过</string>
+    <string name="dlg_safety_check_fail_content">房间内消防检查不通过,请及时处理消防隐患,防火安全无小事,时时处处需小心;消防隐患消除后再重新提交消防检查报告后方可正常开房营业。</string>
+    <string name="dlg_safety_check_fail_btn">隐患已处理</string>
+
+    <string name="dlg_safety_store_title">请检查公共区域</string>
+    <string name="dlg_safety_store_tips">尚未检查公共区域消防情况</string>
+    <string name="dlg_safety_store_tips2">扫码提交公共区域消防检查结果</string>
+    <string name="dlg_safety_request_offline_operation_title">申请离线营业</string>
+    <string name="dlg_safety_request_offline_operation_tips">相关部门提醒您：连续超过7天不联网的场所，则视为异常营业，请尽早修复网络</string>
+
+
+    <string name="dlg_safety_store_tips3">公共区域以及房间消防状况都验视通过后则可正常营业</string>
+    <string name="skin_default">默认皮肤</string>
+    <string name="lack_song_tips">尊敬的北星用户，如有缺歌问题请微信扫码发送“缺歌、歌曲名、歌星名”到公众号，我们将按照提交顺序在公众号回馈并进行处理，非常感谢您对我们工作的支持。</string>
+
+    <string name="dlg_wifi_name">Wifi名称</string>
+    <string name="dlg_wifi_pwd">Wifi密码</string>
+    //气氛
+    <string name="air_con">空调</string>
+    <string name="air_con_on">空调－开</string>
+    <string name="air_con_off">空调－关</string>
+    <string name="air">排风</string>
+    <string name="temp">温度</string>
+    <string name="air_bubble">喷泡泡</string>
+    <string name="air_smoke">喷烟雾</string>
+    <string name="air_off">排风－关</string>
+    <string name="air_on">排风－开</string>
+    <string name="temp_mode">温度设置</string>
+    <string name="temp_up">温度＋</string>
+    <string name="temp_down">温度－</string>
+    <string name="wind_mode">风力设置</string>
+    <string name="air_wind_high">高风</string>
+    <string name="air_wind_mid">中风</string>
+    <string name="air_wind_low">低风</string>
+    <string name="air_mode">空调模式</string>
+    <string name="air_con_mode_auto">自动</string>
+    <string name="air_con_mode_cool">制冷</string>
+    <string name="air_con_mode_hot">制热</string>
+    <string name="air_con_mode_wind">送风</string>
+
+    <string name="songlist_default">默认排序</string>
+    <string name="songlist_words">字数排序</string>
+    <string name="songlist_spell">拼音排序</string>
+
+    <string name="pls_input_buy_count">请输入购买数量</string>
+</resources>

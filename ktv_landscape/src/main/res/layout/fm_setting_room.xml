@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg">
+
+    <RelativeLayout
+        android:id="@+id/rl_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#353a41">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/room_name_setting"
+            android:textColor="#999"
+            android:textSize="30sp" />
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/iv_back"
+            android:layout_width="114dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/service_setting_back" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_back"
+            android:background="#666666" />
+
+    </RelativeLayout>
+
+    <com.beidousat.karaoke.widget.WidgetKeyboard
+        android:id="@+id/keyboard"
+        android:layout_width="@dimen/keyboard_width"
+        android:layout_height="@dimen/keyboard_height"
+        android:layout_above="@+id/setting_room_tv_ok"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="30dp"
+        app:keyboard_input_hint="@string/pls_input_room_name" />
+
+    <TextView
+        android:id="@+id/setting_room_tv_ok"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="@string/ok"
+        android:gravity="center"
+        android:clickable="true"
+        android:background="@drawable/selector_dlg_button_gradient"
+        android:textColor="@color/dlg_button_gradient_text_color"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:textSize="@dimen/button_text_size" />
+</RelativeLayout>

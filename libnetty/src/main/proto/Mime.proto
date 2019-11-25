@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+option java_package = "com.bestarmedia.proto.node";
+option java_outer_classname = "MimeProto";
+option java_multiple_files = true;
+
+// 机顶盒媒体类型，坐标、长宽度相关以分辨率 1280x720为标准，客户端会自动根据屏幕分辨率换算
+
+message Text {
+    string content = 1; // 文本内容
+    string color = 2; // 颜色值 #FFFFFFFF
+    string background = 3; // 背景图 url 默认为空值
+    int32 left_x = 4; // 屏幕左边的x坐标 默认0,
+    int32 right_x = 5; // 屏幕右边的y坐标 默认720
+    int32 y = 6; // 高度Y坐标 默认80（走马灯顶部）
+
+    int32 play_time = 7; // 单条播放时长，默认30s
+    int32 play_count = 9; // 播放次数 默认 1次
+    int32 play_interval = 10; // 播放间隔时间 单位秒，默认15秒
+    int32 play_direction = 11; // 播放方向 1 从右向左 2从左向右，默认1
+    int32 source = 12; // 0 店家本地 1 政府监管
+}
+
+
+message Image {
+    string url = 1; // 图片 url
+    int32 width = 2; // 图片宽，默认屏幕宽度1/3=426
+    int32 height = 3; // 图片高，默认屏幕高度1/3=240
+    int32 start_x = 4; // 开始位置X坐标，默认0
+    int32 start_y = 5; // 开始位置Y坐标 默认0
+    int32 end_x = 6; // 结束位置X坐标，默认426（居中显示）
+    int32 end_y = 7; // 结束位置Y坐标 默认240（居中显示）
+    int32 play_effect = 8; // 播放效果 1直接显示 2滑入滑出，暂时不需要（直接显示开始坐标和结束坐标一致）
+    int32 stay_time = 9; // 停留时长，默认10秒
+    int32 source = 10; // 0 店家本地 1 政府管理
+    Text text = 19; // 文本对象
+}
+
+message Video {
+    int32 type = 1; // 出现方式 1单通道 2双通道
+    int32 play_type = 11; // 播放方式 1即时播放 2歌曲结束后播放
+    string url = 2; // 视频 url
+    Image image = 9; // 图片
+
+    // 以下字段在单通道方式需要
+    int32 width = 3; // 视频窗口宽，默认屏幕宽度1/3=426
+    int32 height = 4; // 视频窗口高，默认屏幕高度1/3=240
+    int32 start_x = 5; // 开始位置X坐标，默认0
+    int32 start_y = 6; // 开始位置Y坐标 默认0
+    int32 end_x = 7; // 结束位置X坐标，默认426（居中显示）
+    int32 end_y = 8; // 结束位置Y坐标 默认240（居中显示）
+    int32 source = 10; // 0 店家本地 1 政府管理
+}

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_pay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.bestarmedia.texture.VideoTextureView
+            android:id="@+id/video_texture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.bestarmedia.libwidget.layout.EnterAnimLayout
+            android:id="@+id/enter_anim"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.bestarmedia.libwidget.image.RecyclerImageView
+                android:id="@+id/iv_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.bestarmedia.libwidget.layout.EnterAnimLayout>
+
+        <com.bestarmedia.libwidget.image.RecyclerImageView
+            android:id="@+id/iv_qr_code"
+            android:layout_width="180px"
+            android:layout_height="180px"
+            android:layout_marginStart="946px"
+            android:layout_marginTop="352px"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/iv_ad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/rl_tip"
+        android:layout_width="400dp"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/dlg_bg"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/prompt"
+            android:textColor="@color/main_text_end"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:text="@string/network_disable_tip"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

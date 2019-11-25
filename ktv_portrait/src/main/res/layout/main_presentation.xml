@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <RelativeLayout
+        android:id="@+id/player_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.bestarmedia.texture.VideoTextureView
+            android:id="@+id/video_texture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+
+    <com.beidousat.karaoke.widget.WidgetMvImagePlayer
+        android:id="@+id/w_mv_player"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mv_player_height"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.beidousat.karaoke.widget.WidgetAnimImageText
+            android:id="@+id/w_logo"
+            android:layout_width="@dimen/television_logo_width"
+            android:layout_height="@dimen/television_logo_height"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone" />
+
+        <com.beidousat.karaoke.widget.MarqueePlayer
+            android:id="@+id/roll_text_view"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            app:direction="left"
+            app:isRepeat="false"
+            app:marqueeStrokeWidth="2.0"
+            app:speed="3"
+            app:startPoint="end"
+            app:textSize="30sp"
+            app:textcolor="@android:color/white" />
+
+        <LinearLayout
+            android:id="@+id/ll_static"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="horizontal" />
+    </LinearLayout>
+
+    <com.bestarmedia.libwidget.danmaku.BarrageView
+        android:id="@+id/barrage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_top" />
+
+    <TextView
+        android:id="@+id/tv_player_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_tv_operation_tip"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textColor="@android:color/white"
+        android:textSize="38sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_volume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginRight="200dp"
+        android:background="@drawable/bg_tv_operation_tip"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.xw.repo.BubbleSeekBar
+            android:id="@+id/sb_volume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <com.beidousat.karaoke.widget.WidgetScoreResult
+        android:id="@+id/w_score_result"
+        android:layout_width="368dp"
+        android:layout_height="198dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/tv_score_info_bg"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.beidousat.karaoke.widget.WidgetRedEnvelopes
+        android:id="@+id/w_red_envelopes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.beidousat.karaoke.widget.WidgetRedEnvelopesSmall
+        android:id="@+id/w_red_envelopes_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/iv_ad_pause"
+        android:layout_width="400dp"
+        android:layout_height="225dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.beidousat.karaoke.widget.WidgetAdCorner
+        android:id="@+id/w_ad_corner"
+        android:layout_width="153dp"
+        android:layout_height="316dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_top" />
+
+    <yanzhikai.textpath.SyncTextPathView
+        android:id="@+id/tv_score"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:visibility="gone"
+        app:duration="1000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:paintStrokeColor="@android:color/black"
+        app:paintStrokeWidth="1dp"
+        app:pathStrokeColor="@color/main_volume_color_end"
+        app:pathStrokeWidth="2dp"
+        app:showPainter="true"
+        app:text="00"
+        app:textInCenter="true"
+        app:textSize="50sp" />
+
+    <com.beidousat.karaoke.widget.WidgetAnimImageText
+        android:id="@+id/w_qr_code"
+        android:layout_width="@dimen/television_qr_code_width"
+        android:layout_height="@dimen/television_qr_code_height"
+        android:layout_marginEnd="30dp"
+        android:visibility="gone"
+        app:layout_constraintRight_toLeftOf="@+id/w_ad_corner"
+        app:layout_constraintTop_toBottomOf="@+id/ll_top" />
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/riv_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@android:color/black"
+        android:visibility="gone" />
+</android.support.constraint.ConstraintLayout>

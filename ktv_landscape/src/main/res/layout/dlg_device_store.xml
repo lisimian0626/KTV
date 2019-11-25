@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dialog_dark">
+
+    <TextView
+        android:id="@+id/tv_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="设备正在入库..."
+        android:textColor="@android:color/white"
+        android:textSize="26sp" />
+
+    <ProgressBar
+        android:id="@+id/pgb_progress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:layout_toStartOf="@+id/tv_msg" />
+
+
+    <com.bestarmedia.libwidget.image.RecyclerImageView
+        android:id="@+id/iv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/dlg_successful"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_status"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="入库成功！"
+        android:textColor="@android:color/white"
+        android:textSize="26sp"
+        android:visibility="gone" />
+
+</RelativeLayout>
