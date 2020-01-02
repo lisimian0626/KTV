@@ -1,0 +1,1 @@
+include ':app', ':door', ':ktv_landscape', ':ktv_launcher', ':ktv_portrait', ':libcommon', ':liblame',  ':libnetty',  ':libopengl',  ':libplayer',  ':librtc',  ':libscore',  ':libserial',  ':libscore',  ':libskin',  ':libwidget',  ':projector',  ':wall'
